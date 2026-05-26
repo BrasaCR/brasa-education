@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="BRASA CR · Education, World Wide · Owned by the citizens of the world">
+<meta name="theme-color" content="#1B1A17">
+
+<title>BRASA CR — Education, World Wide</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://assets.brasa.world">
+
+<!-- Fraunces (variable serif) + Geist (variable sans) — same as brasa.world -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300..700&display=swap">
+
+<style>
+/* =========================================================================
+   BRASA — Education, World Wide
+   Photo-first · Text-restrained · Constitutionally anchored
+   Foundation stylesheet · verbatim from brasa.world
+   ========================================================================= */
+
+:root {
+  --brasa-black: #1B1A17;
+  --brasa-soft: #6B6862;
+  --brasa-accent: #8C3A1F;
+  --brasa-green: #0D6E5C;
+  --brasa-callout: #F2EDE0;
+  --brasa-page: #FBF9F4;
+  --brasa-cream: #F5F0E5;
+  --brasa-rule: #E5DFD0;
+  --brasa-hover: #6B280F;
+  --serif: 'Fraunces', 'Times New Roman', serif;
+  --sans: 'Geist', 'Helvetica Neue', system-ui, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 9rem;
+  --max-w: 1480px;
+  --gutter: clamp(1.25rem, 4vw, 2.75rem);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-photo: cubic-bezier(0.16, 0.84, 0.34, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--brasa-page);
+  color: var(--brasa-black);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.5;
+  font-feature-settings: "ss01", "ss02";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+img { display: block; max-width: 100%; height: auto; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+.container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.visually-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brasa-accent);
+  margin-bottom: var(--space-sm);
+}
+.section-h {
+  font-family: var(--serif); font-weight: 350;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05; letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0;
+  margin-bottom: var(--space-md);
+  max-width: 28ch;
+}
+
+/* HEADER */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.25rem var(--gutter);
+  display: flex; align-items: center; justify-content: space-between;
+  pointer-events: none;
+  transition: background 380ms var(--ease), padding 380ms var(--ease), backdrop-filter 380ms var(--ease);
+}
+.site-header > * { pointer-events: auto; }
+.site-header.scrolled {
+  background: rgba(251, 249, 244, 0.86);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  padding-top: 0.9rem; padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(229, 223, 208, 0.5);
+}
+.wordmark {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 1.35rem; letter-spacing: 0.04em;
+  color: var(--brasa-cream);
+  transition: color 380ms var(--ease);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  display: flex; align-items: center;
+}
+.site-header.scrolled .wordmark { color: var(--brasa-black); }
+.wordmark-img { height: 140px; width: auto; display: block; transition: height 380ms var(--ease), filter 380ms var(--ease); filter: drop-shadow(0 4px 18px rgba(0,0,0,0.25)); }
+.site-header.scrolled .wordmark-img { height: 56px; filter: none; }
+.nav { display: flex; gap: 2.25rem; align-items: center; }
+.nav a {
+  font-family: var(--sans); font-size: 0.82rem; font-weight: 500;
+  letter-spacing: 0.04em; color: var(--brasa-cream);
+  position: relative; padding: 0.25rem 0;
+  transition: color 380ms var(--ease);
+}
+.site-header.scrolled .nav a { color: var(--brasa-black); }
+.nav a::after { content: ''; position: absolute; bottom: -2px; left: 0; height: 1px; width: 0; background: currentColor; transition: width 360ms var(--ease); }
+.nav a:hover::after { width: 100%; }
+.nav-search {
+  background: transparent; display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%;
+  color: var(--brasa-cream);
+  transition: color 380ms var(--ease), background 280ms var(--ease);
+}
+.site-header.scrolled .nav-search { color: var(--brasa-black); }
+.nav-search:hover { background: rgba(140, 58, 31, 0.12); }
+@media (max-width: 720px) {
+  .nav { gap: 1.25rem; }
+  .nav a:not(.nav-search) { display: none; }
+  .nav a.nav-catalog { display: inline-block; }
+  .wordmark-img { height: 84px; }
+  .site-header.scrolled .wordmark-img { height: 44px; }
+}
+
+/* HERO */
+.hero {
+  position: relative; width: 100%;
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: flex-end;
+  overflow: hidden; background: var(--brasa-black);
+}
+.hero-photo { position: absolute; inset: 0; z-index: 1; overflow: hidden; }
+.hero-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(27,26,23,0.3) 0%, rgba(27,26,23,0) 28%, rgba(27,26,23,0) 50%, rgba(27,26,23,0.55) 100%);
+  z-index: 2;
+}
+.hero-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  animation: heroBreathe 28s var(--ease-photo) infinite alternate;
+  filter: saturate(0.95) contrast(1.02);
+}
+@keyframes heroBreathe {
+  0%   { transform: scale(1.0)  translateX(0); }
+  100% { transform: scale(1.08) translateX(-1.5%); }
+}
+.hero-content { position: relative; z-index: 3; width: 100%; padding: 0 var(--gutter) clamp(3rem, 8vh, 5.5rem); color: var(--brasa-cream); }
+.hero-identity {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(2.75rem, 8vw, 6.75rem);
+  line-height: 0.96; letter-spacing: -0.025em;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+  max-width: 18ch; margin-bottom: 1.5rem;
+  opacity: 0; transform: translateY(28px);
+  animation: heroReveal 1.6s 0.4s var(--ease) forwards;
+}
+.hero-tag {
+  font-family: var(--sans); font-weight: 400;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  letter-spacing: 0.04em;
+  color: rgba(245, 240, 229, 0.82);
+  max-width: 52ch;
+  opacity: 0; transform: translateY(20px);
+  animation: heroReveal 1.6s 0.85s var(--ease) forwards;
+}
+@keyframes heroReveal { to { opacity: 1; transform: translateY(0); } }
+.hero-scroll {
+  position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 3;
+  font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.6);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  opacity: 0; animation: heroReveal 1.6s 1.4s var(--ease) forwards;
+}
+.hero-scroll::after {
+  content: ''; width: 1px; height: 36px;
+  background: linear-gradient(to bottom, rgba(245,240,229,0.7), rgba(245,240,229,0));
+  animation: scrollPulse 2.4s var(--ease) infinite;
+}
+@keyframes scrollPulse {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* SECTION + REVEAL */
+.section { padding-top: clamp(4rem, 10vh, 8rem); padding-bottom: clamp(4rem, 10vh, 8rem); }
+.section--tight { padding-top: clamp(3rem, 6vh, 5rem); padding-bottom: clamp(3rem, 6vh, 5rem); }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .hero-identity, .hero-tag, .hero-scroll { opacity: 1; transform: none; animation: none; }
+  .hero-photo img { animation: none; }
+  * { transition-duration: 0.001ms !important; }
+}
+
+/* FOUR PILLARS */
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(0.75rem, 1.5vw, 1.25rem); }
+@media (max-width: 720px) { .pillars { grid-template-columns: 1fr; } }
+.pillar {
+  position: relative; display: flex; flex-direction: column;
+  aspect-ratio: 4 / 3; overflow: hidden;
+  background: var(--brasa-black); isolation: isolate;
+}
+.pillar-photo { position: absolute; inset: 0; z-index: 1; }
+.pillar-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(27,26,23,0.05) 0%, rgba(27,26,23,0.0) 35%, rgba(27,26,23,0.65) 100%);
+  z-index: 2; transition: background 700ms var(--ease);
+}
+.pillar:hover .pillar-photo::after { background: linear-gradient(180deg, rgba(27,26,23,0.15) 0%, rgba(27,26,23,0.05) 35%, rgba(27,26,23,0.78) 100%); }
+.pillar-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1500ms var(--ease-photo); filter: saturate(0.93) contrast(1.02); }
+.pillar:hover .pillar-photo img { transform: scale(1.06); }
+.pillar-content {
+  position: relative; z-index: 3; align-self: end; width: 100%;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex; align-items: flex-end; margin-top: auto;
+  color: var(--brasa-cream);
+}
+.pillar-eyebrow {
+  font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.7);
+  margin-bottom: 0.5rem; display: block;
+}
+.pillar-label {
+  font-family: var(--serif); font-weight: 350;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.05; letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  margin-bottom: 0.5rem;
+}
+.pillar-arrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.85);
+  transform: translateX(0);
+  transition: transform 480ms var(--ease), color 280ms;
+}
+.pillar:hover .pillar-arrow { transform: translateX(8px); color: var(--brasa-cream); }
+
+/* SUBJECTS GRID (21 tiles · BRASA "rights" pattern) */
+.rights-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.75rem; }
+.right-tile {
+  position: relative; display: block; aspect-ratio: 1 / 1;
+  overflow: hidden; background: var(--brasa-callout); isolation: isolate;
+}
+.right-tile-primary { position: absolute; inset: 0; z-index: 1; display: block; }
+.right-photo { position: absolute; inset: 0; z-index: 1; }
+.right-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(27,26,23,0) 50%, rgba(27,26,23,0.7) 100%); z-index: 2; }
+.right-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1500ms var(--ease-photo); filter: saturate(0.92) contrast(1.03); }
+.right-tile:hover .right-photo img { transform: scale(1.07); }
+.right-label {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 3;
+  padding: 1rem; color: var(--brasa-cream);
+  font-family: var(--serif); font-weight: 400;
+  font-size: 1.05rem; letter-spacing: -0.005em;
+  line-height: 1.1; font-variation-settings: "opsz" 36, "SOFT" 40;
+}
+
+/* FEATURED COLLECTIONS */
+.featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.75rem, 1.5vw, 1.25rem); }
+@media (max-width: 960px) { .featured-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .featured-grid { grid-template-columns: 1fr; } }
+.feature { position: relative; display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--brasa-black); }
+.feature-photo { position: absolute; inset: 0; z-index: 1; }
+.feature-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(27,26,23,0) 35%, rgba(27,26,23,0.7) 100%); z-index: 2; }
+.feature-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1500ms var(--ease-photo); filter: saturate(0.92) contrast(1.02); }
+.feature:hover .feature-photo img { transform: scale(1.05); }
+.feature-content { position: absolute; bottom: 0; left: 0; z-index: 3; padding: clamp(1.25rem, 2.5vw, 1.75rem); color: var(--brasa-cream); }
+.feature-eyebrow {
+  font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.78);
+  margin-bottom: 0.4rem; display: block;
+}
+.feature-label {
+  font-family: var(--serif); font-weight: 350;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  line-height: 1.1; letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 72, "SOFT" 50;
+}
+
+/* Status badge — sits top-right of a feature tile, signals provider tier */
+.feature-badge {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  z-index: 4;
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(245, 240, 229, 0.95);
+  color: var(--brasa-black);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.feature-badge.free     { color: var(--brasa-green); }
+.feature-badge.freemium { color: var(--brasa-accent); }
+.feature-badge.native   { color: var(--brasa-accent); background: var(--brasa-cream); }
+
+
+/* SIGNALS */
+.signals {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(0.5rem, 1vw, 1rem);
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-top: 1px solid var(--brasa-rule);
+  border-bottom: 1px solid var(--brasa-rule);
+}
+@media (max-width: 880px) { .signals { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } }
+@media (max-width: 480px) { .signals { grid-template-columns: 1fr; } }
+.signal { text-align: left; padding: 0.5rem 0.75rem 0.5rem 0; }
+.signal-num {
+  font-family: var(--serif); font-weight: 350;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  line-height: 1; color: var(--brasa-accent);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  margin-bottom: 0.4rem; letter-spacing: -0.02em;
+  font-feature-settings: "lnum";
+}
+.signal-label { font-family: var(--sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; line-height: 1.35; color: var(--brasa-soft); }
+
+/* GATEWAY */
+.gateway {
+  position: relative; display: block; width: 100%;
+  aspect-ratio: 21 / 9; min-height: 320px;
+  overflow: hidden; background: var(--brasa-black); isolation: isolate;
+}
+@media (max-width: 720px) { .gateway { aspect-ratio: 4 / 5; } }
+.gateway-photo { position: absolute; inset: 0; z-index: 1; }
+.gateway-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(27,26,23,0.5) 0%, rgba(27,26,23,0.55) 100%);
+  z-index: 2; transition: background 700ms var(--ease);
+}
+.gateway:hover .gateway-photo::after { background: linear-gradient(180deg, rgba(27,26,23,0.4) 0%, rgba(27,26,23,0.45) 100%); }
+.gateway-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1800ms var(--ease-photo); filter: saturate(0.85) contrast(1.05); }
+.gateway:hover .gateway-photo img { transform: scale(1.04); }
+.gateway-content {
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 2rem;
+  color: var(--brasa-cream);
+}
+.gateway-eyebrow {
+  font-family: var(--sans); font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.75);
+  margin-bottom: 1rem;
+}
+.gateway-h {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  line-height: 1; letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 1;
+  margin-bottom: 1.5rem; max-width: 18ch;
+}
+.gateway-arrow {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid rgba(245, 240, 229, 0.4);
+  border-radius: 999px;
+  transition: background 380ms var(--ease), border-color 380ms;
+}
+.gateway:hover .gateway-arrow { background: rgba(245, 240, 229, 0.1); border-color: rgba(245, 240, 229, 0.7); }
+
+/* WELCOME */
+.welcome { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+@media (max-width: 820px) { .welcome { grid-template-columns: 1fr; } }
+.welcome-photo { aspect-ratio: 4 / 5; overflow: hidden; background: var(--brasa-callout); }
+.welcome-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92); }
+.welcome-text {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.18; letter-spacing: -0.012em;
+  color: var(--brasa-black);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  max-width: 24ch;
+}
+.welcome-text em { font-style: italic; color: var(--brasa-accent); font-variation-settings: "opsz" 144, "SOFT" 80, "WONK" 1; }
+.welcome-sig {
+  margin-top: 1.75rem;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brasa-soft);
+}
+
+/* FOOTER */
+.site-footer { background: var(--brasa-black); color: var(--brasa-cream); padding: clamp(3rem, 7vh, 5rem) var(--gutter) 2rem; margin-top: 0; }
+.footer-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: end; }
+@media (max-width: 720px) { .footer-inner { grid-template-columns: 1fr; } }
+.footer-mark { font-family: var(--serif); font-weight: 300; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.05; letter-spacing: -0.015em; font-variation-settings: "opsz" 144, "SOFT" 50; margin-bottom: 0.75rem; }
+.footer-mark-img { height: 220px; width: auto; display: block; margin-bottom: 0.75rem; }
+.footer-tagline { font-family: var(--sans); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.04em; color: rgba(245, 240, 229, 0.65); max-width: 48ch; line-height: 1.6; }
+.footer-links { display: flex; flex-direction: column; gap: 0.65rem; font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; text-align: right; }
+@media (max-width: 720px) { .footer-links { text-align: left; flex-direction: row; flex-wrap: wrap; gap: 1rem 1.5rem; } }
+.footer-links a { color: rgba(245, 240, 229, 0.78); transition: color 280ms var(--ease); position: relative; }
+.footer-links a:hover { color: var(--brasa-cream); }
+.footer-bottom { max-width: var(--max-w); margin: 3rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(245, 240, 229, 0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.06em; color: rgba(245, 240, 229, 0.4); }
+
+/* SEARCH OVERLAY */
+.search-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(27, 26, 23, 0.96);
+  backdrop-filter: blur(20px);
+  opacity: 0; pointer-events: none;
+  transition: opacity 380ms var(--ease);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 6rem var(--gutter) 2rem;
+}
+.search-overlay.is-open { opacity: 1; pointer-events: auto; }
+.search-inner { width: 100%; max-width: 640px; }
+.search-input {
+  width: 100%; background: transparent; border: 0;
+  border-bottom: 1px solid rgba(245, 240, 229, 0.3);
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--brasa-cream);
+  padding: 1rem 0; outline: none;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+.search-input::placeholder { color: rgba(245, 240, 229, 0.4); }
+.search-hint { margin-top: 1.5rem; font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; color: rgba(245, 240, 229, 0.5); }
+.search-close { position: absolute; top: 1.5rem; right: var(--gutter); color: rgba(245, 240, 229, 0.6); font-family: var(--sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; transition: color 280ms; }
+.search-close:hover { color: var(--brasa-cream); }
+
+/* ACCESSIBILITY */
+:focus-visible { outline: 2px solid var(--brasa-accent); outline-offset: 3px; }
+.site-header .nav a:focus-visible,
+.pillar:focus-visible,
+.right-tile-primary:focus-visible,
+.feature:focus-visible,
+.gateway:focus-visible { outline-offset: -3px; }
+
+/* Featured-band wrappers — each grid has its own eyebrow header */
+.featured-band { margin-bottom: clamp(2.5rem, 5vh, 4rem); }
+.featured-band:last-child { margin-bottom: 0; }
+
+.band-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brasa-accent);
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--brasa-rule);
+}
+
+.featured-band .featured-grid { margin-top: 0; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <a href="#" class="wordmark" aria-label="BRASA CR — Education, World Wide">
+    <img src="https://assets.brasa.world/Photos/brasa-cr-logo_8.png" class="wordmark-img" alt="BRASA CR">
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#subjects" class="nav-subjects">Subjects</a>
+    <a href="#featured" class="nav-featured">Featured</a>
+    <a href="#full-catalog" class="nav-catalog">Catalog</a>
+    <button class="nav-search" id="searchToggle" aria-label="Open search">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="8" cy="8" r="5.5"/>
+        <path d="M12.2 12.2L16 16"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-identity">
+  <div class="hero-photo">
+    <img src="https://images.brasa.world/Photos/vecteezy_3d-model-of-the-earth-with-human-silhouettes_27381136.jpg?w=2400&q=82"
+         alt="The Earth and the citizens of the world standing before it at sunset"
+         loading="eager" fetchpriority="high"
+         width="2400" height="1350">
+  </div>
+  <div class="hero-content container">
+    <h1 class="hero-identity" id="hero-identity">Education, World Wide</h1>
+    <p class="hero-tag">BRASA CR · Free education for the citizens of the world. Every school. Every level. In every language.</p>
+  </div>
+  <a href="#pillars" class="hero-scroll" aria-label="Scroll to explore">Explore</a>
+</section>
+
+<!-- FOUR PILLARS · Education · Government · Business · BRASA (constitutional) -->
+<section class="section" id="pillars" aria-labelledby="pillars-h">
+  <div class="container">
+    <h2 class="visually-hidden" id="pillars-h">The four pillars</h2>
+    <div class="pillars reveal">
+
+      <a href="https://brasa.education/" class="pillar">
+        <div class="pillar-photo">
+          <img data-photo-slug="pillar-education"
+               src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&q=82&auto=format&fit=crop"
+               alt="A student reading by warm lamplight"
+               loading="lazy" width="1200" height="900">
+        </div>
+        <div class="pillar-content">
+          <div>
+            <span class="pillar-eyebrow">Your</span>
+            <div class="pillar-label">Education</div>
+            <span class="pillar-arrow">Enter →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://brasagovernment.net/" class="pillar">
+        <div class="pillar-photo">
+          <img data-photo-slug="pillar-government"
+               src="https://images.unsplash.com/photo-1577017040065-650ee4d43339?w=1200&q=82&auto=format&fit=crop"
+               alt="Law books, gavel, and scales symbolizing justice"
+               loading="lazy" width="1200" height="900">
+        </div>
+        <div class="pillar-content">
+          <div>
+            <span class="pillar-eyebrow">Your</span>
+            <div class="pillar-label">Government</div>
+            <span class="pillar-arrow">Enter →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://brasa.business/" class="pillar">
+        <div class="pillar-photo">
+          <img data-photo-slug="pillar-business"
+               src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=82&auto=format&fit=crop"
+               alt="People standing together as a team"
+               loading="lazy" width="1200" height="900">
+        </div>
+        <div class="pillar-content">
+          <div>
+            <span class="pillar-eyebrow">Your</span>
+            <div class="pillar-label">Business</div>
+            <span class="pillar-arrow">Enter →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://brasa.world/" class="pillar">
+        <div class="pillar-photo">
+          <img data-photo-slug="pillar-brasa"
+               src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=82&auto=format&fit=crop"
+               alt="Embers — the slow burn of constitutional fire"
+               loading="lazy" width="1200" height="900">
+        </div>
+        <div class="pillar-content">
+          <div>
+            <span class="pillar-eyebrow">Your</span>
+            <div class="pillar-label">BRASA</div>
+            <span class="pillar-arrow">Enter →</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- 21 SUBJECTS -->
+<section class="section" id="subjects" aria-labelledby="subjects-h">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">The Curriculum · Routed through Class Central</p>
+      <h2 class="section-h" id="subjects-h">Twenty-five fields. One curriculum.</h2>
+    </div>
+
+    <div class="reveal">
+      <div class="rights-grid">
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/mathematics" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-mathematics" src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Mathematics</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/physics" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-physics" src="https://images.unsplash.com/photo-1516331138075-f3adc1e149cd?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Physics</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/chemistry" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-chemistry" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Chemistry</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/biology" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-biology" src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Biology</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/astronomy" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-astronomy" src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Astronomy</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/environmental-science" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-earth-science" src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Earth Science</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/cs" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-computer-science" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Computer Science</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/engineering" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-engineering" src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Engineering</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/health-and-medicine" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-medicine" src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Medicine</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/economics" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-economics" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Economics</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/history" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-history" src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">History</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/literature" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-literature" src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Literature</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/philosophy" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-philosophy" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Philosophy</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/art-design" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-art" src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Art</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/music" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-music" src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Music</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/languages-culture" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-languages" src="https://images.unsplash.com/photo-1456513080867-f24f76ced9b8?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Languages</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/environmental-science" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-geography" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Geography</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/psychology" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-psychology" src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Psychology</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/law" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-civics-and-law" src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Civics &amp; Law</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/business" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-business" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Business</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/personal-development" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-life-skills" src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Life Skills</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/programming" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-programming" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Programming</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/data-science" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-data-science" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Data Science</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/artificial-intelligence" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-artificial-intelligence" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Artificial Intelligence</div></a></div>
+        <div class="right-tile"><a href="https://www.classcentral.com/subject/education-teaching" class="right-tile-primary" target="_blank" rel="noopener"><div class="right-photo"><img data-photo-slug="subject-education-teaching" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy" width="400" height="400"></div><div class="right-label">Education & Teaching</div></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED COLLECTIONS -->
+<section class="section" id="featured" aria-labelledby="featured-h">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">Indexed through Class Central · Every subject, every level, every provider</p>
+      <h2 class="section-h" id="featured-h">Where to begin.</h2>
+    </div>
+
+
+    <div class="featured-band reveal">
+      <p class="band-eyebrow">Best of all time · 3 tiles</p>
+      <div class="featured-grid">
+      <a href="https://www.classcentral.com/collection/top-free-online-courses" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-best-all-time" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Best Free Courses of All Time" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · All-time top</span>
+          <div class="feature-label">250+ top free courses, ranked by reviews.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/collection/free-certificates" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-free-certs" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Free Certificates" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Credentials</span>
+          <div class="feature-label">13,000+ courses with free certificates.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/collection/top-online-courses" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-top-250" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Top Online Courses Overall" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Top 250</span>
+          <div class="feature-label">The reviewer-ranked top of every subject.</div>
+        </div>
+      </a>
+
+      </div>
+    </div>
+
+    <div class="featured-band reveal">
+      <p class="band-eyebrow">Languages · CR priority · 2 tiles</p>
+      <div class="featured-grid">
+      <a href="https://www.classcentral.com/collection/free-certificates?lang=spanish" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-lang-spanish" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Cursos en Español" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Idioma</span>
+          <div class="feature-label">839+ Spanish-language courses with free certificates.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/collection/free-certificates?lang=portuguese" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-lang-portuguese" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Cursos em Português" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Idioma</span>
+          <div class="feature-label">787+ Portuguese-language courses, all free.</div>
+        </div>
+      </a>
+
+      </div>
+    </div>
+
+    <div class="featured-band reveal">
+      <p class="band-eyebrow">Marquee institutions · 5 tiles</p>
+      <div class="featured-grid">
+      <a href="https://www.classcentral.com/institution/khan-academy" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-inst-khan" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Khan Academy" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Institution</span>
+          <div class="feature-label">100+ Khan Academy courses indexed and rated.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/institution/mit-opencourseware" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-inst-mit" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="MIT OpenCourseWare" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Institution</span>
+          <div class="feature-label">2,500+ MIT courses, free, full materials.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/institution/harvard" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-inst-harvard" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Harvard University" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Institution</span>
+          <div class="feature-label">CS50, Justice, public health. Free audit.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/institution/stanford" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-inst-stanford" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Stanford University" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Institution</span>
+          <div class="feature-label">Andrew Ng's Machine Learning. CS231n. CS229.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/institution/yale" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-inst-yale" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=82&auto=format&fit=crop"
+               alt="Yale University" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Institution</span>
+          <div class="feature-label">Open Yale Courses. Humanities and social science.</div>
+        </div>
+      </a>
+
+      </div>
+    </div>
+
+    <div class="featured-band reveal">
+      <p class="band-eyebrow">BRASA Native · Layer B · 6 tiles</p>
+      <div class="featured-grid">
+      <a href="#native-indigenous-languages" class="feature">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-native-indigenous" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&q=82&auto=format&fit=crop"
+               alt="CR Indigenous Languages" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">BRASA Native · Layer B</span>
+          <div class="feature-label">Bribri, Cabécar, Maleku and five more.</div>
+        </div>
+      </a>
+      <a href="#native-cr-civic" class="feature">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-native-civic" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&q=82&auto=format&fit=crop"
+               alt="CR Civic Education" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">BRASA Native · Layer B</span>
+          <div class="feature-label">Constitutional rights. Trámites. CCSS.</div>
+        </div>
+      </a>
+      <a href="#native-sinpe" class="feature">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-native-sinpe" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&q=82&auto=format&fit=crop"
+               alt="SINPE & Payments" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">BRASA Native · Layer B</span>
+          <div class="feature-label">Infrastructure literacy. Scam recognition.</div>
+        </div>
+      </a>
+      <a href="#native-ortiz-naranjo" class="feature">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-native-ortiz" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&q=82&auto=format&fit=crop"
+               alt="Ortiz-Naranjo Field Theory" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">BRASA Native · Layer B</span>
+          <div class="feature-label">BRASA-original. One formula, ten applications.</div>
+        </div>
+      </a>
+      <a href="#native-brasa-operations" class="feature">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-native-ops" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&q=82&auto=format&fit=crop"
+               alt="BRASA Platform Operations" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">BRASA Native · Layer B</span>
+          <div class="feature-label">The operating manual for being a citizen.</div>
+        </div>
+      </a>
+      <a href="#native-cr-cultural" class="feature">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-native-cultural" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&q=82&auto=format&fit=crop"
+               alt="CR Cultural Bridges" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">BRASA Native · Layer B</span>
+          <div class="feature-label">Ecology. Geography. History. Culture.</div>
+        </div>
+      </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SIGNALS -->
+<section class="section section--tight" id="catalog" aria-labelledby="signals-h">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">The shape of the catalog</p>
+      <h2 class="section-h" id="signals-h" style="margin-bottom: 3rem;">Open, in public.</h2>
+
+      <div class="signals">
+        <div class="signal">
+          <div class="signal-num">250,000+</div>
+          <div class="signal-label">Courses. From Khan foundations to MIT graduate seminars.</div>
+        </div>
+        <div class="signal">
+          <div class="signal-num">1,000+</div>
+          <div class="signal-label">Institutions. Khan, MIT, Harvard, Stanford, Yale, and more.</div>
+        </div>
+        <div class="signal">
+          <div class="signal-num">12,000+</div>
+          <div class="signal-label">Subjects. Every level, every field.</div>
+        </div>
+        <div class="signal">
+          <div class="signal-num">7,100+</div>
+          <div class="signal-label">Languages. Every citizen, in their own.</div>
+        </div>
+        <div class="signal">
+          <div class="signal-num">$0</div>
+          <div class="signal-label">Cost. Constitutional, not commercial.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GATEWAY -->
+<section class="section" id="full-catalog" aria-labelledby="gateway-h">
+  <div class="container">
+    <a href="#catalog-all" class="gateway reveal" aria-labelledby="gateway-h">
+      <div class="gateway-photo">
+        <img data-photo-slug="gateway-main"
+             src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=2200&q=82&auto=format&fit=crop"
+             alt="An open library — every shelf, every language"
+             loading="lazy" width="2200" height="943">
+      </div>
+      <div class="gateway-content">
+        <span class="gateway-eyebrow">The full curriculum</span>
+        <h2 class="gateway-h" id="gateway-h">Open the catalog.</h2>
+        <span class="gateway-arrow">
+          Enter every course
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="section" id="welcome" aria-labelledby="welcome-h">
+  <div class="container">
+    <div class="welcome reveal">
+      <div class="welcome-photo">
+        <img data-photo-slug="welcome-main"
+             src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=900&q=85&auto=format&fit=crop"
+             alt="A bridge in the Costa Rican rainforest — every learner has a path"
+             loading="lazy" width="900" height="1125">
+      </div>
+      <div>
+        <p class="welcome-text" id="welcome-h">
+          Welcome to Education, World Wide. <em>Every school, every level, every learner</em> — in their own language, at no cost, for the rest of time.
+        </p>
+        <div class="welcome-sig">BRASA CR · Costa Rica · 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <img src="https://assets.brasa.world/Photos/brasa-cr-logo_8.png" class="footer-mark-img" alt="BRASA CR">
+      <p class="footer-tagline">Education, World Wide. BRASA CR · Free education for the citizens of the world. Every school, every level, every learner — funded by commerce, protected by Swiss sovereignty.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#subjects">Subjects</a>
+      <a href="#featured">Featured</a>
+      <a href="#full-catalog">Catalog</a>
+      <a href="https://brasa.world" target="_blank" rel="noopener">brasa.world</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© BRASA CR · 2026 · Education, World Wide</span>
+    <span>Made with care in Costa Rica</span>
+  </div>
+</footer>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search BRASA Education">
+  <button class="search-close" id="searchClose" aria-label="Close search">Close ✕</button>
+  <div class="search-inner">
+    <input type="search" class="search-input" id="searchInput" placeholder="Search the curriculum…" autocomplete="off">
+    <p class="search-hint">Try: <em>Calculus</em> · <em>Black holes</em> · <em>Five Great Lessons</em> · <em>Khan</em></p>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────
+// PHOTO REGISTRY — slug → R2 filename lookup
+// Mirrors the architecture used in brasa.world. The brasa-images Worker
+// fetches from R2 (assets.brasa.world/Photos/), transforms (resize,
+// compress, WebP/AVIF auto-negotiation, EXIF strip), and caches at edge.
+// One source → infinite variants. Append ?w=...&q=...&fit=... per slug.
+// ─────────────────────────────────────────────────────────────────────
+const R2_BASE = 'https://images.brasa.world/Photos/';
+
+// Filenames in R2, keyed by slug. null = no R2 photo yet → placeholder stays.
+const photoFiles = {
+  // Hero — 2400px wide, q82, auto-format (WebP/AVIF in modern browsers)
+  'hero-main': 'vecteezy_3d-model-of-the-earth-with-human-silhouettes_27381136.jpg?w=2400&q=82',
+
+  // Pillars (2×2) — 1200×900 display, request 1200px wide, q82.
+  // Same filenames brasa.world uses — these four pillars are constitutional.
+  'pillar-education':  'vecteezy_a-yellow-backpack-sits-on-a-wooden-table-in-front-of-a-large_49646937.jpg?w=1200&q=82',
+  'pillar-government': 'vecteezy_ai-generated-law-books-gavel-and-scales-symbolizing-justice_35305456.jpg?w=1200&q=82',
+  'pillar-business':   'vecteezy_united-silhouettes-businesspeople-illustrate-teamwork_29367492.jpg?w=1200&q=82',
+  'pillar-brasa':      'embers3.jpg?w=1200&q=82',
+
+  // 21 Subjects — 400×400, q80. null = placeholder. Fill in as photos land in R2.
+  'subject-mathematics':     'vecteezy_a-blackboard-with-many-formulas-written-on-it_51266418.jpg?w=400&q=80',
+  'subject-physics':         'vecteezy_structure-of-an-atom-protons-neutrons-electrons-and_31404152.jpg?w=400&q=80',
+  'subject-chemistry':       'vecteezy_innovative-chemistry-futuristic-lab-with-digital-molecular_65710474.jpg?w=400&q=80',
+  'subject-biology':         'vecteezy_bacteria-and-virus-cells-world-under-the-microscope-created_22334512.jpg?w=400&q=80',
+  'subject-astronomy':       'vecteezy_space-background-cosmic-enigma-capturing-the-mysteries-of_24531051.jpg?w=400&q=80',
+  'subject-earth-science':   'vecteezy_a-rock-formation-at-sunset-with-a-red-sky_70985091.jpg?w=400&q=80',
+  'subject-computer-science': 'vecteezy_ai-circuit-board-technology-background-central-computer_22408402.jpg?w=400&q=80',
+  'subject-engineering':     'vecteezy_an-engineer-analyzing-a-3d-model-of-a-futuristic-car-design_71610334.jpeg?w=400&q=80',
+  'subject-medicine':        'vecteezy_double-exposure-of-doctor-working-with-modern-virtual-screen_10818885.jpg?w=400&q=80',
+  'subject-economics':       'vecteezy_illustration-of-forex-charts-and-diagrams-for-stock-market_2883751.jpg?w=400&q=80',
+  'subject-history':         'vecteezy_illuminating-the-past-antique-books-quill-pen-and-candles_56525173.jpeg?w=400&q=80',
+  'subject-literature':      'vecteezy_ai-generated-library-with-many-colorful-books-in-front-of_36796338.jpeg?w=400&q=80',
+  'subject-philosophy':      'vecteezy_ai-generated-generative-ai-stoicism-concept-sculpture-of-a_35165600.jpg?w=400&q=80',
+  'subject-art':             'vecteezy_photo-realistic-illustration-of-human-eye-oil-draw_24795317.jpg?w=400&q=80',
+  'subject-music':           'vecteezy_musical-notes-from-an-ancient-book-of-songs-on-open-book_30588491.jpg?w=400&q=80',
+  'subject-languages':       'vecteezy_children-reading-books-around-a-world-map-promoting-education_65781137.jpg?w=400&q=80',
+  'subject-geography':       'vecteezy_compass-on-the-old-map-of-the-world-vintage-style-magnetic_33863212.jpg?w=400&q=80',
+  'subject-psychology':      'vecteezy_book-and-brain-modern-idea-and-concept-illustration_22602806.jpg?w=400&q=80',
+  'subject-civics-and-law':  'vecteezy_a-close-up-view-of-the-lady-justice-statue-holding-scales_51343425.jpg?w=400&q=80',
+  'subject-business':        'vecteezy_business-office-with-blurred-people-casual-wear-with_53635183.jpg?w=400&q=80',
+  'subject-life-skills':     'vecteezy_ai-generated-the-laundry-room-has-hanging-in-a-basket_35716630.jpg?w=400&q=80',
+  'subject-programming': 'vecteezy_html-code-on-a-computer-monitor-software-and-web-developer_12830353.jpg?w=400&q=80',
+  'subject-data-science': 'vecteezy_holographic-data-streams-with-vibrant-pixel-lines-at-night_71869615.jpeg?w=400&q=80',
+  'subject-artificial-intelligence': 'vecteezy_ai-generated-cyberpunk-glowing-green-ai-circuit-board_38564651.jpg?w=400&q=80',
+  'subject-education-teaching': 'vecteezy_abstract-collage-of-education-and-intelligence-wallpaper_21773920.jpg?w=400&q=80',
+
+  // 83 Curated Tiles — Class Central taxonomy + BRASA Native. 900×600, q82.
+  // null = R2 file pending. Photos can reuse one R2 file per band group.
+  //   best-of
+  'feature-best-all-time': null,
+  'feature-free-certs': null,
+  'feature-top-250': null,
+  //   languages
+  'feature-lang-spanish': null,
+  'feature-lang-portuguese': null,
+  //   institutions
+  'feature-inst-khan': null,
+  'feature-inst-mit': null,
+  'feature-inst-harvard': null,
+  'feature-inst-stanford': null,
+  'feature-inst-yale': null,
+  //   native
+  'feature-native-indigenous': null,
+  'feature-native-civic': null,
+  'feature-native-sinpe': null,
+  'feature-native-ortiz': null,
+  'feature-native-ops': null,
+  'feature-native-cultural': null,
+
+  // Gateway banner — 2200px wide, q82
+  'gateway-main':            null,
+
+  // Welcome moment — 900px wide, q85
+  'welcome-main':            'vecteezy_bridge-in-rainforest-costa-rica_45759619.jpg?w=900&q=85',
+};
+
+// Resolve slug → full R2 URL, or null when no file is registered yet.
+const photoMap = Object.fromEntries(
+  Object.entries(photoFiles).map(([slug, file]) => [slug, file ? R2_BASE + file : null])
+);
+
+// Apply photos to any element with [data-photo-slug] (img.src or background-image).
+// Direct, browser-native fallback: on error, the placeholder src remains visible.
+function applyPhotos() {
+  document.querySelectorAll('[data-photo-slug]').forEach(el => {
+    const slug = el.getAttribute('data-photo-slug');
+    const url = photoMap[slug];
+    if (!url) return;
+    if (el.tagName === 'IMG') {
+      const placeholder = el.src;
+      el.addEventListener('error', () => {
+        console.warn(`[photoMap] R2 load failed for "${slug}" → ${url}. Reverting to placeholder.`);
+        if (el.src !== placeholder) el.src = placeholder;
+      }, { once: true });
+      el.addEventListener('load', () => {
+        console.log(`[photoMap] loaded "${slug}" from R2`);
+      }, { once: true });
+      el.src = url;
+    } else {
+      const probe = new Image();
+      probe.onload = () => { el.style.backgroundImage = `url('${url}')`; };
+      probe.onerror = () => { console.warn(`[photoMap] R2 load failed for "${slug}" → ${url}`); };
+      probe.src = url;
+    }
+  });
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', applyPhotos);
+} else {
+  applyPhotos();
+}
+
+const header = document.getElementById('header');
+const onScroll = () => {
+  if (window.scrollY > 40) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+revealEls.forEach((el) => io.observe(el));
+
+const overlay = document.getElementById('searchOverlay');
+const toggle = document.getElementById('searchToggle');
+const close = document.getElementById('searchClose');
+const input = document.getElementById('searchInput');
+
+const openSearch = () => { overlay.classList.add('is-open'); setTimeout(() => input.focus(), 100); };
+const closeSearch = () => { overlay.classList.remove('is-open'); input.value = ''; };
+toggle.addEventListener('click', openSearch);
+close.addEventListener('click', closeSearch);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeSearch();
+  if ((e.key === '/' || (e.metaKey && e.key === 'k')) && !overlay.classList.contains('is-open')) {
+    e.preventDefault();
+    openSearch();
+  }
+});
+overlay.addEventListener('click', (e) => { if (e.target === overlay) closeSearch(); });
+</script>
+</body>
+</html>
