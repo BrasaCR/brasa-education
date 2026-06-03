@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRASA Lesson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#F0EBDE;--ink:#1B1A17;--soft:#6B6658;--accent:#8C3A1F;--line:#D9D2C4;--serif:'Fraunces',Georgia,serif;--sans:'Geist',system-ui,sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}
+  header.bar{position:sticky;top:0;z-index:10;background:rgba(240,235,222,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar-row{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;max-width:760px;margin:0 auto;padding-left:clamp(1.25rem,5vw,2.5rem);padding-right:clamp(1.25rem,5vw,2.5rem)}
+  .mark{font-family:var(--serif);font-weight:600;font-size:1.3rem;color:var(--accent)}
+  .back{font-family:var(--sans);font-size:.85rem;font-weight:500;color:var(--soft);text-decoration:none;cursor:pointer;background:none;border:0}
+  .back:hover{color:var(--ink)}
+  .lead{padding:clamp(2.25rem,6vw,3.5rem) 0 1rem}
+  .eyebrow{font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-bottom:.75rem}
+  h1.title{font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;letter-spacing:-.01em;color:var(--ink)}
+  .lesson-body{padding:1rem 0 5rem;font-size:1.05rem}
+  .lesson-body h1{font-family:var(--serif);font-weight:600;font-size:1.7rem;line-height:1.15;margin:2rem 0 .75rem;color:var(--ink)}
+  .lesson-body h2{font-family:var(--serif);font-weight:600;font-size:1.35rem;line-height:1.2;margin:1.8rem 0 .6rem;color:var(--ink)}
+  .lesson-body h3{font-family:var(--serif);font-weight:600;font-size:1.12rem;margin:1.5rem 0 .5rem;color:var(--ink)}
+  .lesson-body p{margin:0 0 1.05rem}
+  .lesson-body strong{font-weight:600;color:var(--ink)}
+  .lesson-body em{font-style:italic;color:var(--soft)}
+  .lesson-body ol,.lesson-body ul{margin:0 0 1.05rem;padding-left:1.4rem}
+  .lesson-body li{margin:0 0 .5rem}
+  .lesson-body a{text-decoration:underline}
+  .loading{color:var(--soft);font-style:italic}
+  footer{padding:2rem 0;border-top:1px solid var(--line);color:var(--soft);font-size:.8rem}
+</style>
+</head>
+<body>
+<header class="bar"><div class="bar-row">
+  <span class="mark">BRASA CR</span>
+  <button class="back" onclick="goBack()">\u2190 Back</button>
+</div></header>
+
+<div class="wrap">
+  <div class="lead">
+    <p class="eyebrow">BRASA Lesson</p>
+    <h1 class="title" id="title">Lesson</h1>
+  </div>
+  <div class="lesson-body" id="body"><p class="loading">Loading lesson\u2026</p></div>
+  <footer>A BRASA lesson, in the Montessori tradition \u00B7 served from assets.brasa.world</footer>
+</div>
+
+<script>
+function goBack(){ if(history.length>1){history.back();} else {location.href='index.html';} }
+
+function lessonMarkdownToHTML(md){
+  if(!md) return '';
+  let s = md.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  s = s.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  s = s.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  s = s.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+  s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  s = s.replace(/^(\d+)\. (.+)$/gm, '<li>$2</li>');
+  s = s.replace(/(<li>[\s\S]+?<\/li>)/g, '<ol>$1</ol>');
+  s = s.split(/\n\n+/).map(p => {
+    if (p.startsWith('<h') || p.startsWith('<ol') || p.startsWith('<li')) return p;
+    return '<p>' + p.replace(/\n/g, '<br>') + '</p>';
+  }).join('\n');
+  return s;
+}
+
+(async function(){
+  const params = new URLSearchParams(location.search);
+  const slug = params.get('slug') || '';
+  const t = params.get('t') || '';
+  const titleEl = document.getElementById('title');
+  const bodyEl = document.getElementById('body');
+  if(t){ titleEl.textContent = t; document.title = t + ' \u00B7 BRASA'; }
+  if(!slug){ bodyEl.innerHTML = '<p class="loading">No lesson specified.</p>'; return; }
+  const url = 'https://assets.brasa.world/Lessons/' + slug + '.md';
+  try{
+    const res = await fetch(url);
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    let md = await res.text();
+    // Drop a leading title line if it duplicates the course name
+    const lines = md.split('\n');
+    let i = 0; while(i < lines.length && lines[i].trim() === '') i++;
+    if(i < lines.length && t){
+      const first = lines[i].replace(/[*_#]/g,'').trim().toLowerCase();
+      const name = t.replace(/[*_#]/g,'').trim().toLowerCase();
+      if(first === name || first.indexOf(name) === 0 || name.indexOf(first) === 0){
+        md = lines.slice(i+1).join('\n');
+      }
+    }
+    bodyEl.innerHTML = lessonMarkdownToHTML(md);
+  }catch(err){
+    bodyEl.innerHTML = '<p class="loading">Couldn\u2019t load this lesson (' + (err.message||err) + ').<br>'
+      + '<small><a href="' + url + '" target="_blank" rel="noopener">Open the raw file</a></small></p>';
+  }
+})();
+</script>
+</body>
+</html>
