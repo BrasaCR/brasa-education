@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRASA CR — Career Certificates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1A17; --ink-soft:#6B6862; --ink-faint:#A19E97;
+  --accent:#8C3A1F; --hover:#6B280F; --page:#FBF9F4; --cream:#F5F2EB; --line:rgba(27,26,23,0.12);
+  --serif:'Fraunces','Times New Roman',serif; --sans:'Geist','Helvetica Neue',system-ui,sans-serif;
+  --max-w:1320px; --gutter:clamp(1.25rem,4vw,2.75rem);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 var(--gutter);}
+
+header.site{position:sticky;top:0;z-index:50;background:rgba(251,249,244,0.92);backdrop-filter:blur(10px);border-bottom:0.5px solid var(--line);}
+header.site .bar{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem;}
+.brand{display:flex;align-items:center;gap:0.7rem;}
+.brand img{width:38px;height:38px;border-radius:8px;}
+.brand .wm{font-family:var(--serif);font-weight:500;font-size:1.4rem;letter-spacing:0.01em;color:var(--accent);}
+nav.surfaces{display:flex;gap:1.6rem;}
+nav.surfaces a{font-size:0.9rem;color:var(--ink-soft);}
+nav.surfaces a:hover{color:var(--accent);}
+@media(max-width:720px){nav.surfaces{display:none;}}
+
+.hero{padding:clamp(3rem,7vw,5rem) 0 clamp(1.5rem,3vw,2.5rem);}
+.back-link{display:inline-block;font-size:14px;color:var(--ink-soft);margin-bottom:1.5rem;transition:color .18s ease,transform .18s ease;}
+.back-link:hover{color:var(--accent);transform:translateX(-3px);}
+.hero-eyebrow{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.4rem,6vw,4.4rem);line-height:0.98;letter-spacing:-0.025em;max-width:16ch;}
+.hero p{margin-top:1.1rem;max-width:58ch;color:var(--ink-soft);font-size:1.05rem;}
+
+.cc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;padding-bottom:clamp(3rem,7vw,6rem);}
+.cc-tile{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:240px;overflow:hidden;color:#fff;border-top:3px solid var(--accent);transition:transform .35s cubic-bezier(0.22,0.61,0.36,1);}
+.cc-tile::before{content:'';position:absolute;inset:0;z-index:-2;background:#1B1A17 url('https://assets.brasa.world/Thumbnails/career-certificates.jpg') center/cover no-repeat;}
+.cc-tile:hover{transform:translateY(-4px);}
+.cc-rule{display:none;}
+.cc-body{flex:0 0 auto;padding:1.5rem 1.5rem 0.75rem;}
+.cc-name{font-family:var(--serif);font-weight:400;font-size:1.5rem;letter-spacing:-0.01em;line-height:1.08;margin-bottom:0.6rem;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,0.55);}
+.cc-desc{font-size:0.92rem;color:#fff;line-height:1.5;text-shadow:0 1px 8px rgba(0,0,0,0.6);}
+.cc-foot{display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem 1.3rem;}
+.cc-src{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.72);}
+.cc-arrow{font-size:1.1rem;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,0.55);transition:transform .25s ease;}
+.cc-tile:hover .cc-arrow{transform:translateX(4px);}
+
+
+footer.site{border-top:0.5px solid var(--line);padding:2.5rem 0 3.5rem;}
+footer.site .frow{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:1rem;font-size:0.8rem;color:var(--ink-soft);}
+footer.site a:hover{color:var(--accent);}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap bar">
+  <a class="brand" href="index.html">
+    <img src="https://assets.brasa.world/Photos/brasa-cr-logo_8.png" alt="BRASA CR">
+    <span class="wm">BRASA CR</span>
+  </a>
+  <nav class="surfaces">
+    <a href="https://brasa.business">Your Business</a>
+    <a href="index.html">Your Education</a>
+    <a href="https://brasagovernment.net">Your Government</a>
+    <a href="https://brasa.world">Your BRASA</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <a class="back-link" href="index.html">&larr; Education, World Wide</a>
+    <div class="hero-eyebrow">Career Certificates</div>
+    <h1>Credentials that open doors, free or near-free.</h1>
+    <p>Professional certificates, free-certificate courses, and the provider tracks worth your time — every path opens to its catalog and enrolls you directly with the source.</p>
+  </section>
+  <section class="cc-grid">
+      <a class="cc-tile" target="_blank" rel="noopener" href="https://www.classcentral.com/career-certificates">
+        <div class="cc-rule"></div>
+        <div class="cc-body">
+          <div class="cc-name">Career Certificates</div>
+          <div class="cc-desc">Professional certificate programs from Google, IBM, Meta and more — ranked and reviewed.</div>
+        </div>
+        <div class="cc-foot"><span class="cc-arrow">&rarr;</span></div>
+      </a>
+      <a class="cc-tile" target="_blank" rel="noopener" href="https://www.classcentral.com/report/free-certificates/">
+        <div class="cc-rule"></div>
+        <div class="cc-body">
+          <div class="cc-name">Free Certificates</div>
+          <div class="cc-desc">Online courses that still award a genuinely free certificate of completion.</div>
+        </div>
+        <div class="cc-foot"><span class="cc-arrow">&rarr;</span></div>
+      </a>
+      <a class="cc-tile" target="_blank" rel="noopener" href="https://www.coursera.org/courseraplus/special/40-percent-offer-a?irclickid=V821w-30LxyZUhN2PeXzS0ujUkuWHJW-%3ARFpzM0&amp;irgwc=1&amp;afsrc=1&amp;utm_medium=partners&amp;utm_source=impact&amp;utm_campaign=259799&amp;utm_content=b2c&amp;utm_campaignid=Class%20Central&amp;utm_term=14726_CR_1213616_">
+        <div class="cc-rule"></div>
+        <div class="cc-body">
+          <div class="cc-name">Coursera Plus</div>
+          <div class="cc-desc">Unlimited access to 10,000+ courses and professional certificates, one subscription.</div>
+        </div>
+        <div class="cc-foot"><span class="cc-arrow">&rarr;</span></div>
+      </a>
+      <a class="cc-tile" target="_blank" rel="noopener" href="https://www.classcentral.com/subject/personal-development">
+        <div class="cc-rule"></div>
+        <div class="cc-body">
+          <div class="cc-name">Personal Development</div>
+          <div class="cc-desc">Communication, productivity, leadership and the skills that compound over a career.</div>
+        </div>
+        <div class="cc-foot"><span class="cc-arrow">&rarr;</span></div>
+      </a>
+      <a class="cc-tile" target="_blank" rel="noopener" href="https://www.classcentral.com/provider/noble-desktop">
+        <div class="cc-rule"></div>
+        <div class="cc-body">
+          <div class="cc-name">Noble Desktop</div>
+          <div class="cc-desc">Hands-on certificate programs in design, coding, data and digital skills.</div>
+        </div>
+        <div class="cc-foot"><span class="cc-arrow">&rarr;</span></div>
+      </a>
+      <a class="cc-tile" target="_blank" rel="noopener" href="https://www.classcentral.com/provider/boot-dev">
+        <div class="cc-rule"></div>
+        <div class="cc-body">
+          <div class="cc-name">Boot.dev</div>
+          <div class="cc-desc">A gamified backend-developer career path — Python, Go, algorithms and systems.</div>
+        </div>
+        <div class="cc-foot"><span class="cc-arrow">&rarr;</span></div>
+      </a>
+      <a class="cc-tile" target="_blank" rel="noopener" href="https://www.classcentral.com/subject/cs">
+        <div class="cc-rule"></div>
+        <div class="cc-body">
+          <div class="cc-name">Computer Science</div>
+          <div class="cc-desc">Programming, algorithms, systems and theory from the world's leading universities.</div>
+        </div>
+        <div class="cc-foot"><span class="cc-arrow">&rarr;</span></div>
+      </a>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap frow">
+  <div>BRASA CR — The First Free World School</div>
+  <div>Catalog routed through <a href="https://www.classcentral.com/career-certificates" target="_blank" rel="noopener">Class Central</a></div>
+</div></footer>
+</body>
+</html>
