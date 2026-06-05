@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# wrangler / cloudflare
+.wrangler/
+.dev.vars
+dist/
+
+# secrets — NEVER commit these (set via `wrangler secret put`)
+*.key
+.env
+.env.*
+
+# os / editor
+.DS_Store
+*.log
