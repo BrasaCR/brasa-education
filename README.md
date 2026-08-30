@@ -335,6 +335,117 @@ Pengetahuan milik semua orang. Pendidikan BRASA menyediakan pembelajaran gratis 
 *BRASA システムの一部 — 教育・統治・事業・公開台帳*
 *世界中の市民の共有財産 — コスタリカより心を込めて · 2026*
 
+# 🎓 BRASA — تعلیم
+> مفت عالمی اسکول۔ ہر شہری کے لیے، ہر زبان میں۔ ہمیشہ مفت۔
+
+🌐 **BRASA دنیا کا حصہ:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASA تعلیم کے بارے میں
+علم سب کا ہے۔ BRASA تعلیم سیکھنے کا مفت موقع فراہم کرتا ہے — **7,100 سے زیادہ زبانوں میں** تاکہ کوئی بھی پیچھے نہ رہے۔ اس کے ساتھ **مفت کاروباری ڈگری حاصل کرنے کا راستہ** بھی شامل ہے — آپ سے ایک بھی پیسہ نہیں لیا جائے گا۔
+
+## آپ یہاں کیا کر سکتے ہیں
+- 📚 کوئی بھی مضمون سیکھیں — اپنی رفتار میں، ہمیشہ دستیاب
+- 🎓 **مفت کاروباری ڈگری** حاصل کریں
+- 🗣️ تمام مواد اپنی مادری زبان میں پڑھیں
+- 🆓 کوئی ٹیوشن فیس نہیں، کوئی خرچہ نہیں — ہمیشہ کے لیے
+
+## BRASA کی اقدار
+- 🗣️ **7,100 سے زیادہ زبانیں** — حقیقی شمولیت
+- 💰 **شہریوں کے لیے مفت** — تجارت سے کفالت، آپ سے نہیں
+- 📜 **21 حقوق سے تحفظ یافتہ** — تعلیم ایک آئینی حق ہے
+- 🔍 **مکمل شفافیت** — طریقہ کار اور ذرائع آمدن، سب کچھ کھلا ہے
+- 🤝 **عوام کی ملکیت** — لوگوں کے لیے، منافع کے لیے نہیں
+
+---
+
+*BRASA نظام کا حصہ — تعلیم · حکومت · کاروبار · کھلا رجسٹر*
+*دنیا کے شہریوں کی ملکیت · کوسٹا ریکا میں محبت سے بنایا گیا · 2026*
+
+# 🎓 BRASA — Giáo dục
+> Trường Học Toàn cầu Miễn phí. Dành cho mọi người, bằng mọi ngôn ngữ. Mãi mãi miễn phí.
+
+🌐 **Là một phần của Thế giới BRASA:** [brasa.world](https://brasa.world)
+
+---
+
+## Về Giáo dục BRASA
+Kiến thức thuộc về mọi người. BRASA cung cấp việc học miễn phí — bằng **hơn 7.100 ngôn ngữ**, để không ai bị bỏ lại phía sau. Đồng thời bao gồm lộ trình lấy **Bằng Kinh doanh Miễn phí** — không thu một đồng nào từ bạn.
+
+## Bạn có thể làm gì tại đây
+- 📚 Học bất kỳ môn nào — theo tốc độ của riêng bạn, luôn sẵn sàng
+- 🎓 Lấy **Bằng Kinh doanh Miễn phí**
+- 🗣️ Toàn bộ nội dung bằng ngôn ngữ mẹ đẻ của bạn
+- 🆓 Không học phí, không chi phí — mãi mãi
+
+## Giá trị cốt lõi BRASA
+- 🗣️ **Hơn 7.100 ngôn ngữ** — Sự bao gồm thực sự
+- 💰 **Miễn phí cho công dân** — Được tài trợ bởi thương mại, không lấy từ bạn
+- 📜 **Được bảo vệ bởi 21 Quyền** — Giáo dục là một quyền theo Hiến pháp
+- 🔍 **Hoàn toàn minh bạch** — Cách hoạt động và nguồn tài trợ, đều công khai
+- 🤝 **Thuộc về nhân dân** — Vì người dân, không vì lợi nhuận
+
+---
+
+*Là một phần Hệ thống BRASA — Giáo dục · Chính phủ · Kinh doanh · Sổ Mở*
+*Thuộc về công dân toàn cầu · Được tạo tác với tình yêu tại Costa Rica · 2026*
+
+# 🎓 BRASA — Eğitim
+> Ücretsiz Dünya Okulu. Herkes için, her dilde. Sonsuza dek ücretsiz.
+
+🌐 **BRASA Dünya'nın bir parçası:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASA Eğitim Hakkında
+Bilgi herkesindir. BRASA Eğitim **7.100'den fazla dilde** ücretsiz öğrenme imkânı sunar — hiç kimse geride kalmasın diye. Ayrıca **Ücretsiz İşletme Diploması almanın yolunu** da içerir — sizden tek kuruş alınmaz.
+
+## Burada Neler Yapabilirsiniz
+- 📚 İstediğiniz her konuyu öğrenin — kendi hızınızda, her zaman erişilebilir
+- 🎓 **Ücretsiz İşletme Diploması** alın
+- 🗣️ Tüm içerik kendi anadilinizde
+- 🆓 Hiçbir ücret yok, hiçbir masraf yok — sonsuza dek
+
+## BRASA Değerleri
+- 🗣️ **7.100'den Fazla Dil** — Gerçek kapsayıcılık
+- 💰 **Vatandaşlar için ücretsiz** — Ticaret tarafından finanse edilir, sizden değil
+- 📜 **21 Hak ile güvence altında** — Eğitim anayasal bir haktır
+- 🔍 **Tamamen şeffaf** — İşleyiş ve kaynaklar, hepsi açık
+- 🤝 **Halkın malıdır** — İnsanlar için, kazanç için değil
+
+---
+
+*BRASA Sisteminin bir parçası — Eğitim · Yönetim · İş Dünyası · Açık Defter*
+*Dünya Vatandaşlarının Mülkiyeti · Kosta Rika'da Sevgiyle Üretilmiştir · 2026*
+
+# 🎓 BRASA — 교육
+> 무료 세계 학교. 모두를 위해, 모든 언어로. 영원히 무료.
+
+🌐 **BRASA 세계의 일부:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASA 교육에 관하여
+지식은 모두의 것입니다. BRASA 교육은 **7,100개 이상의 언어**로 무료 학습 기회를 제공합니다 — 아무도 소외되지 않도록. 또한 **무료 경영 학위를 취득하는 과정**도 포함되어 있습니다 — 비용은 일절 받지 않습니다.
+
+## 여기서 할 수 있는 일
+- 📚 원하는 과목을 배우세요 — 자신의 속도로, 언제나
+- 🎓 **무료 경영 학위**를 취득하세요
+- 🗣️ 모든 내용을 모국어로 읽으세요
+- 🆓 수업료 없음, 비용 없음 — 영원히
+
+## BRASA의 가치
+- 🗣️ **7,100개 이상의 언어 지원** — 진정한 포용
+- 💰 **시민에게 무료** — 상업으로 지원, 시민에게서 받지 않음
+- 📜 **21가지 권리로 보호** — 교육은 헌법상의 권리입니다
+- 🔍 **완전한 투명성** — 운영 방식과 재원, 모두 공개
+- 🤝 **시민의 소유** — 시민을 위한 것이지, 이익을 위한 것이 아님
+
+---
+
+*BRASA 시스템의 일부 — 교육 · 정부 · 기업 · 공개 장부*
+*전 세계 시민의 공유 재산 — 코스타리카에서 정성껏 제작 · 2026*
 
 
 
