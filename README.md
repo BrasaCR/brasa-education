@@ -448,4 +448,111 @@ Bilgi herkesindir. BRASA Eğitim **7.100'den fazla dilde** ücretsiz öğrenme i
 *전 세계 시민의 공유 재산 — 코스타리카에서 정성껏 제작 · 2026*
 
 
+# 🎓 BRASA — शिक्षण
+> विनामूल्य विश्वविद्यालय. प्रत्येक नागरिकासाठी, प्रत्येक भाषेत. कायमचे विनामूल्य.
 
+🌐 **BRASA विश्वाचा भाग:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASA शिक्षणाबद्दल
+ज्ञान सर्वांचे आहे. BRASA शिक्षण **७,१०० हून अधिक भाषांमध्ये** विनामूल्य शिकण्याची संधी देते — जेणेकरून कोणीही मागे राहणार नाही. यात **विनामूल्य व्यावसायिक पदवी मिळवण्याचा मार्ग** देखील समाविष्ट आहे — तुमच्याकडून एक पैसाही घेतला जाणार नाही.
+
+## येथे तुम्ही काय करू शकता
+- 📚 कोणताही विषय शिका — तुमच्या वेगाने, नेहमी उपलब्ध
+- 🎓 **विनामूल्य व्यावसायिक पदवी** मिळवा
+- 🗣️ सर्व सामग्री तुमच्या मातृभाषेत वाचा
+- 🆓 कोणतीही फी नाही, कोणताही खर्च नाही — कायमचे
+
+## BRASA मूल्ये
+- 🗣️ **७,१०० हून अधिक भाषा** — खरोखर सर्वांचा समावेश
+- 💰 **नागरिकांसाठी विनामूल्य** — व्यापाराद्वारे खर्च भागवला जातो, तुमच्याकडून नाही
+- 📜 **२१ हक्कांद्वारे संरक्षित** — शिक्षण हा संविधानिक हक्क आहे
+- 🔍 **पूर्णपणे पारदर्शक** — कार्यपद्धती आणि निधी सर्व काही उघडे आहे
+- 🤝 **लोकांच्या मालकीचे** — लोकांसाठी, नफ्यासाठी नाही
+
+---
+*BRASA प्रणालीचा भाग — शिक्षण · सरकार · व्यवसाय · खुली नोंदणी*
+*जगातील नागरिकांच्या मालकीचे · कोस्टा रिका येथे प्रेमाने तयार केले · २०२६*
+
+
+# 🎓 BRASA — Elimu
+> Shule ya Ulimwengu BILA MALIPO. Kwa kila raia, kwa kila lugha. Milele bila malipo.
+
+🌐 **Sehemu ya BRASA Ulimwengu:** [brasa.world](https://brasa.world)
+
+---
+
+## Kuhusu Elimu ya BRASA
+Maarifa ni ya kila mtu. BRASA inatoa nafasi ya kujifunza bila malipo kwa **zaidi ya lugha 7,100** — ili asibaki nyuma yeyote. Inajumuisha pia **njia ya kupata Stashahada ya Biashara BILA MALIPO** — hatuchukui hata senti moja kwako.
+
+## Unachoweza Kufanya Hapa
+- 📚 Jifunze somo lolote — kwa kasi yako mwenyewe, wakati wote inapatikana
+- 🎓 Pata **Stashahada ya Biashara BILA MALIPO**
+- 🗣️ Soma maandishi yote kwa lugha yako ya asili
+- 🆓 Hakuna ada, hakuna gharama — milele
+
+## Maadili ya BRASA
+- 🗣️ **Zaidi ya lugha 7,100** — Kweli inajumuisha kila mtu
+- 💰 **BILA MALIPO kwa kila raia** — Inafadhiliwa na biashara, sio kwako
+- 📜 **Inalindwa na Haki 21** — Elimu ni haki ya kila mtu katika Kanuni ya Msingi
+- 🔍 **Uwazi kabisa** — Jinsi inavyofanya kazi na chanzo cha fedha viko wazi
+- 🤝 **Inamilikiwa na watu** — Kwa watu, sio kwa faida
+
+---
+*Sehemu ya Mfumo wa BRASA — Elimu · Serikali · Biashara · Rejesta ya Wazi*
+*Inamilikiwa na raia wa ulimwengu — Imetengenezwa kwa upendo huko Kosta Rika · 2026*
+
+# 🎓 BRASA — Ilimi
+> Makarantar Duniya Kyau. Ga kowane ɗan ƙasa, a kowane yare. Har abada kyau.
+
+🌐 **Wuri daga Tsarin BRASA:** [brasa.world](https://brasa.world)
+
+---
+
+> Game da Ilimin BRASA
+Ilimi na kowa ne. BRASA tana ba da damar koyo kyau a **fiye da yare 7,100** — domin kada wani ya rage. Hakan ya haɗa da **hanyar samun takardar ilimi ta kasuwanci kyau** — ba za a karɓi kuɗi ko ɗaya daga wurinka ba.
+
+> Abinda za ka iya yi a nan
+- 📚 Koyo kowane fanni — bisa ga ikonka, a kowane lokaci
+- 🎓 Samu **Takardar Ilimi ta Kasuwanci Kyau**
+- 🗣️ Karanta duk bayani a yaren mahaifinka
+- 🆓 Babu kuɗi, babu biyan kuɗi — har abada
+
+> Dabi'un BRASA
+- 🗣️ **Fiye da Yare 7,100** — Haɗe da kowa da gaske
+- 💰 **Kyau ga kowane ɗan ƙasa** — Kasuwanci ke tallafawa, ba kai ba
+- 📜 **Haƙƙoƙi 21 suna kiyaye** — Ilimi haƙƙi ne bisa kundin tsari
+- 🔍 **Buɗe gaba ɗaya** — Yadda take aiki da kuɗin sun kasance a fili
+- 🤝 **Na Jama'a** — Domin jama'a, ba domin riba ba
+
+---
+*Wuri daga Tsarin BRASA — Ilimi · Mulki · Kasuwanci · Rijista a Buɗe*
+*Na ɗan ƙasa na duniya — Anyi da ƙauna a Costa Rica · 2026*
+
+# 🎓 BRASA — آموزش
+> مدرسه جهانی رایگان. برای هر شهروند، به هر زبان. برای همیشه رایگان.
+
+🌐 **بخشی از جهان BRASA:** [brasa.world](https://brasa.world)
+
+---
+
+## درباره آموزش BRASA
+دانش متعلق به همه است. BRASA امکان آموزش رایگان را به **بیش از ۷٬۱۰۰ زبان** فراهم می‌کند — تا هیچ‌کس جا نماند. همچنین شامل **راه گرفتن مدرک کسب‌وکار رایگان** است — یک ریال هم از شما دریافت نمی‌شود.
+
+## در اینجا چه می‌توانید بکنید
+- 📚 هر درسی را بخوانید — با سرعت خود، همیشه در دسترس
+- 🎓 **مدرک رایگان کسب‌وکار** دریافت کنید
+- 🗣️ همه مطالب را به زبان مادری خود بخوانید
+- 🆓 هیچ شهریه، هیچ هزینه‌ای — برای همیشه رایگان
+
+## ارزش‌های BRASA
+- 🗣️ **بیش از ۷٬۱۰۰ زبان** — مشارکت واقعی همه
+- 💰 **رایگان برای شهروندان** — هزینه از تجارت تأمین می‌شود، نه از شما
+- 📜 **محفوظ با ۲۱ حق** — آموزش یک حق قانون اساسی است
+- 🔍 **کاملاً شفاف** — روش کار و منابع مالی همگی آشکار است
+- 🤝 **متعلق به مردم** — برای مردم، نه برای سود
+
+---
+*بخشی از سیستم BRASA — آموزش · حکومت · کسب‌وکار · دفتر کل باز*
+*متعلق به شهروندان جهان — ساخته شده با محبت در کاستاریکا · ۲۰۲۶*
