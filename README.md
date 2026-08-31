@@ -1364,3 +1364,67 @@ Bilim barchaga tegishli. BRASA **7.100 dan ortiq tillarda** bepul ta'lim beradi 
 ---
 *BRASA Tizimining bir qismi — Ta'lim · Davlat · Biznes · Ochiq Kitob*
 *Butun Dunyo Fuqarolari Mulki — Kosta-Rikada mehr bilan yaratilgan · 2026*
+
+# 🎓 BRASA — Utbildning
+> Gratis Världsskola. För varje medborgare, på varje språk. För Alltid Gratis.
+
+🌐 **Del av BRASA Värld:** [brasa.world](https://brasa.world)
+
+---
+
+## Om BRASA Utbildning
+Kunskap tillhör alla. BRASA erbjuder kostnadsfri utbildning på **över 7 100 språk** — Ingen lämnas bakom. Inkluderar **hela vägen till Gratis Företagsexamen** — utan någon kostnad.
+
+## Vad Du Kan Göra
+- 📚 Studera vilket ämne som helst — i din egen takt, alltid tillgängligt
+- 🎓 **Ta en Gratis Företagsexamen**
+- 🗣️ Läs allt på ditt eget modersmål
+- 🆓 Ingen terminsavgift, inga kostnader — Gratis för alltid
+
+## BRASAs Värderingar
+- 🗣️ **Över 7 100 Språk** — Verklig inkludering för alla
+- 💰 Gratis för Medborgarna — Finansierat av handel, inte av dig
+- 📜 **Skyddat av 21 Rättigheter** — Utbildning är en grundlagsfäst rättighet
+- 🔍 **Fullständig Insyn** — Hur det fungerar och finansieras är offentligt
+- 🤝 **Folket Äger Det** — För folket, inte för vinst
+
+---
+*Del av BRASA-systemet — Utbildning · Styrelse · Näringsliv · Öppen Bok*
+*Ägs av Världens Medborgare — Byggt med kärlek på Costa Rica · 2026*
+
+# 🌍 BRASA Monn
+Yon sèl sistèm: Edikasyon · Gouvenman · Komès — Konstwi pou chak sitwayen nan lemonn.
+
+🌐 Sit Entènèt: https://brasa.world
+📍 Orijin: Arenal · Kosta Rika
+📅 Etabli: 2026 · Se Sitwayen ki Posede Li
+
+✨ Kisa BRASA Ye?
+BRASA mete Edikasyon, Gouvenman ak Komès ansanm nan yon sèl sistèm konplè — kreye pou chak lang, chak nasyon ak chak lavi. Tout sèvis debaz yo gratis pou sitwayen yo, se komès ki finanse yo nèt — pa gen taks, pako janm.
+
+💎 Fòs Nou ak Sa K Fè Nou Inik
+🗣️ **Plis pase 7 100 Lang** — Chak sitwayen nan pwòp lang li
+📜 **21 Dwa Inivèsèl ak Konstitisyon** — Garanti ekri klè pou tout moun
+🔍 **Totalman Transparan** — Liv Ouvè Rapò an dirèk 24/7; Pa gen anyen kache
+🆓 **0$ pou Sitwayen yo** — Se komès ki finanse li, se pa frè oswa taks
+🌍 **Vrèman Global** — Amerik · Afrik · Ewòp · Azi · Mwayen Oryan · Oseani
+🤝 **Se Pèp Ki Posede Li** — Se pa konpayi, se pa gouvenman — Se Nou Tout
+🎓 **Edikasyon pou Tout Moun** — Gen ladan l chemen pou Jwenn Diplòm Komès Gratis
+🛒 **Sistèm Konplè** — Mache, aprantisaj, jere ak komès — Tout ansanm konekte
+
+🧱 Kat Poto
+| Poto | Objektif |
+|---|---|
+| 🎓 Edikasyon — Lekòl Mondyal Gratis — Konesans ouvè pou tout moun |
+| ⚖️ Gouvenman — Gouvenans daprè Konstitisyon ak 21 Dwa Pwoteje Ou yo |
+| 💼 Komès — Mache Sitwayen ak Diplòm Komès Gratis |
+| 📖 Liv Ouvè — Done Piblik an dirèk, ou ka tcheke yo — Totalman ouvè ak transparan |
+
+📜 21 Dwa
+**Kò · Libète Chwa · Idantite · Verite · Lang · Kominikasyon · Fanmi · Planèt ki Ansante · Dlo Pwòp · Manje · Sante · Enèji · Lojman · Sekirite · Lapè · Edikasyon · Repo · Teknoloji · Jistis · Komès · Vwayaj**
+→ *Li Konstitisyon an nèt sou brasa.world*
+
+📜 Prensip ak Lisans
+Konstitisyon an vini anvan tout lòt bagay. Ouvè ak transparan. Se sitwayen lemonn ki posede li. Tout dwa pwoteje pa kad Konstitisyon BRASA a.
+
+«Arenal · Kosta Rika · 2026 — Konstwi ak Lanmou pou Tout Moun.»
