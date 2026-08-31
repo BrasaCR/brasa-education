@@ -959,3 +959,111 @@ Ilmu duweke kabeh wong. BRASA nyediakake pendhidhikan gratis ing **luwih saka 7.
 ---
 *Bagean saka Sistem BRASA — Pendhidhikan · Pamrentahan · Bisnis · Buku Besar Terbuka*
 *Duweni dening Warga Donya — Dibangun kanthi tresna ing Kosta Rika · 2026*
+
+# 🎓 BRASA — शिक्षा
+> निःशुल्क विश्वविद्यालय। प्रत्येक नागरिकका लागि, प्रत्येक भाषामा। सदैव निःशुल्क।
+
+🌐 **BRASA विश्वको एक अंश:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASA शिक्षाका बारेमा
+ज्ञान सबैको हो। BRASA ले **7,100 भन्दा बढी भाषाहरूमा निःशुल्क शिक्षा प्रदान गर्दछ** — कसै पनि पछाडि पर्नु पर्दैन। **निःशुल्क व्यापार डिग्री प्राप्त गर्ने पूर्ण मार्ग पनि समावेश छ** — हामी तपाईंबाट एक पैसा पनि लिने छैनौं।
+
+## तपाईंले यहाँ के गर्न सक्नुहुन्छ
+- 📚 कुनै पनि विषय पढ्नुहोस् — आफ्नै गतिमा, जहिले पनि उपलब्ध
+- 🎓 **निःशुल्क व्यापार डिग्री प्राप्त गर्नुहोस्**
+- 🗣️ सबै कुरा आफ्नै मातृभाषामा पढ्नुहोस्
+- 🆓 कुनै शुल्क छैन, कुनै लागत छैन — सदैव निःशुल्क
+
+## BRASA मूल्यहरू
+- 🗣️ **7,100 भन्दा बढी भाषाहरू** — वास्तविक समावेशीकरण
+- 💰 **नागरिकका लागि निःशुल्क** — व्यापारद्वारा वित्तपोषित, तपाईंबाट होइन
+- 📜 **21 अधिकारद्वारा संरक्षित** — शिक्षा संवैधानिक अधिकार हो
+- 🔍 **पूर्ण रूपमा पारदर्शी** — सञ्चालन र वित्तपोषण सार्वजनिक छन्
+- 🤝 **जनताको स्वामित्वमा** — जनताका लागि, नाफाका लागि होइन
+
+---
+*BRASA प्रणालीको एक अंश — शिक्षा · सरकार · व्यापार · खुला खाता*
+*विश्वका नागरिकहरूको स्वामित्वमा · कोस्टा रिकामा मायाले निर्माण गरिएको · 2026*
+
+# 🎓 BRASA — Educație
+> Școala Mondială Gratuită. Pentru fiecare cetățean, în fiecare limbă. Gratuită Pentru Totdeauna.
+
+🌐 **Parte din BRASA Lume:** [brasa.world](https://brasa.world)
+
+---
+
+## Despre Educația BRASA
+Cunoștințele aparțin tuturor. BRASA oferă educație gratuită în **peste 7.100 de limbi** — Nimeni nu este lăsat în urmă. Inclusiv **calea completă către o Diplomă în Afaceri Gratuită** — Fără nici un cost.
+
+## Ce Poți Face Aici
+- 📚 Învață orice subiect — În ritmul tău, mereu disponibil
+- 🎓 **Obține o Diplomă în Afaceri Gratuită**
+- 🗣️ Citește totul în limba ta maternă
+- 🆓 Fără taxe de școlarizare, fără costuri — Gratuit pentru totdeauna
+
+## Valorile BRASA
+- 🗣️ **Peste 7.100 de Limbi** — Incluziune autentică pentru toți
+- 💰 **Gratuit pentru Cetățeni** — Finanțat prin comerț, nu de la tine
+- 📜 **Protejat de cele 21 de Drepturi** — Educația este un drept constituțional
+- 🔍 **Pe Deplin Transparent** — Modul de funcționare și finanțarea sunt publice
+- 🤝 **Proprietatea Poporului** — Pentru popor, nu pentru profit
+
+---
+*Parte din Sistemul BRASA — Educație · Guvern · Afaceri · Registru Deschis*
+*Proprietatea Cetățenilor Lumii — Creat cu iubire în Costa Rica · 2026*
+
+# 🎓 BRASA — Edukasyon
+> Libreng Eskwelahan sa Tibuok Kalibutan. Alang sa Matag Lungsuranon, sa Matag Pinulongan. Libre Hangtod sa Kahangturan.
+
+🌐 **Bahin sa BRASA Kalibutan:** [brasa.world](https://brasa.world)
+
+---
+
+## Bahin sa Edukasyon sa BRASA
+Ang kahibalo iya sa tanan. Ang BRASA naghatag og libreng edukasyon sa **labaw sa 7,100 ka pinulongan** — Walay nahabilin. Apil na ang **kompleto nga dalan aron makakuha og Libreng Diploma sa Negosyo** — Walay bayad.
+
+## Unsay Mahimo Nimo Dinhi
+- 📚 Pagkat-on sa bisan unsang hilisgutan — Sa imong kaugalingong katulin, kanunay anaa
+- 🎓 **Pagkuha og Libreng Diploma sa Negosyo**
+- 🗣️ Basaha ang tanan sa imong kaugalingong pinulongan
+- 🆓 Walay bayad sa eskwela, walay gasto — Libre hangtod sa kahangturan
+
+## Ang Mga Bili sa BRASA
+- 🗣️ **Labaw sa 7,100 ka Pinulongan** — Tinuod nga pag-apil sa tanan
+- 💰 **Libre alang sa Lungsuranon** — Gipondohan pinaagi sa pamaligya, dili gikan kanimo
+- 📜 **Gipanalipdan sa 21 nga Katungod** — Ang edukasyon usa ka katungod subay sa Konstitusyon
+- 🔍 **Bug-os nga Transparente** — Ang paagi sa pagpadagan ug pondo bukas sa publiko
+- 🤝 **Gipanag-iya sa Katawhan** — Alang sa Katawhan, dili alang sa Kita
+
+---
+*Bahin sa Sistema sa BRASA — Edukasyon · Gobyerno · Negosyo · Bukas nga Libro*
+*Gipanag-iya sa mga Lungsuranon sa Kalibutan — Gihimo uban ang Gugma sa Costa Rica · 2026*
+
+# 🎓 BRASA — අධ්‍යාපනය
+> නොමිලේ ලෝක පාසල. සෑම පුරවැසියෙකුටම, සෑම භාෂාවෙන්ම. සදහටම නොමිලේ.
+
+🌐 **BRASA ලෝකයේ කොටසකි:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASA අධ්‍යාපනය ගැන
+දැනුම සෑම දෙනාටම අයිතියි. BRASA විසින් **භාෂා 7,100කට වඩා තුළ නොමිලේ අධ්‍යාපනය සපයයි** — කිසිවෙකු පසුපස නොයයි. **ව්‍යාපාරික ඩිප්ලෝමාවක් නොමිලේ ලබාගැනීමේ සම්පූර්ණ මාර්ගයද ඇතුළත් වේ** — ඔබගෙන් සතයක්වත් අය නොකරමු.
+
+## ඔබට මෙහි කළ හැකි දේ
+- 📚 ඕනෑම විෂයයක් ඉගෙන ගන්න — ඔබේ වේගයෙන්, සැමවිටම ලැබෙන්නට
+- 🎓 **ව්‍යාපාරික ඩිප්ලෝමාවක් නොමිලේ ලබාගන්න**
+- 🗣️ සියල්ල ඔබගේ මවුභාෂාවෙන් කියවන්න
+- 🆓 ගාස්තු නැත, වියදමක් නැත — සදහටම නොමිලේ
+
+## BRASA හි අගයන්
+- 🗣️ **භාෂා 7,100කට වඩා** — සෑම දෙනාටම සැබෑ ලෙස විවෘත
+- 💰 **පුරවැසියන්ට නොමිලේ** — වාණිජ්‍යයෙන් අරමුදල්, ඔබගෙන් නොවේ
+- 📜 **අයිතිවාසිකම් 21කින් ආරක්ෂා වී ඇත** — අධ්‍යාපනය ආණ්ඩුක්‍රම ව්‍යවස්ථාපිත අයිතියකි
+- 🔍 **සම්පූර්ණ විනිවිදභාවය** — ක්‍රියාකාරීත්වය සහ අරමුදල් මහජනතාවට විවෘතයි
+- 🤝 **ජනතාගේ හිමිකාරීත්වය** — ජනතාව සදහා, ලාභය සදහා නොවේ
+
+---
+*BRASA පද්ධතියේ කොටසකි — අධ්‍යාපනය · රජය · ව්‍යාපාර · විවෘත ලේඛනාගාරය*
+*ලෝක පුරවැසියන්ගේ හිමිකාරීත්වය · කොස්ටා රිකාවේ ආදරයෙන් නිර්මාණය කරන ලදී · 2026*
