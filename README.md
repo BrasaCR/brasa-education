@@ -770,3 +770,57 @@ Wiedza należy do wszystkich. BRASA oferuje bezpłatną edukację w **ponad 7 10
 ---
 *BRASAစနစ်၏အစိတ်အပိုင်း — ပညာရေး · အစိုးရ · စီးပွားရေး · ပွင့်လင်းမှတ်တမ်း*
 *ကမ္ဘာ့နိုင်ငံသားများပိုင် · ကော်စတာရီကာတွင်မေတ္တာဖြင့်တည်ဆောက်သည် · 2026*
+
+# 🎓 BRASA — Onderwijs
+> De gratis Wereldschool. Voor elke burger, in elke taal. Voor Altijd Gratis.
+
+🌐 **Onderdeel van BRASA Wereld:** [brasa.world](https://brasa.world)
+
+---
+
+## Over BRASA Onderwijs
+Kennis is van iedereen. BRASA biedt gratis onderwijs in **meer dan 7.100 talen** — niemand blijft achter. Inclusief een **traject voor een Gratis Bedrijfsdiploma** — wij vragen u geen cent.
+
+## Wat U Hier Kunt Doen
+- 📚 Leer elk onderwerp — op uw eigen tempo, altijd beschikbaar
+- 🎓 **Behaal een Gratis Bedrijfsdiploma**
+- 🗣️ Lees alles in uw eigen moedertaal
+- 🆓 Geen collegegeld, geen kosten — voor altijd
+
+## BRASA Waarden
+- 🗣️ **Meer dan 7.100 Talen** — Echte inclusie van iedereen
+- 💰 **Gratis voor Burgers** — Gefinancierd door handel, niet door u
+- 📜 **Beschermd door 21 Rechten** — Onderwijs is een grondwettelijk recht
+- 🔍 **Volledig Transparant** — Werkwijze en financiering zijn openbaar
+- 🤝 **Eigendom van het Volk** — Voor het volk, niet voor winst
+
+---
+*Onderdeel van het BRASA Systeem — Onderwijs · Overheid · Bedrijfsleven · Open Grootboek*
+*Eigendom van Wereldburgers — Met liefde gebouwd in Costa Rica · 2026*
+
+# 🎓 BRASA — 教育
+> 免費的全球學府。屬於每一位公民，使用每一種語言。永遠免費。
+
+🌐 **BRASA 世界之一部分：** [brasa.world](https://brasa.world)
+
+---
+
+## 關於 BRASA 教育
+知識屬於所有人。BRASA 以 **7,100+ 種語言** 提供免費教育 — 不讓任何人落後。更包含 **免費取得商業學位的完整路徑** — 完全不收費。
+
+## 您可以在這裡做什麼
+- 📚 依自己的進度學習任何主題 — 隨時可使用
+- 🎓 **免費取得商業學位**
+- 🗣️ 以您的母語閱讀全部內容
+- 🆓 零學費、零費用 — 永遠免費
+
+## BRASA 的價值
+- 🗣️ **7,100+ 種語言** — 真正接納每一個人
+- 💰 **對公民免費** — 由商業支持，不向您收費
+- 📜 **21 項權利保障** — 受教權是憲法保障的權利
+- 🔍 **完全公開透明** — 營運方式與資金來源全部公開
+- 🤝 **全民共有** — 為人民服務，不為營利
+
+---
+*BRASA 體系之一部分 — 教育 · 政府 · 商業 · 公開帳本*
+*全世界公民共同擁有 · 2026 年於哥斯大黎加用心打造*
