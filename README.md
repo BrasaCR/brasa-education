@@ -1067,3 +1067,112 @@ Ang kahibalo iya sa tanan. Ang BRASA naghatag og libreng edukasyon sa **labaw sa
 ---
 *BRASA පද්ධතියේ කොටසකි — අධ්‍යාපනය · රජය · ව්‍යාපාර · විවෘත ලේඛනාගාරය*
 *ලෝක පුරවැසියන්ගේ හිමිකාරීත්වය · කොස්ටා රිකාවේ ආදරයෙන් නිර්මාණය කරන ලදී · 2026*
+
+# 🎓 BRASA — ការអប់រំ
+> សាលាពិភពលោកឥតគិតថ្លៃ។ សម្រាប់ពលរដ្ឋគ្រប់រូប ជាភាសានីមួយៗ។ ឥតគិតថ្លៃជារៀងរហូត។
+
+🌐 **ផ្នែកមួយនៃ BRASA ពិភពលោក៖** [brasa.world](https://brasa.world)
+
+---
+
+## អំពីការអប់រំរបស់ BRASA
+ចំណេះដឹងជារបស់ទាំងអស់គ្នា។ BRASA ផ្តល់ការអប់រំឥតគិតថ្លៃជា **ភាសាជាង ៧,១០០** — គ្មាននរណាម្នាក់ត្រូវបោះបង់ចោល។ រាប់បញ្ចូលផងដែរនូវ **ផ្លូវពេញលេញដើម្បីទទួលបានសញ្ញាបត្រពាណិជ្ជកម្មដោយឥតគិតថ្លៃ** — គ្មានការចំណាយទាល់តែសោះ។
+
+## អ្វីដែលអ្នកអាចធ្វើបាន
+- 📚 សិក្សាប្រធានបទណាមួយ — តាមល្បឿនផ្ទាល់ខ្លួន មានជានិច្ច
+- 🎓 **ទទួលបានសញ្ញាបត្រពាណិជ្ជកម្មដោយឥតគិតថ្លៃ**
+- 🗣️ អានអ្វីៗទាំងអស់ជាភាសាកំណើតរបស់អ្នក
+- 🆓 គ្មានថ្លៃសិក្សា គ្មានការចំណាយ — ឥតគិតថ្លៃជារៀងរហូត
+
+## តម្លៃរបស់ BRASA
+- 🗣️ **ភាសាជាង ៧,១០០** — ការបើកទូលាយពិតប្រាកដសម្រាប់ទាំងអស់គ្នា
+- 💰 ឥតគិតថ្លៃសម្រាប់ពលរដ្ឋ — ទទួលមូលនិធិពីពាណិជ្ជកម្ម មិនមែនពីអ្នក
+- 📜 **ការពារដោយសិទ្ធិទាំង ២១** — ការអប់រំជាសិទ្ធិតាមរដ្ឋធម្មនុញ្ញ
+- 🔍 **តម្លាភាពពេញលេញ** — របៀបដំណើរការ និងមូលនិធិជារឿងសាធារណៈ
+- 🤝 **ជាកម្មសិទ្ធិរបស់ប្រជាជន** — សម្រាប់ប្រជាជន មិនមែនដើម្បីប្រាក់ចំណេញ
+
+---
+*ផ្នែកមួយនៃប្រព័ន្ធ BRASA — ការអប់រំ · រដ្ឋាភិបាល · ពាណិជ្ជកម្ម · សៀវភៅបើកចំហ*
+*ជាកម្មសិទ្ធិរបស់ពលរដ្ឋពិភពលោក — បង្កើតឡើងដោយក្តីស្រឡាញ់នៅកូស្តារីកា · ២០២៦*
+
+# 🎓 BRASA — Təhsil
+> Pulsuz Dünya Məktəbi. Hər bir vətəndaş üçün, hər bir dildə. Əbədi Pulsuz.
+
+🌐 **BRASA Dünyanın bir hissəsidir:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASA Təhsil Haqqında
+Bilik hamı üçündür. BRASA **7.100-dən çox dildə pulsuz təhsil verir** — heç kim geridə qalmayacaq. **Pulsuz Biznes Diplomuna sahib olmaq üçün tam yol da daxildir** — heç bir ödəniş etmədən.
+
+## Nə Edə Bilərsiniz
+- 📚 İstənilən fənni öyrənin — öz sürətinizdə, həmişə mövcuddur
+- 🎓 **Pulsuz Biznes Diplomunu əldə edin**
+- 🗣️ Hər şeyi öz doğma dilinizdə oxuyun
+- 🆓 Təhsil haqqı yoxdur, xərc yoxdur — əbədi pulsuz
+
+## BRASA Dəyərləri
+- 🗣️ **7.100-dən çox Dil** — hamı üçün həqiqi açıq qapı
+- 💰 Vətəndaşlar üçün pulsuz — Ticarət hesabına maliyyələşdirilir, sizin hesabınıza deyil
+- 📜 **21 Hüquqla qorunur** — Təhsil konstitusional hüquqdur
+- 🔍 **Tam Şəffaflıq** — İşləmə və maliyyələşdirmə ictimai məlumatdır
+- 🤝 **Xalqın Mülkiyyətindədir** — Xalq üçündür, mənfəət üçün deyil
+
+---
+*BRASA Sisteminin bir hissəsidir — Təhsil · Hökumət · Biznes · Açıq Mühasibat Kitabı*
+*Dünya Vətəndaşlarının Mülkiyyətindədir — Kosta Rikada sevgiylə qurulmuşdur · 2026*
+
+# 🎓 BRASA — پەروەردە
+> خوێندنگای جیهانی بێبەرامەن. بۆ هەر هاووڵاتییەک، بۆ هەر زمانێک. بۆ هەمیشە بێبەرامەن.
+
+🌐 **بەشێک لە BRASA جیهان:** [brasa.world](https://brasa.world)
+
+---
+
+## دەربارەی پەروەردەی BRASA
+زانیاری هی هەموو کەسە. BRASA پەروەردەی بێبەرامەن پێشەکەش دەکات بە **زیاتر لە ٧,١٠٠ زمان** — هیچ کەس پشتگوێ ناخرێت. ڕێگای تەواوی وەرگرتنی بڕوانامەی بازرگانی بێبەرامەن لەخۆدەگرێت — بێ هیچ پارە.
+
+## چی دەتوانیت بکەیت
+- 📚 هەر بابەتێک فێربە — بە خێرایی خۆت، هەمیشە بەردەست
+- 🎓 **بڕوانامەی بازرگانی بێبەرامەن وەربگرە**
+- 🗣️ هەموو شت بە زمانی دایکی خۆت بخوێنەوە
+- 🆓 بێ پارەی خوێندن، بێ تێچوو — بۆ هەمیشە بێبەرامەن
+
+## بەهاکانی BRASA
+- 🗣️ **زیاتر لە ٧,١٠٠ زمان** — کرانەوەی ڕاستی بۆ هەمووان
+- 💰 بێبەرامە بۆ هاووڵاتییان — پشتگیری بە پارەی بازرگانی، نەک لە تۆ
+- 📜 **پارێزراو بە ٢١ ماف** — پەروەردە مافێکی دەستوورییە
+- 🔍 **تەواو ڕوون و ئاشکرا** — شێوازی کارکردن و پارەدانی گشتییە
+- 🤝 **خاوەندارێتی خەڵک** — بۆ خەڵک، نەک بۆ قازانج
+
+---
+*بەشێک لە سیستەمی BRASA — پەروەردە · حکوومەت · بازرگانی · پەرستەرەی کراوە*
+*خاوەندارێتی هاووڵاتییانی جیهان — بە خۆشەویستی لە کۆستا ڕیکا دروستکراوە · ٢٠٢٦*
+
+# 🎓 BRASA — Imfundo
+> Isikole Somhlaba Samahhala. Sesakhamuzi ngasinye, ngazo zonke izilimi. Samahhala Phakade.
+
+🌐 **Ingxenye ye-BRASA Umhlaba:** [brasa.world](https://brasa.world)
+
+---
+
+## Mayelana neMfundo ye-BRASA
+Ulwazi lungolwawo wonke umuntu. I-BRASA inikeza imfundo yamahhala **ngezilimi ezingaphezu kwezi-7,100** — Akekho osala ngemuva. Kubandakanya nendlela **ephelele yokuthola Idiploma Yebhizinisi Mahhala** — Ngaphandle kwezindleko.
+
+## Ongakwenza Lapha
+- 📚 Funda noma yisiphi isifundo — Ngesivinini sakho, sitholakala njalo
+- 🎓 **Thola Idiploma Yebhizinisi Mahhala**
+- 🗣️ Funda konke ngolimi lwakho lwebele
+- 🆓 Akukho mali yesikole, akukho zindleko — Samahhala phakade
+
+## Izimiso ze-BRASA
+- 🗣️ **Izilimi Ezingaphezu kwezi-7,100** — Ukuvuleka ngokweqiniso kwawo wonke umuntu
+- 💰 **Imahhala eSakhamuzini** — Ixhase ngokuhwebelana, hhayi kuwe
+- 📜 **Ivikelwe ngamaLungelo angama-21** — Imfundo iyilungelo elingokomthethosisekelo
+- 🔍 **Okusobala Ngokuphelele** — Indlela esebenza ngayo kanye nokuxhaswa kusobala emphakathini
+- 🤝 **IngabeyeBantu** — Okwabantu, hhayi okwenzuzo
+
+---
+*Ingxenye yeSistemu ye-BRASA — Imfundo · Uhulumeni · Amabhizinisi · Incwadi Evulekile*
+*IngabeyeSakhamuzi Somhlaba Wonke — Yakhiwe ngothando eKosta Rika · 2026*
+
