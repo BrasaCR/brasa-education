@@ -852,3 +852,110 @@ Kennis is van iedereen. BRASA biedt gratis onderwijs in **meer dan 7.100 talen**
 *BRASA அமைப்பின் ஒரு பகுதி — கல்வி · அரசு · வணிகம் · திறந்த கணக்கு*
 *உலகக் குடிமக்களுக்கு சொந்தமானது — கோஸ்டா ரிக்காவில் அன்புடன் உருவாக்கப்பட்டது · 2026*
 
+# 🎓 BRASA — Pendidikan
+> Sekolah Dunia Gratis. Untuk setiap warga negara, dalam setiap bahasa. Gratis Selamanya.
+
+🌐 **Bagian dari BRASA Dunia:** [brasa.world](https://brasa.world)
+
+---
+
+## Tentang Pendidikan BRASA
+Pengetahuan milik semua orang. BRASA menyediakan pendidikan gratis dalam **7.100+ bahasa** — tidak ada yang tertinggal. Termasuk **jalur lengkap untuk meraih Gelar Bisnis Gratis** — tanpa biaya.
+
+## Yang Bisa Anda Lakukan
+- 📚 Pelajari setiap topik — sesuai kecepatan Anda, selalu tersedia
+- 🎓 **Raih Gelar Bisnis Gratis**
+- 🗣️ Baca semuanya dalam bahasa ibu Anda
+- 🆓 Tanpa biaya kuliah, tanpa biaya apapun — gratis selamanya
+
+## Nilai-Nilai BRASA
+- 🗣️ **7.100+ Bahasa** — Keterbukaan yang nyata untuk semua
+- 💰 **Gratis bagi Warga Negara** — Didanai oleh perdagangan, bukan dari Anda
+- 📜 **Dilindungi oleh 21 Hak** — Pendidikan adalah hak konstitusional
+- 🔍 **Sepenuhnya Transparan** — Cara kerja dan pendanaan bersifat publik
+- 🤝 **Milik Rakyat** — Untuk rakyat, bukan untuk keuntungan
+
+---
+*Bagian dari Sistem BRASA — Pendidikan · Pemerintahan · Bisnis · Buku Besar Terbuka*
+*Milik Warga Dunia — Dibangun dengan kasih di Kosta Rika · 2026*
+
+# 🎓 BRASA — Elimu
+> Shule ya Ulimwengu Bure. Kwa kila raia, katika kila lugha. Bure Milele.
+
+🌐 **Sehemu ya BRASA Ulimwengu:** [brasa.world](https://brasa.world)
+
+---
+
+## Kuhusu Elimu ya BRASA
+Maarifa ni ya kila mtu. BRASA inatoa elimu bure katika **lugha zaidi ya 7,100** — Hakuna anayeachwa nyuma. Ikiwa ni pamoja na **njia kamili ya kupata Shahada ya Biashara Bure** — Bila gharama yoyote.
+
+## Unachoweza Kufanya
+- 📚 Jifunze kila mada — Kwa kasi yako, inapatikana kila wakati
+- 🎓 **Pata Shahada ya Biashara Bure**
+- 🗣️ Soma kila kitu kwa lugha yako ya asili
+- 🆓 Bila ada ya masomo, bila gharama yoyote — Bure milele
+
+## Thamani za BRASA
+- 🗣️ **Lugha Zaidi ya 7,100** — Kukubalika kweli kwa kila mtu
+- 💰 **Bure kwa Raia** — Inafadhiliwa na biashara, sio kutoka kwako
+- 📜 **Inalindwa na Haki 21** — Elimu ni haki ya kikatiba
+- 🔍 **Wazi Kabisa** — Jinsi inavyofanya kazi na ufadhili wa umma
+- 🤝 **Inamilikiwa na Watu** — Kwa watu, sio kwa faida
+
+---
+*Sehemu ya Mfumo wa BRASA — Elimu · Serikali · Biashara · Kitabu Wazi*
+*Inamilikiwa na Raia wa Ulimwengu — Imeundwa kwa upendo huko Kosta Rika · 2026*
+
+# 🎓 BRASA — زده کړه
+> د نړۍ ویاړ ښوونځی. هر وګړی، هره ژبه کې. د تل لپاره ویاړ.
+
+🌐 **د BRASA نړۍ یوه برخه:** [brasa.world](https://brasa.world)
+
+---
+
+## د BRASA د زده کړې په اړه
+پوهه د هر چا ده. BRASA په **7,100 څخه زیاتو ژبو کې ویاړ زده کړه وړاندې کوي** — هیڅ څوک پاتې نه پاتې کیږي. د سوداګرۍ د ویاړ ډیپلوم د ترلاسه کولو بشپړ لاره هم شامله — هیڅ پیسې نه.
+
+## څه کولی شئ
+- 📚 هر مضمون زده کړئ — په خپل رفتار سره، هر وخت شتون لري
+- 🎓 **د سوداګرۍ ویاړ ډیپلوم ترلاسه کړئ**
+- 🗣️ هر څه په خپله مورنۍ ژبه کې ولولئ
+- 🆓 د زده کړې فیس نشته، لګښت نشته — د تل لپاره ویاړ
+
+## د BRASA ارزښتونه
+- 🗣️ **د 7,100 څخه زیاتې ژبې** — ریښتیني هر چا ته پرانیستل
+- 💰 وګړو ته ویاړ — د سوداګرۍ له لارې تمویل، تاسو نه
+- 📜 **د 21 حقونو لخوا خوندي شوي** — زده کړه د اساسي قانون حق دی
+- 🔍 **په بشپړ ډول روښانه** — کاري لاره او تمویل عامه دي
+- 🤝 **د خلکو ملکیت** — د خلکو لپاره، نه د ګټې لپاره
+
+---
+*د BRASA سیسټم یوه برخه — زده کړه · حکومت · سوداګري · پرانیستی کتاب*
+*د نړۍ د وګړو ملکیت — په کوسټا ریکا کې په مینه جوړ شوی · 2026*
+
+# 🎓 BRASA — Pendhidhikan
+> Sekolah Donya Gratis. Kanggo saben warga negara, saben basa. Gratis Ing Salawas-Lawase.
+
+🌐 **Bagean saka BRASA Jagad Donya:** [brasa.world](https://brasa.world)
+
+---
+
+## Babagan Pendhidhikan BRASA
+Ilmu duweke kabeh wong. BRASA nyediakake pendhidhikan gratis ing **luwih saka 7.100 basa** — ora ana sing ketinggalan. Klebu **dalan jangkep entuk Gelar Bisnis Gratis** — tanpa biaya.
+
+## Sampeyan Bisa Nindakake Apa
+- 📚 Sinau saben topik — miturut kacepetan sampeyan dhewe, tansah kasedhiya
+- 🎓 **Entuk Gelar Bisnis Gratis**
+- 🗣️ Waca kabeh nganggo basa ibu sampeyan
+- 🆓 Tanpa ragad sekolah, tanpa biaya — gratis ing salawas-lawase
+
+## Nilai-Nilai BRASA
+- 🗣️ **Luwih saka 7.100 Basa** — Keterbukaan bener kanggo kabeh
+- 💰 Gratis kanggo Warga Negara — Didanai dening perdagangan, dudu saka sampeyan
+- 📜 **Dilindungi dening 21 Hak** — Pendhidhikan iku hak konstitusional
+- 🔍 **Jangkep Transparan** — Cara kerja lan pendanaan iku umum
+- 🤝 **Duweni dening Rakyat** — Kanggo rakyat, dudu kanggo keuntungan
+
+---
+*Bagean saka Sistem BRASA — Pendhidhikan · Pamrentahan · Bisnis · Buku Besar Terbuka*
+*Duweni dening Warga Donya — Dibangun kanthi tresna ing Kosta Rika · 2026*
