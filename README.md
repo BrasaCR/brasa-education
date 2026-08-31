@@ -556,3 +556,109 @@ Ilimi na kowa ne. BRASA tana ba da damar koyo kyau a **fiye da yare 7,100** — 
 ---
 *بخشی از سیستم BRASA — آموزش · حکومت · کسب‌وکار · دفتر کل باز*
 *متعلق به شهروندان جهان — ساخته شده با محبت در کاستاریکا · ۲۰۲۶*
+
+# 🎓 బ్రాసా — విద్యా
+> ఉచిత ప్రపంచ విద్యాలయం. ప్రతి పౌరునికి, ప్రతి భాషలో. ఎప్పటికీ ఉచితం.
+
+🌐 **బ్రాసా ప్రపంచంలో భాగం:** [brasa.world](https://brasa.world)
+
+---
+
+## బ్రాసా విద్య గురించి
+జ్ఞానం అందరికీ స్వంతం. బ్రాసా **7,100 కంటే ఎక్కువ భాషల్లో** ఉచితంగా నేర్చుకునే అవకాశం కల్పిస్తుంది — ఎవరూ వెనుకబడకూడదు. ఇందులో **ఉచిత వ్యాపార డిగ్రీ పొందే మార్గం కూడా ఉంది** — మీ నుండి ఒక పైసా కూడా తీసుకోము.
+
+## మీరు ఇక్కడ ఏమి చేయవచ్చు
+- 📚 ఏ విషయమైనా నేర్చుకోండి — మీ వేగంలో, ఎప్పుడూ అందుబాటులో
+- 🎓 **ఉచిత వ్యాపార డిగ్రీ పొందండి**
+- 🗣️ మొత్తం సమాచారాన్ని మీ మాతృభాషలో చదవండి
+- 🆓 ఎటువంటి రుసుము లేదు, ఖర్చు లేదు — ఎప్పటికీ
+
+## బ్రాసా విలువలు
+- 🗣️ **7,100 కంటే ఎక్కువ భాషలు** — నిజంగా అందరినీ చేర్చడం
+- 💰 **పౌరులకు ఉచితం** — వ్యాపారం ద్వారా నిధులు, మీ నుండి కాదు
+- 📜 **21 హక్కుల ద్వారా రక్షితం** — విద్య రాజ్యాంగ హక్కు
+- 🔍 **పూర్తి పారదర్శకత** — పద్ధతులు మరియు నిధులు అంతా బహిరంగం
+- 🤝 **ప్రజల సొత్తు** — ప్రజల కోసం, లాభం కోసం కాదు
+
+---
+*బ్రాసా వ్యవస్థలో భాగం — విద్యా · ప్రభుత్వం · వ్యాపారం · బహిరంగ నమోదు*
+*ప్రపంచ పౌరుల స్వంత ఆస్తి · కోస్టా రికాలో ప్రేమతో రూపొందించబడింది · 2026*
+
+# 🎓 BRASA — Istruzione
+> Scuola Universale Gratuita. Per ogni cittadino, in ogni lingua. Per Sempre.
+
+🌐 **Parte di BRASA Mondo:** [brasa.world](https://brasa.world)
+
+---
+
+## Istruzione in BRASA
+La conoscenza appartiene a tutti. BRASA offre l'istruzione gratuita in **più di 7.100 lingue** — nessuno rimane indietro. Include anche **il percorso per ottenere una Laurea Commerciale GRATUITA** — non ti chiederemo nemmeno un centesimo.
+
+## Cosa puoi fare qui
+- 📚 Studia qualsiasi materia — ai tuoi ritmi, sempre disponibile
+- 🎓 Ottieni una **Laurea Commerciale GRATUITA**
+- 🗣️ Leggi tutto nella tua lingua madre
+- 🆓 Nessuna retta, nessun costo — per sempre
+## I valori di BRASA
+- 🗣️ **Più di 7.100 lingue** — Inclusione vera per tutti
+- 💰 **GRATUITO per i cittadini** — Finanziato dal commercio, non da te
+- 📜 **Protetto da 21 Diritti** — L'istruzione è un diritto costituzionale
+- 🔍 **Completamente trasparente** — Metodi e fondi sono pubblici
+- 🤝 **Di proprietà del popolo** — Per il popolo, non per il profitto
+
+---
+*Parte del Sistema BRASA — Istruzione · Governo · Commercio · Registro Aperto*
+*Di proprietà dei cittadini del mondo — Creato con amore in Costa Rica · 2026*
+
+# 🎓 બ્રાસા — શિક્ષણ
+> નિઃશુલ્ક વિશ્વવિદ્યાલય. પ્રત્યેક નાગરિક માટે, પ્રત્યેક ભાષામાં. હંમેશા નિઃશુલ્ક.
+
+🌐 **બ્રાસા વિશ્વનો ભાગ:** [brasa.world](https://brasa.world)
+
+---
+
+## બ્રાસા શિક્ષણ વિશે
+જ્ઞાન સૌનું છે. બ્રાસા **7,100 થી વધુ ભાષાઓમાં** નિઃશુલ્ક શિક્ષણ આપે છે — જેથી કોઈ પાછળ ન રહે. તેમાં **નિઃશુલ્ક વેપાર ડિગ્રી મેળવવાનો માર્ગ પણ સમાવિષ્ટ છે** — તમારી પાસેથી એક પૈસો પણ લેવામાં આવશે નહીં.
+
+## તમે અહીં શું કરી શકો
+- 📚 કોઈપણ વિષય ભણો — તમારી ગતિએ, હંમેશા ઉપલબ્ધ
+- 🎓 **નિઃશુલ્ક વેપાર ડિગ્રી મેળવો**
+- 🗣️ બધી સામગ્રી તમારી માતૃભાષામાં વાંચો
+- 🆓 કોઈ ફી નહીં, કોઈ ખર્ચ નહીં — હંમેશા
+
+## બ્રાસાનાં મૂલ્યો
+- 🗣️ **7,100 થી વધુ ભાષાઓ** — સૌનો સમાવેશ ખરેખર
+- 💰 **નાગરિકો માટે નિઃશુલ્ક** — વેપાર દ્વારા નાણાં, તમારી પાસેથી નહીં
+- 📜 **21 અધિકારો દ્વારા સુરક્ષિત** — શિક્ષણ એ બંધારણીય અધિકાર છે
+- 🔍 **સંપૂર્ણ પારદર્શક** — પદ્ધતિઓ અને નાણાં બધું જાહેરમાં
+- 🤝 **લોકોની માલિકીમાં** — લોકો માટે, નફા માટે નહીં
+
+---
+*બ્રાસા પ્રણાલીનો ભાગ — શિક્ષણ · સરકાર · વેપાર · ખુલ્લું નોંધણીપત્રક*
+*વિશ્વના નાગરિકોની માલિકીમાં — કોસ્ટા રિકામાં પ્રેમથી બનાવેલ · 2026*
+# 🎓 BRASA — Edukacja
+> Bezpłatna Światowa Szkoła. Dla każdego obywatela, w każdym języku. Na Zawsze.
+
+🌐 **Część BRASA Świat:** [brasa.world](https://brasa.world)
+
+---
+
+## Edukacja w BRASA
+Wiedza należy do wszystkich. BRASA oferuje bezpłatną edukację w **ponad 7 100 językach** — nikt nie pozostaje w tyle. Zawiera również **ścieżkę uzyskania Dyplomu Handlowego ZA DARMO** — nie weźmiemy od Ciebie ani grosza.
+
+## Co możesz tu zrobić
+- 📚 Ucz się dowolnego przedmiotu — we własnym tempie, zawsze dostępne
+- 🎓 Uzyskaj **Dyplom Handlowy ZA DARMO**
+- 🗣️ Czytaj wszystko w swoim języku ojczystym
+- 🆓 Bez czesnego, bez kosztów — na zawsze
+
+## Wartości BRASA
+- 🗣️ **Ponad 7 100 języków** — Prawdziwe włączenie wszystkich
+- 💰 **Bezpłatne dla obywateli** — Finansowane przez handel, nie od Ciebie
+- 📜 **Chronione przez 21 Praw** — Edukacja jest prawem konstytucyjnym
+- 🔍 **Całkowicie przejrzyste** — Metody i fundusze są publiczne
+- 🤝 **Własność Ludzi** — Dla ludzi, nie dla zysku
+
+---
+*Część Systemu BRASA — Edukacja · Rząd · Handel · Otwarty Rejestr*
+*Własność Obywateli Świata — Stworzone z Miłością w Kostaryce · 2026*
