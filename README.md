@@ -1176,3 +1176,191 @@ Ulwazi lungolwawo wonke umuntu. I-BRASA inikeza imfundo yamahhala **ngezilimi ez
 *Ingxenye yeSistemu ye-BRASA — Imfundo · Uhulumeni · Amabhizinisi · Incwadi Evulekile*
 *IngabeyeSakhamuzi Somhlaba Wonke — Yakhiwe ngothando eKosta Rika · 2026*
 
+# 🎓 BRASA — Obrazovanje
+> Besplatna Svetska Škola. Za svakog građanina, na svakom jeziku. Besplatno Zauvek.
+
+🌐 **Deo BRASA Sveta:** [brasa.world](https://brasa.world)
+
+---
+
+## O Obrazovanju BRASA
+Znanje pripada svima. BRASA pruža besplatno obrazovanje na **više od 7.100 jezika** — Niko ne ostaje iza. Uključuje i **kompletan put do Besplatne Diplome iz Poslovanja** — Bez ikakvih troškova.
+
+## Šta Možete Učiniti
+- 📚 Učite bilo koji predmet — Svojom brzinom, uvek dostupno
+- 🎓 **Steknite Besplatnu Diplomu iz Poslovanja**
+- 🗣️ Čitajte sve na svom maternjem jeziku
+- 🆓 Bez školarine, bez troškova — Besplatno zauvek
+
+## Vrednosti BRASA
+- 🗣️ **Više od 7.100 Jezika** — Istinsko uključenje za sve
+- 💰 Besplatno za Građane — Finansira se od trgovine, ne od vas
+- 📜 **Zaštićeno sa 21 Prava** — Obrazovanje je ustavno pravo
+- 🔍 **Potpuno Transparentno** — Način rada i finansiranje su javni
+- 🤝 **U Vlasništvu Naroda** — Za narod, ne za profit
+
+---
+*Deo Sistema BRASA — Obrazovanje · Država · Poslovanje · Otvorena Knjiga*
+*U vlasništvu Građana Sveta — Izgrađeno s ljubavlju u Kostarici · 2026*
+
+# 🎓 BRASA — Образование
+> Безплатно Световно Училище. За всеки гражданин, на всеки език. Безплатно Завинаги.
+
+🌐 **Част от BRASA Свят:** [brasa.world](https://brasa.world)
+
+---
+
+## За Образованието на BRASA
+Знанието е за всички. BRASA предоставя безплатно образование на **над 7.100 езика** — Никой не е изоставен. Включва и **цялостен път до Безплатна Диплома по Бизнес** — Без никакви разходи.
+
+## Какво Можете Да Правите
+- 📚 Учете всяка тема — С ваше темпо, винаги достъпно
+- 🎓 **Получете Безплатна Диплома по Бизнес**
+- 🗣️ Четете всичко на вашия майчин език
+- 🆓 Без такса за обучение, без разходи — Безплатно завинаги
+
+## Ценностите на BRASA
+- 🗣️ **Над 7.100 Езика** — Истинско приобщаване на всички
+- 💰 Безплатно за Гражданите — Финансирана от търговия, не от вас
+- 📜 **Защитено от 21 Права** — Образованието е конституционно право
+- 🔍 **Пълна Прозрачност** — Начинът на работа и финансиране са публични
+- 🤝 **Собственост на Народа** — За народа, не за печалба
+
+---
+*Част от Системата на BRASA — Образование · Държава · Бизнес · Отворена Книга*
+*Собственост на Гражданите на Света — Изградено с любов в Коста Рика · 2026*
+
+# 🎓 BRASA — Utdanning
+> Verdensskole uten kostnad. For hver borger, på hvert språk. Gratis For Alltid.
+
+🌐 **Del av BRASA Verden:** [brasa.world](https://brasa.world)
+
+---
+
+## Om BRASA Utdanning
+Kunnskap tilhører alle. BRASA tilbyr gratis utdanning på **over 7.100 språk** — Ingen blir etterlatt. Inkludert **full vei til Gratis Bedriftsdiplom** — Uten noen kostnad.
+
+## Hva Du Kan Gjøre
+- 📚 Lær ethvert emne — I ditt eget tempo, alltid tilgjengelig
+- 🎓 **Få et Gratis Bedriftsdiplom**
+- 🗣️ Les alt på ditt eget morsmål
+- 🆓 Ingen skolepenger, ingen kostnad — Gratis for alltid
+
+## BRASAs Verdier
+- 🗣️ **Over 7.100 Språk** — Ekte inkludering for alle
+- 💰 Gratis for Borgerne — Finansiert av handel, ikke av deg
+- 📜 **Beskyttet av 21 Rettigheter** — Utdanning er en grunnlovsrettighet
+- 🔍 **Fullstendig Gjennomsiktig** — Hvordan det fungerer og finansieres er offentlig
+- 🤝 **Eiet av Folket** — For folket, ikke for gevinst
+
+---
+*Del av Systemet BRASA — Utdanning · Styresett · Næringsliv · Åpen Bok*
+*Eiet av Verdens Borgere — Bygget med kjærlighet på Costa Rica · 2026*
+
+# 🎓 BRASA — Uddannelse
+> Verdensskole uden omkostning. For hver borger, på hvert sprog. Gratis For Altid.
+
+🌐 **Del af BRASA Verden:** [brasa.world](https://brasa.world)
+
+---
+
+## Om BRASA Uddannelse
+Viden tilhører alle. BRASA tilbyder gratis uddannelse på **over 7.100 sprog** — Ingen efterlades. Inklusive **fuld vej til Gratis Erhvervsdiplom** — Uden nogen omkostning.
+
+## Hvad Du Kan Gøre
+- 📚 Lær ethvert emne — I dit eget tempo, altid tilgængeligt
+- 🎓 **Få et Gratis Erhvervsdiplom**
+- 🗣️ Læs alt på dit eget modersmål
+- 🆓 Ingen studieafgift, ingen omkostning — Gratis for altid
+
+## BRASAs Værdier
+- 🗣️ **Over 7.100 Sprog** — Ægte inklusion for alle
+- 💰 Gratis for Borgerne — Finansieret af handel, ikke af dig
+- 📜 **Beskyttet af 21 Rettigheder** — Uddannelse er en grundlovsrettighed
+- 🔍 **Fuldstændig Gennemsigtigt** — Drift og finansiering er offentlig
+- 🤝 **Ejet af Folket** — For folket, ikke for gevinst
+
+---
+*Del af Systemet BRASA — Uddannelse · Styre · Erhvervsliv · Åben Bog*
+*Ejet af Verdens Borgere — Bygget med kærlighed på Costa Rica · 2026*
+
+# 🎓 BRASA — Koulutus
+> Maksuton Maailman Koulu. Jokaiselle kansalaiselle, jokaisella kielellä. Maksuton Ikuisesti.
+
+🌐 **Osa BRASA Maailmaa:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASAn Koulutuksesta
+Tieto kuuluu kaikille. BRASA tarjoaa maksutonta koulutusta **yli 7.100 kielellä** — Ketään ei jätetä jälkeen. Sisältää myös **kokonaisen polun Maksuttomaan Liiketoiminnan Tutkintoon** — Ilman kustannuksia.
+
+## Mitä Voit Tehdä
+- 📚 Opiskele mitä tahansa ainetta — Omalla tahdillasi, aina saatavilla
+- 🎓 **Suorita Maksuton Liiketoiminnan Tutkinto**
+- 🗣️ Lue kaikki omalla äidinkielelläsi
+- 🆓 Ei lukukausimaksua, ei kustannuksia — Maksuton ikuisesti
+
+## BRASAn Arvot
+- 🗣️ **Yli 7.100 Kieltä** — Todellinen osallisuus kaikille
+- 💰 Maksuton Kansalaiselle — Kaupalla rahoitettu, ei sinulta
+- 📜 **Suojattu 21 Oikeudella** — Koulutus on perustuslaillinen oikeus
+- 🔍 **Täysin Läpinäkyvä** — Toimintatapa ja rahoitus ovat julkisia
+- 🤝 **Kansalaisten Omistuksessa** — Kansalle, ei voittoa varten
+
+---
+*Osa BRASA Järjestelmää — Koulutus · Hallinto · Liiketoiminta · Avoin Kirja*
+*Maailman Kansalaisten Omistuksessa — Rakennettu rakkaudella Costa Ricassa · 2026
+
+# 🎓 BRASA — ትምህርት
+> ነፃ የዓለም ትምህርት ቤት። ለእያንዳንዱ ዜጋ፣ በእያንዳንዱ ቋንቋ። ለዘላለም ነፃ።
+
+🌐 **የBRASA ዓለም አንድ ክፍል፦** [brasa.world](https://brasa.world)
+
+---
+
+## ስለ BRASA ትምህርት
+ዕውቀት የሁሉም ነው። BRASA ከ**7,100 በላይ ቋንቋዎች** ትምህርትን በነጻ ይሰጣል — ማንም ወደኋላ አይቀርም። ሙሉውን **ነፃ የንግድ ዲፕሎማ የማግኘት መንገድንም ይጨምራል** — ምንም ወጪ ሳይጠይቅ።
+
+## ምን ማድረግ እንደሚችሉ
+- 📚 የፈለጉትን ርዕሰ ጉዳይ ይማሩ — በእራሶ ፍጥነትዎ፣ ሁልጊዜ ይገኛል
+- 🎓 **ነፃ የንግድ ዲፕሎማ ይውሰዱ**
+- 🗣️ ሁሉንም ነገር በአደገበት ቋንቋ ያንብቡ
+- 🆓 የትምህርት ክፍያ የለም፣ ወጪ የለም — ለዘላለም ነፃ
+
+## የBRASA እሴቶች
+- 🗣️ **ከ7,100 በላይ ቋንቋዎች** — ለሁሉም እውነተኛ ተደራሽነት
+- 💰 ለዜጎች ነፃ — በንግድ የተደገፈ፣ በእርሶ አይደለም
+- 📜 **በ21 መብቶች የተጠበቀ** — ትምህርት ሕገ መንግሥታዊ መብት ነው
+- 🔍 **ሙሉ በሙሉ ግልጽነት** — የአሠራርና የገንዘብ ሁኔታ ለሕዝብ ግልጽ ነው
+- 🤝 **በሕዝብ ባለቤትነት** — ለሕዝብ እንጂ ለትርፍ አይደለም
+
+---
+*የBRASA ሥርዓት አንድ ክፍል፡ ትምህርት · መንግሥት · ንግድ · የተከፈተ መጽሐፍ*
+*በዓለም ዜጎች ባለቤትነት — በኮስታ ሪካ በፍቅር የተሠራ · 2026*
+
+# 🎓 BRASA — Ta'lim
+> Butunjahon bepul maktabi. Har bir fuqaro uchun, har bir tilda. Abadiy Bepul.
+
+🌐 **BRASA Jahonning bir qismi:** [brasa.world](https://brasa.world)
+
+---
+
+## BRASA Ta'lim Haqida
+Bilim barchaga tegishli. BRASA **7.100 dan ortiq tillarda** bepul ta'lim beradi — Hech kim ortda qolmaydi. **Bepul Biznes Diplomiga ega bo'lish uchun to'liq yo'lni ham o'z ichiga oladi** — Hech qanday to'lovsiz.
+
+## Nima Qila Olasiz
+- 📚 Istalgan fanni o'rganing — O'z sur'atingizda, doimo mavjud
+- 🎓 **Bepul Biznes Diplomiga ega bo'ling**
+- 🗣️ Barchani o'z ona tilingizda o'qing
+- 🆓 O'quv to'lovi yo'q, xarajat yo'q — Abadiy bepul
+
+## BRASA Qadriyatlari
+- 🗣️ **7.100 dan ortiq tillar** — Barcha uchun haqiqiy imkoniyat
+- 💰 Fuqarolar uchun bepul — Savdo hisobidan moliyalashtiriladi, sizning hisobingizdan emas
+- 📜 **21 Huquq bilan himoyalangan** — Ta'lim konstitutsiyaviy huquqdir
+- 🔍 **To'liq Oshkoralik** — Ishlash va moliyalashtirish tartibi ommaga oshkora
+- 🤝 **Xalq Mulki** — Xalq uchun, foyda olish uchun emas
+
+---
+*BRASA Tizimining bir qismi — Ta'lim · Davlat · Biznes · Ochiq Kitob*
+*Butun Dunyo Fuqarolari Mulki — Kosta-Rikada mehr bilan yaratilgan · 2026*
