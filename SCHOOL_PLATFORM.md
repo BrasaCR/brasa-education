@@ -9,3 +9,5 @@ Learner progress, grading, guardian consent, and retention are deliberately outs
 The manual `Deploy staging` workflow targets only `brasa-education-staging` and its dedicated D1 database, applies additive migrations, deploys, and requires a seeded `STAGING_SCHOOL_ID` for smoke testing. Its `IDENTITY` service binding targets only `brasa-identity-staging`; Education still owns the school-membership authorization decision after identity introspection. Production bindings must never be used for this check.
 
 `ops/staging-seed.sql` is an idempotent, non-personal smoke fixture for the preview database only. The expected workflow variable is `STAGING_SCHOOL_ID=contract-test-school`.
+
+`school-admin.html` is a low-bandwidth, keyboard-accessible preview interface. It exchanges a single-use invitation through same-origin Education routes, keeps the opaque access token only in page memory, rotates near expiry, creates tenant-bound drafts, and revokes on explicit logout. Tokens are never placed in URLs or persistent browser storage.
