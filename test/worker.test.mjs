@@ -8,7 +8,7 @@ test('Worker adapter exposes health and public lessons', async () => {
   const health = await worker.fetch(new Request('https://brasa.education/health'), env);
   assert.deepEqual(await health.json(), { ok: true, service: 'brasa-education', version: 1 });
   const lessons = await worker.fetch(new Request('https://brasa.education/api/v1/schools/staging-school/lessons'), env);
-  assert.equal(lessons.status, 200); assert.deepEqual(await lessons.json(), { data: [] });
+  assert.equal(lessons.status, 200); assert.deepEqual(await lessons.json(), { data: [], meta: { page: 1, limit: 25, hasMore: false } });
 });
 
 test('writes fail closed while the staging identity binding is absent', async () => {
