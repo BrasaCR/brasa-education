@@ -2,6 +2,7 @@ import { onRequestGet, onRequestPost } from '../functions/api/v1/schools/[school
 import { issueSchoolInvitation, manageSchool, updateLessonStatus, updateMembership, updateSchoolSettings } from '../functions/api/v1/schools/[schoolId]/manage.js';
 import { onboardSchool } from '../functions/api/v1/onboarding.js';
 import { changeSchoolLifecycle } from '../functions/api/v1/school-lifecycle.js';
+import { auditHistory, schoolExport } from '../functions/api/v1/schools/[schoolId]/governance.js';
 const lessonRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lessons$/;
 const manageRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/manage$/;
 const membershipRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/memberships$/;
@@ -9,6 +10,8 @@ const invitationRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/
 const settingsRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/settings$/;
 const lessonStatusRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lessons\/([0-9a-f-]{36})\/status$/;
 const lifecycleRoute = /^\/internal\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lifecycle$/;
+const auditRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/audit$/;
+const exportRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/export$/;
 const sessionRoutes = new Set(['/api/v1/session/exchange', '/api/v1/session/renew', '/api/v1/session/logout']);
 const json = (body, status, headers = {}) => Response.json(body, { status, headers: { 'cache-control': 'no-store', ...headers } });
 
@@ -25,6 +28,8 @@ export default {
     if (url.pathname === '/internal/v1/schools' && request.method === 'POST') return onboardSchool({ request, env });
     const lifecycle = url.pathname.match(lifecycleRoute);
     if (lifecycle && request.method === 'POST') return changeSchoolLifecycle({ request, env, params: { schoolId: lifecycle[1] } });
+    const audit=url.pathname.match(auditRoute); if(audit&&request.method==='GET')return auditHistory({request,env,params:{schoolId:audit[1]}});
+    const schoolData=url.pathname.match(exportRoute); if(schoolData&&request.method==='GET')return schoolExport({request,env,params:{schoolId:schoolData[1]}});
     const manage = url.pathname.match(manageRoute);
     if (manage && request.method === 'GET') return manageSchool({ request, env, params: { schoolId: manage[1] } });
     const membership = url.pathname.match(membershipRoute);
