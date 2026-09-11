@@ -10,6 +10,7 @@
     "staging": {
       "name": "brasa-education-staging",
       "workers_dev": true,
+      "services": [{ "binding": "IDENTITY", "service": "brasa-identity-staging" }],
       "d1_databases": [{ "binding": "DB", "database_name": "brasa-education-staging", "database_id": "0ebb424e-50d8-48a4-9964-1cfec6d60994", "migrations_dir": "migrations" }]
     }
   }
