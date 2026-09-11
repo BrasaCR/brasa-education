@@ -11,11 +11,27 @@ export async function manageSchool(context) {
   try {
     const schoolId = String(context.params.schoolId);
     await authorizeSchoolActor(context, schoolId, ADMIN);
-    const [memberships, lessons] = await Promise.all([
+    const [school, memberships, lessons] = await Promise.all([
+      context.env.DB.prepare('SELECT id, slug, name, country_code AS countryCode, default_locale AS defaultLocale, public_profile AS publicProfile, supported_locales_json AS supportedLocalesJson, brand_primary_color AS brandPrimaryColor, support_url AS supportUrl FROM school_tenants WHERE id = ? AND status = ?').bind(schoolId, 'active').first(),
       context.env.DB.prepare('SELECT actor_brasa_id AS actorId, role, status, updated_at AS updatedAt FROM school_memberships WHERE school_id = ? ORDER BY updated_at DESC LIMIT 200').bind(schoolId).all(),
       context.env.DB.prepare("SELECT id, slug, locale, title, summary, status, updated_at AS updatedAt FROM school_lessons WHERE school_id = ? AND status != 'archived' ORDER BY updated_at DESC LIMIT 200").bind(schoolId).all()
     ]);
-    return json({ data: { schoolId, memberships: memberships.results, lessons: lessons.results } });
+    if (!school) throw httpError(404, 'school_not_found');
+    return json({ data: { school: { ...school, publicProfile: Boolean(school.publicProfile), supportedLocales: JSON.parse(school.supportedLocalesJson), supportedLocalesJson: undefined }, memberships: memberships.results, lessons: lessons.results } });
+  } catch (error) { return failure(error); }
+}
+
+export async function updateSchoolSettings(context) {
+  try {
+    const schoolId = String(context.params.schoolId), actor = await authorizeSchoolActor(context, schoolId, ADMIN), input = await limitedJson(context.request, 8192);
+    const name = String(input.name || '').trim(), defaultLocale = String(input.defaultLocale || ''), locales = [...new Set(Array.isArray(input.supportedLocales) ? input.supportedLocales : [])];
+    const color = String(input.brandPrimaryColor || '').toLowerCase(), supportUrl = String(input.supportUrl || '').trim(), publicProfile = input.publicProfile === true;
+    if (!name || name.length > 160 || !locales.includes(defaultLocale) || locales.length < 1 || locales.length > 12 || locales.some(locale => !/^[a-z]{2,3}(?:-[A-Za-z0-9]+)*$/.test(locale)) || !/^#[0-9a-f]{6}$/.test(color)) throw httpError(400, 'invalid_school_settings');
+    if (supportUrl) { let parsed; try { parsed = new URL(supportUrl); } catch { throw httpError(400, 'invalid_school_settings'); } if (parsed.protocol !== 'https:' || parsed.username || parsed.password || supportUrl.length > 500) throw httpError(400, 'invalid_school_settings'); }
+    const now = new Date().toISOString(), result = await context.env.DB.prepare("UPDATE school_tenants SET name=?, default_locale=?, supported_locales_json=?, brand_primary_color=?, support_url=?, public_profile=?, updated_at=? WHERE id=? AND status='active'").bind(name, defaultLocale, JSON.stringify(locales), color, supportUrl || null, publicProfile ? 1 : 0, now, schoolId).run();
+    if (!result.meta?.changes) throw httpError(404, 'school_not_found');
+    await context.env.DB.prepare('INSERT INTO school_audit_log (id, school_id, actor_brasa_id, action, resource_type, resource_id, snapshot_json, occurred_at) VALUES (?,?,?,?,?,?,?,?)').bind(crypto.randomUUID(), schoolId, actor.actorId, 'settings_update', 'school', schoolId, JSON.stringify({ name, defaultLocale, supportedLocales: locales, brandPrimaryColor: color, supportUrl: supportUrl || null, publicProfile }), now).run();
+    return json({ data: { id: schoolId, name, defaultLocale, supportedLocales: locales, brandPrimaryColor: color, supportUrl: supportUrl || null, publicProfile, updatedAt: now } });
   } catch (error) { return failure(error); }
 }
 

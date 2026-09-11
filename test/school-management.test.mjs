@@ -1,18 +1,18 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { issueSchoolInvitation, manageSchool, updateLessonStatus, updateMembership } from '../functions/api/v1/schools/[schoolId]/manage.js';
+import { issueSchoolInvitation, manageSchool, updateLessonStatus, updateMembership, updateSchoolSettings } from '../functions/api/v1/schools/[schoolId]/manage.js';
 
 const request = (path, body) => new Request(`https://brasa.education${path}`, { method: body ? 'POST' : 'GET', headers: { authorization: 'Bearer valid' }, body: body && JSON.stringify(body) });
 const identity = { fetch: async () => Response.json({ display_id: 'BRA-ADMIN-12345' }) };
 function database(role = 'school_admin') {
   const calls = [];
-  return { calls, prepare(sql) { return { bind(...values) { calls.push({ sql, values }); return { all: async () => ({ results: sql.includes('SELECT role') ? [{ role }] : [] }), run: async () => ({ meta: { changes: 1 } }) }; } }; }, batch: async items => items };
+  return { calls, prepare(sql) { return { bind(...values) { calls.push({ sql, values }); return { all: async () => ({ results: sql.includes('SELECT role') ? [{ role }] : [] }), first: async () => ({ id: 'school-a', slug: 'school-a', name: 'School A', countryCode: 'CR', defaultLocale: 'en', publicProfile: 1, supportedLocalesJson: '["en"]', brandPrimaryColor: '#8c3a1f', supportUrl: null }), run: async () => ({ meta: { changes: 1 } }) }; } }; }, batch: async items => items };
 }
 
 test('school administrator receives private management data', async () => {
   const DB = database(), response = await manageSchool({ request: request('/manage'), env: { DB, IDENTITY: identity }, params: { schoolId: 'school-a' } });
-  assert.equal(response.status, 200); assert.equal((await response.json()).data.schoolId, 'school-a');
-  assert.equal(DB.calls.filter(call => call.sql.startsWith('SELECT')).length, 3);
+  assert.equal(response.status, 200); assert.equal((await response.json()).data.school.id, 'school-a');
+  assert.equal(DB.calls.filter(call => call.sql.startsWith('SELECT')).length, 4);
 });
 
 test('school administrator manages bounded roles with an audit record', async () => {
@@ -45,4 +45,17 @@ test('administrator invitation crosses Identity with a private service credentia
 test('invitation issuance fails closed when the service credential is absent', async () => {
   const response = await issueSchoolInvitation({ request: request('/invitations', { actorId: 'BRA-TEACHER-12345', role: 'teacher' }), env: { DB: database(), IDENTITY: identity }, params: { schoolId: 'school-a' } });
   assert.equal(response.status, 503);
+});
+
+test('administrator updates bounded school presentation settings', async () => {
+  const DB = database(), body = { name: 'Escuela Norte', defaultLocale: 'es', supportedLocales: ['es', 'en'], brandPrimaryColor: '#993311', supportUrl: 'https://school.example/help', publicProfile: true };
+  const response = await updateSchoolSettings({ request: request('/settings', body), env: { DB, IDENTITY: identity }, params: { schoolId: 'school-a' } });
+  assert.equal(response.status, 200); assert.deepEqual((await response.json()).data.supportedLocales, ['es', 'en']);
+  assert.equal(DB.calls.some(call => call.values.includes('settings_update')), true);
+});
+
+test('school settings reject unsafe support links', async () => {
+  const DB = database(), body = { name: 'School A', defaultLocale: 'en', supportedLocales: ['en'], brandPrimaryColor: '#993311', supportUrl: 'javascript:alert(1)', publicProfile: true };
+  const response = await updateSchoolSettings({ request: request('/settings', body), env: { DB, IDENTITY: identity }, params: { schoolId: 'school-a' } });
+  assert.equal(response.status, 400);
 });

@@ -1,10 +1,11 @@
 import { onRequestGet, onRequestPost } from '../functions/api/v1/schools/[schoolId]/lessons.js';
-import { issueSchoolInvitation, manageSchool, updateLessonStatus, updateMembership } from '../functions/api/v1/schools/[schoolId]/manage.js';
+import { issueSchoolInvitation, manageSchool, updateLessonStatus, updateMembership, updateSchoolSettings } from '../functions/api/v1/schools/[schoolId]/manage.js';
 import { onboardSchool } from '../functions/api/v1/onboarding.js';
 const lessonRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lessons$/;
 const manageRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/manage$/;
 const membershipRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/memberships$/;
 const invitationRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/invitations$/;
+const settingsRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/settings$/;
 const lessonStatusRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lessons\/([0-9a-f-]{36})\/status$/;
 const sessionRoutes = new Set(['/api/v1/session/exchange', '/api/v1/session/renew', '/api/v1/session/logout']);
 const json = (body, status, headers = {}) => Response.json(body, { status, headers: { 'cache-control': 'no-store', ...headers } });
@@ -26,6 +27,8 @@ export default {
     if (membership && request.method === 'POST') return updateMembership({ request, env, params: { schoolId: membership[1] } });
     const invitation = url.pathname.match(invitationRoute);
     if (invitation && request.method === 'POST') return issueSchoolInvitation({ request, env, params: { schoolId: invitation[1] } });
+    const settings = url.pathname.match(settingsRoute);
+    if (settings && request.method === 'POST') return updateSchoolSettings({ request, env, params: { schoolId: settings[1] } });
     const lessonStatus = url.pathname.match(lessonStatusRoute);
     if (lessonStatus && request.method === 'POST') return updateLessonStatus({ request, env, params: { schoolId: lessonStatus[1], lessonId: lessonStatus[2] } });
     const match = url.pathname.match(lessonRoute);
