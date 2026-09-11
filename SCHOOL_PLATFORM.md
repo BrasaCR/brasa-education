@@ -14,4 +14,4 @@ The manual `Deploy staging` workflow targets only `brasa-education-staging` and 
 
 After opening an authorized school, administrators can manage bounded team roles and access states, view private lesson workflow data, and move lessons into review, published, or archived states. Curriculum reviewers may change lesson status but cannot manage memberships. Every membership and status mutation writes a school-scoped audit record.
 
-Invitation creation is intentionally not exposed to the Education Worker. Provisioning remains behind the trusted Identity operator boundary until service-to-service issuance has a binding-authenticated capability; this prevents direct public calls from bypassing school-role authorization.
+Invitation creation requires a verified school administrator and crosses the Education-to-Identity service binding with a shared Worker secret. Identity compares that credential before generating the invitation, stores only its hash, and returns the raw code once. The secret is configured with Wrangler and is never committed, logged, returned to the browser, or placed in a public Worker variable.

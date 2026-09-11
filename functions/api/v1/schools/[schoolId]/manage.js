@@ -34,6 +34,22 @@ export async function updateMembership(context) {
   } catch (error) { return failure(error); }
 }
 
+export async function issueSchoolInvitation(context) {
+  try {
+    const schoolId = String(context.params.schoolId), actor = await authorizeSchoolActor(context, schoolId, ADMIN);
+    if (!context.env.EDUCATION_ISSUER_SECRET) throw httpError(503, 'invitation_service_unavailable');
+    const input = await limitedJson(context.request, 4096), actorId = String(input.actorId || '').trim().toUpperCase(), role = String(input.role || '');
+    if (!/^BRA-[A-Z0-9-]{5,40}$/.test(actorId) || !MANAGED_ROLES.has(role)) throw httpError(400, 'invalid_invitation');
+    const now = new Date().toISOString();
+    await context.env.DB.prepare('INSERT INTO school_memberships (id, school_id, actor_brasa_id, role, status, created_at, updated_at) VALUES (?,?,?,?,?,?,?) ON CONFLICT(school_id, actor_brasa_id, role) DO UPDATE SET status = excluded.status, updated_at = excluded.updated_at').bind(crypto.randomUUID(), schoolId, actorId, role, 'active', now, now).run();
+    const response = await context.env.IDENTITY.fetch('https://brasa-identity/internal/education/invitations', { method: 'POST', headers: { 'content-type': 'application/json', 'x-brasa-service-authorization': context.env.EDUCATION_ISSUER_SECRET }, body: JSON.stringify({ display_id: actorId, assurance_level: 1, expires_in: 86400 }) });
+    if (!response.ok) throw httpError(503, 'invitation_service_unavailable');
+    const invitation = await response.json();
+    await context.env.DB.prepare('INSERT INTO school_audit_log (id, school_id, actor_brasa_id, action, resource_type, resource_id, snapshot_json, occurred_at) VALUES (?,?,?,?,?,?,?,?)').bind(crypto.randomUUID(), schoolId, actor.actorId, 'invitation_issue', 'membership', actorId, JSON.stringify({ role, expiresAt: invitation.expires_at }), now).run();
+    return json({ data: { actorId, role, invitationCode: invitation.invitation_code, expiresAt: invitation.expires_at } }, 201);
+  } catch (error) { return failure(error); }
+}
+
 export async function updateLessonStatus(context) {
   try {
     const schoolId = String(context.params.schoolId), actor = await authorizeSchoolActor(context, schoolId, REVIEWERS);
