@@ -1,6 +1,6 @@
 import { failure, httpError, json, limitedJson } from './_lib/http.js';
 
-async function authorized(request, env) {
+export async function platformAuthorized(request, env) {
   const supplied = request.headers.get('x-brasa-platform-authorization') || '', expected = env.PLATFORM_OPERATOR_SECRET || '';
   if (supplied.length < 32 || expected.length < 32 || supplied.length !== expected.length) return false;
   const encoder = new TextEncoder(), left = encoder.encode(supplied), right = encoder.encode(expected);
@@ -13,7 +13,7 @@ const text = (value, maximum) => { const result = String(value || '').trim(); if
 export async function onboardSchool({ request, env }) {
   try {
     if (!env.DB || !env.IDENTITY || !env.EDUCATION_ISSUER_SECRET) throw httpError(503, 'onboarding_unavailable');
-    if (!(await authorized(request, env))) throw httpError(401, 'platform_authorization_required');
+    if (!(await platformAuthorized(request, env))) throw httpError(401, 'platform_authorization_required');
     const input = await limitedJson(request, 8192), id = text(input.id, 80).toLowerCase(), slug = text(input.slug, 80).toLowerCase();
     const name = text(input.name, 160), countryCode = text(input.countryCode, 2).toUpperCase(), adminId = text(input.adminId, 48).toUpperCase();
     const defaultLocale = String(input.defaultLocale || 'en'), locales = [...new Set(Array.isArray(input.supportedLocales) ? input.supportedLocales : [defaultLocale])];

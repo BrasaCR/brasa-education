@@ -1,12 +1,14 @@
 import { onRequestGet, onRequestPost } from '../functions/api/v1/schools/[schoolId]/lessons.js';
 import { issueSchoolInvitation, manageSchool, updateLessonStatus, updateMembership, updateSchoolSettings } from '../functions/api/v1/schools/[schoolId]/manage.js';
 import { onboardSchool } from '../functions/api/v1/onboarding.js';
+import { changeSchoolLifecycle } from '../functions/api/v1/school-lifecycle.js';
 const lessonRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lessons$/;
 const manageRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/manage$/;
 const membershipRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/memberships$/;
 const invitationRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/invitations$/;
 const settingsRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/settings$/;
 const lessonStatusRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lessons\/([0-9a-f-]{36})\/status$/;
+const lifecycleRoute = /^\/internal\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lifecycle$/;
 const sessionRoutes = new Set(['/api/v1/session/exchange', '/api/v1/session/renew', '/api/v1/session/logout']);
 const json = (body, status, headers = {}) => Response.json(body, { status, headers: { 'cache-control': 'no-store', ...headers } });
 
@@ -21,6 +23,8 @@ export default {
       return new Response(response.body, { status: response.status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
     }
     if (url.pathname === '/internal/v1/schools' && request.method === 'POST') return onboardSchool({ request, env });
+    const lifecycle = url.pathname.match(lifecycleRoute);
+    if (lifecycle && request.method === 'POST') return changeSchoolLifecycle({ request, env, params: { schoolId: lifecycle[1] } });
     const manage = url.pathname.match(manageRoute);
     if (manage && request.method === 'GET') return manageSchool({ request, env, params: { schoolId: manage[1] } });
     const membership = url.pathname.match(membershipRoute);
