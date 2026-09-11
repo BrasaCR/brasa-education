@@ -5,3 +5,5 @@ Each school is a tenant with its own membership boundary. GovID authenticates a 
 `GET /api/v1/schools/:schoolId/lessons?locale=en` returns published lessons without memberships, actor IDs, audit records, drafts, or learner data. `POST` requires a GovID bearer session plus an active matching-school administrator or teacher membership and creates an append-only audit record.
 
 Learner progress, grading, guardian consent, and retention are deliberately outside this migration until their consent and deletion policies are defined.
+
+The manual `Verify staging` workflow tests a separately provisioned preview and requires a seeded `STAGING_SCHOOL_ID`. Deployment automation is intentionally withheld until a preview D1 database and preview `IDENTITY` service binding have been provisioned and recorded; production bindings must never be used for this check.

@@ -1,1 +1,1 @@
-{"name":"@brasa/education","private":true,"type":"module","scripts":{"test":"node --test test/*.test.mjs"}}
+{"name":"@brasa/education","private":true,"type":"module","scripts":{"test":"node --test test/*.test.mjs","smoke:staging":"node scripts/smoke-staging.mjs"}}
