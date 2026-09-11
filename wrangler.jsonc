@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "brasa-education",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "directory": ".education-assets", "binding": "ASSETS", "run_worker_first": ["/api/*", "/health"] },
+  "observability": { "enabled": true, "logs": { "head_sampling_rate": 1 }, "traces": { "enabled": true, "head_sampling_rate": 0.05 } },
+  "env": {
+    "staging": {
+      "name": "brasa-education-staging",
+      "workers_dev": true,
+      "d1_databases": [{ "binding": "DB", "database_name": "brasa-education-staging", "database_id": "0ebb424e-50d8-48a4-9964-1cfec6d60994", "migrations_dir": "migrations" }]
+    }
+  }
+}

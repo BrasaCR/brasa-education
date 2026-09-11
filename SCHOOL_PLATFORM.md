@@ -6,4 +6,6 @@ Each school is a tenant with its own membership boundary. GovID authenticates a 
 
 Learner progress, grading, guardian consent, and retention are deliberately outside this migration until their consent and deletion policies are defined.
 
-The manual `Verify staging` workflow tests a separately provisioned preview and requires a seeded `STAGING_SCHOOL_ID`. Deployment automation is intentionally withheld until a preview D1 database and preview `IDENTITY` service binding have been provisioned and recorded; production bindings must never be used for this check.
+The manual `Deploy staging` workflow targets only `brasa-education-staging` and its dedicated D1 database, applies additive migrations, deploys, and requires a seeded `STAGING_SCHOOL_ID` for smoke testing. The identity binding remains deliberately absent until a compatible preview introspection endpoint exists; authenticated writes therefore fail closed with `identity_service_unavailable`. Production bindings must never be used for this check.
+
+`ops/staging-seed.sql` is an idempotent, non-personal smoke fixture for the preview database only. The expected workflow variable is `STAGING_SCHOOL_ID=contract-test-school`.
