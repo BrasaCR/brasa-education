@@ -1,0 +1,10 @@
+{
+  "contractVersion": "1.0.0",
+  "canonicalSource": "brasa-world/contracts/public-api.v1.json",
+  "operationId": "listPublishedLessons",
+  "servicePathTemplate": "/api/v1/schools/:schoolId/lessons",
+  "methods": ["GET"],
+  "requiredRoot": ["data"],
+  "requiredItem": ["id", "schoolId", "slug", "locale", "title", "body", "accessibility", "offlineEligible"],
+  "forbiddenFields": ["govId", "actorId", "studentId", "learnerId", "membership", "progress", "grade", "credential", "eligibility", "political", "activity", "createdBy", "updatedBy", "bodyJson", "accessibilityJson"]
+}
