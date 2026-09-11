@@ -1,5 +1,6 @@
 import { onRequestGet, onRequestPost } from '../functions/api/v1/schools/[schoolId]/lessons.js';
 import { issueSchoolInvitation, manageSchool, updateLessonStatus, updateMembership } from '../functions/api/v1/schools/[schoolId]/manage.js';
+import { onboardSchool } from '../functions/api/v1/onboarding.js';
 const lessonRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/lessons$/;
 const manageRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/manage$/;
 const membershipRoute = /^\/api\/v1\/schools\/([a-zA-Z0-9][a-zA-Z0-9_-]{0,79})\/memberships$/;
@@ -18,6 +19,7 @@ export default {
       const response = await env.IDENTITY.fetch(new Request(upstream, request));
       return new Response(response.body, { status: response.status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
     }
+    if (url.pathname === '/internal/v1/schools' && request.method === 'POST') return onboardSchool({ request, env });
     const manage = url.pathname.match(manageRoute);
     if (manage && request.method === 'GET') return manageSchool({ request, env, params: { schoolId: manage[1] } });
     const membership = url.pathname.match(membershipRoute);
