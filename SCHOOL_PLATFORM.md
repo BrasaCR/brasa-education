@@ -11,3 +11,7 @@ The manual `Deploy staging` workflow targets only `brasa-education-staging` and 
 `ops/staging-seed.sql` is an idempotent, non-personal smoke fixture for the preview database only. The expected workflow variable is `STAGING_SCHOOL_ID=contract-test-school`.
 
 `school-admin.html` is a low-bandwidth, keyboard-accessible preview interface. It exchanges a single-use invitation through same-origin Education routes, keeps the opaque access token only in page memory, rotates near expiry, creates tenant-bound drafts, and revokes on explicit logout. Tokens are never placed in URLs or persistent browser storage.
+
+After opening an authorized school, administrators can manage bounded team roles and access states, view private lesson workflow data, and move lessons into review, published, or archived states. Curriculum reviewers may change lesson status but cannot manage memberships. Every membership and status mutation writes a school-scoped audit record.
+
+Invitation creation is intentionally not exposed to the Education Worker. Provisioning remains behind the trusted Identity operator boundary until service-to-service issuance has a binding-authenticated capability; this prevents direct public calls from bypassing school-role authorization.
