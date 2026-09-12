@@ -481,6 +481,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 .featured-band .featured-grid { margin-top: 0; }
+
+.training-art { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-start; justify-content: center; padding: 11% 1rem 0; background: radial-gradient(circle at 78% 18%, rgba(255,255,255,0.2), transparent 28%), linear-gradient(145deg, var(--training-a), var(--training-b)); }
+.training-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(27,26,23,0.02) 30%, rgba(27,26,23,0.78) 100%); }
+.training-mark { color: rgba(255,255,255,0.92); font-family: var(--sans); font-size: clamp(1.8rem, 3.6vw, 3.2rem); font-weight: 650; letter-spacing: -0.06em; line-height: 1; text-align: center; }
+.training-provider:hover .training-mark { transform: scale(1.04); transition: transform 800ms var(--ease-photo); }
+.featured-band#global-training { scroll-margin-top: 7rem; }
+.provider-note { max-width: 78ch; margin-top: 1.25rem; color: var(--brasa-soft); font-size: 0.82rem; line-height: 1.65; }
 </style>
 </head>
 <body>
@@ -748,6 +755,25 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
       </a>
 
       </div>
+    </div>
+
+    <div class="featured-band reveal" id="global-training">
+      <p class="band-eyebrow">Global career training · 12 providers</p>
+      <div class="featured-grid">
+        <a href="https://skillsbuild.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#071d49;--training-b:#4589ff"><div class="training-art" aria-hidden="true"><span class="training-mark">IBM</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">IBM SkillsBuild</span><div class="feature-label">Technology, workplace skills, credentials, and career preparation.</div></div></a>
+        <a href="https://skillshop.withgoogle.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#174ea6;--training-b:#34a853"><div class="training-art" aria-hidden="true"><span class="training-mark">Google</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Google Skillshop</span><div class="feature-label">Self-paced training for Google workplace and business tools.</div></div></a>
+        <a href="https://skillbuilder.aws/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#131a22;--training-b:#ff9900"><div class="training-art" aria-hidden="true"><span class="training-mark">AWS</span></div><span class="feature-badge freemium">Free + paid</span><div class="feature-content"><span class="feature-eyebrow">AWS Skill Builder</span><div class="feature-label">Cloud and AI learning paths, digital courses, and badges.</div></div></a>
+        <a href="https://learn.microsoft.com/training/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#243a5e;--training-b:#0078d4"><div class="training-art" aria-hidden="true"><span class="training-mark">Microsoft</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Microsoft Learn</span><div class="feature-label">Career-oriented modules and guided technical learning paths.</div></div></a>
+        <a href="https://skillsforall.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#005073;--training-b:#00bceb"><div class="training-art" aria-hidden="true"><span class="training-mark">Cisco</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Cisco Skills for All</span><div class="feature-label">Practice-oriented cybersecurity, networking, Python, and data skills.</div></div></a>
+        <a href="https://trailhead.salesforce.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#032d60;--training-b:#0d9dda"><div class="training-art" aria-hidden="true"><span class="training-mark">Trailhead</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Salesforce Trailhead</span><div class="feature-label">Guided CRM, data, AI, and business learning with hands-on practice.</div></div></a>
+        <a href="https://www.pathtopro.com/free-training/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#7a2e00;--training-b:#f96302"><div class="training-art" aria-hidden="true"><span class="training-mark">Path to Pro</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">The Home Depot · Path to Pro</span><div class="feature-label">English and Spanish introductory training for skilled trades.</div></div></a>
+        <a href="https://www.unesco.org/en/global-education-coalition/skills-academy" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#003b70;--training-b:#0077b5"><div class="training-art" aria-hidden="true"><span class="training-mark">UNESCO</span></div><span class="feature-badge">Skills network</span><div class="feature-content"><span class="feature-eyebrow">UNESCO Global Skills Academy</span><div class="feature-label">Employability, digital, entrepreneurial, and green-skills initiatives.</div></div></a>
+        <a href="https://www.open.edu/openlearn/employability-hub" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#3b164d;--training-b:#9b4f96"><div class="training-art" aria-hidden="true"><span class="training-mark">OpenLearn</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">The Open University</span><div class="feature-label">Communication, teamwork, leadership, CV, and workplace learning.</div></div></a>
+        <a href="https://agora.unicef.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#005a8b;--training-b:#1cabe2"><div class="training-art" aria-hidden="true"><span class="training-mark">Agora</span></div><span class="feature-badge free">Free registration</span><div class="feature-content"><span class="feature-eyebrow">UNICEF Agora</span><div class="feature-label">Mobile and offline-capable learning for development and humanitarian work.</div></div></a>
+        <a href="https://openwho.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#113f67;--training-b:#2f80a9"><div class="training-art" aria-hidden="true"><span class="training-mark">OpenWHO</span></div><span class="feature-badge free">Open access</span><div class="feature-content"><span class="feature-eyebrow">World Health Organization</span><div class="feature-label">Low-bandwidth-ready public-health learning and downloadable resources.</div></div></a>
+        <a href="https://www.itcilo.org/courses" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#4a1820;--training-b:#c43d4d"><div class="training-art" aria-hidden="true"><span class="training-mark">ITCILO</span></div><span class="feature-badge freemium">Free + paid</span><div class="feature-content"><span class="feature-eyebrow">International Training Centre of the ILO</span><div class="feature-label">Work, safety, labour, enterprise, and future-of-work education.</div></div></a>
+      </div>
+      <p class="provider-note">BRASA curates pathways to these independent providers. Each provider owns its courses, access rules, credentials, availability, and learner accounts. A listing is not a partnership, endorsement, accreditation, or guarantee of employment.</p>
     </div>
 
   </div>
