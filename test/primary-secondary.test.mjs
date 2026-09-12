@@ -24,3 +24,10 @@ test('labels differing access and educational models', () => {
   assert.equal(links.length, 14);
   for (const [link] of links) assert.match(link, /target="_blank" rel="noopener noreferrer"/);
 });
+
+test('renders a high-clarity provider identity panel with resilient logo fallbacks', () => {
+  assert.match(html, /\.school-provider \.training-logo-panel \{[^}]+background: rgba\(255,255,255,0\.96\)/);
+  assert.match(html, /closest\('\.capability-provider, \.school-provider'\)/);
+  assert.match(html, /logo\.src = `https:\/\/www\.google\.com\/s2\/favicons\?domain=/);
+  assert.match(html, /\.school-provider \.training-logo:not\(\[hidden\]\) \+ \.training-mark \{ display: block; \}/);
+});
