@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // Preserve legacy province links while using the canonical BRASA registry.
+  const legacy = new URLSearchParams(location.search);
+  const region = legacy.get('province');
+  const target = new URL('https://brasa-education-api.richard-bad.workers.dev/costa-rica/schools/');
+  if (region && region !== 'Others') target.searchParams.set('region', region);
+  location.replace(target.href);
+</script>
 <title>Schools of Costa Rica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,22 +59,22 @@
 <body>
 <header class="bar"><div class="wrap bar-row">
   <span class="mark">BRASA CR</span>
-  <a class="back" href="index.html">\u2190 Education, World Wide</a>
+  <a class="back" href="index.html">← Education, World Wide</a>
 </div></header>
 
 <div class="wrap">
   <section class="hero">
     <p class="eyebrow">Schools of Costa Rica</p>
-    <h1 id="title">Loading\u2026</h1>
+    <h1 id="title">Loading…</h1>
     <p class="count" id="count"></p>
     <nav class="provnav" id="provnav"></nav>
     <div class="controls">
-      <input id="q" type="search" placeholder="Search by name\u2026" autocomplete="off">
+      <input id="q" type="search" placeholder="Search by name…" autocomplete="off">
       <select id="typeFilter"><option value="">All types</option></select>
     </div>
   </section>
-  <main id="main"><p class="state">Loading schools\u2026</p></main>
-  <footer>Live from the BRASA citizens registry \u00B7 Schools of Costa Rica</footer>
+  <main id="main"><p class="state">Loading schools…</p></main>
+  <footer>Live from the BRASA citizens registry · Schools of Costa Rica</footer>
 </div>
 
 <script>

@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // Preserve legacy school links while using the canonical BRASA registry.
+  const legacySlug = new URLSearchParams(location.search).get('slug');
+  location.replace(legacySlug
+    ? 'https://brasa-education-api.richard-bad.workers.dev/costa-rica/school/' + encodeURIComponent(legacySlug)
+    : 'https://brasa-education-api.richard-bad.workers.dev/costa-rica/schools/');
+</script>
 <title>School · BRASA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
