@@ -7,6 +7,11 @@
   "assets": { "directory": ".education-assets", "binding": "ASSETS", "run_worker_first": ["/api/*", "/health"] },
   "observability": { "enabled": true, "logs": { "head_sampling_rate": 1 }, "traces": { "enabled": true, "head_sampling_rate": 0.05 } },
   "env": {
+    "production": {
+      "name": "brasa-education-powered-production",
+      "workers_dev": true,
+      "d1_databases": [{ "binding": "DB", "database_name": "brasa-education-platform-production", "database_id": "fdcc01ce-6b7e-405b-8bc0-6c35ff673e9c", "migrations_dir": "migrations" }]
+    },
     "staging": {
       "name": "brasa-education-staging",
       "workers_dev": true,
