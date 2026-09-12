@@ -1,0 +1,27 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+
+const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+
+test('Human Capability collection presents all direct provider resources', () => {
+  assert.match(html, /id="human-capability"/);
+  assert.match(html, /Human capability · Education for life · 29 direct resources/);
+  assert.equal((html.match(/class="feature capability-provider"/g) || []).length, 29);
+});
+
+test('Human Capability links preserve the external-provider boundary', () => {
+  const links = [...html.matchAll(/<a href="https:\/\/[^\"]+" class="feature capability-provider"[^>]+>/g)].map((match) => match[0]);
+  assert.equal(links.length, 29);
+  for (const link of links) {
+    assert.match(link, /target="_blank"/);
+    assert.match(link, /rel="noopener noreferrer"/);
+    assert.match(link, /data-logo-domain="[^"]+"/);
+  }
+  assert.match(html, /BRASA connects learners to them and does not claim their content/);
+});
+
+test('Language tiles remain available as a distinct learning category', () => {
+  assert.match(html, /Languages · 4 tiles/);
+  assert.equal((html.match(/class="feature capability-provider"/g) || []).length, 29);
+});
