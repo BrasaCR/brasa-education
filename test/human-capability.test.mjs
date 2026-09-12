@@ -21,7 +21,9 @@ test('Human Capability links preserve the external-provider boundary', () => {
   assert.match(html, /BRASA connects learners to them and does not claim their content/);
 });
 
-test('Language tiles remain available as a distinct learning category', () => {
-  assert.match(html, /Languages · 4 tiles/);
-  assert.equal((html.match(/class="feature capability-provider"/g) || []).length, 29);
+test('Marquee schools appear after Where to begin and before Human Capability', () => {
+  assert.match(html, /<div class="featured-band reveal" hidden>\s*<p class="band-eyebrow">Languages · 4 tiles<\/p>/);
+  assert.match(html, /\.featured-collections > #featured-start \{ order: 1; \}/);
+  assert.match(html, /\.featured-collections > #marquee-schools \{ order: 2; \}/);
+  assert.match(html, /\.featured-collections > #human-capability \{ order: 3; \}/);
 });

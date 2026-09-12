@@ -494,6 +494,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .capability-provider:hover .training-logo-panel { transform: scale(1.05); transition: transform 1500ms var(--ease-photo); }
 .featured-band#global-training { scroll-margin-top: 7rem; }
 .featured-band#human-capability { scroll-margin-top: 7rem; }
+.featured-collections { display: flex; flex-direction: column; }
+.featured-collections > .featured-intro { order: 0; }
+.featured-collections > #featured-start { order: 1; }
+.featured-collections > #marquee-schools { order: 2; }
+.featured-collections > #human-capability { order: 3; }
+.featured-collections > #global-training { order: 4; }
 .provider-note { max-width: 78ch; margin-top: 1.25rem; color: var(--brasa-soft); font-size: 0.82rem; line-height: 1.65; }
 </style>
 </head>
@@ -609,14 +615,14 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 <!-- FEATURED COLLECTIONS -->
 <section class="section" id="featured" aria-labelledby="featured-h">
-  <div class="container">
-    <div class="reveal">
+  <div class="container featured-collections">
+    <div class="reveal featured-intro">
       <p class="eyebrow">Indexed through Class Central · Every subject, every level, every provider</p>
       <h2 class="section-h" id="featured-h">Where to begin.</h2>
     </div>
 
 
-    <div class="featured-band reveal">
+    <div class="featured-band reveal" id="featured-start">
       <p class="band-eyebrow">Featured schools · 5 tiles</p>
       <div class="featured-grid">
       <a href="how-to-begin.html" class="feature">
@@ -701,7 +707,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
       <p class="provider-note">These resources remain on their providers' websites. BRASA connects learners to them and does not claim their content, credentials, or trademarks.</p>
     </div>
 
-    <div class="featured-band reveal">
+    <div class="featured-band reveal" hidden>
       <p class="band-eyebrow">Languages · 4 tiles</p>
       <div class="featured-grid">
       <a href="https://www.classcentral.com/collection/free-certificates?lang=spanish" class="feature" target="_blank" rel="noopener">
@@ -748,7 +754,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
       </div>
     </div>
 
-    <div class="featured-band reveal">
+    <div class="featured-band reveal" id="marquee-schools">
       <p class="band-eyebrow">Marquee schools · 5 tiles</p>
       <div class="featured-grid">
       <a href="brasa-school.html" class="feature">
