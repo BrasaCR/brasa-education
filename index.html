@@ -484,8 +484,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .training-art { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-start; justify-content: center; padding: 11% 1rem 0; background: radial-gradient(circle at 78% 18%, rgba(255,255,255,0.2), transparent 28%), linear-gradient(145deg, var(--training-a), var(--training-b)); }
 .training-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(27,26,23,0.02) 30%, rgba(27,26,23,0.78) 100%); }
-.training-mark { color: rgba(255,255,255,0.92); font-family: var(--sans); font-size: clamp(1.8rem, 3.6vw, 3.2rem); font-weight: 650; letter-spacing: -0.06em; line-height: 1; text-align: center; }
+.training-logo-panel { position: relative; z-index: 1; width: min(72%, 15rem); height: clamp(4.5rem, 8vw, 6.5rem); display: flex; align-items: center; justify-content: center; padding: 1rem 1.25rem; border-radius: 0.65rem; background: rgba(255,255,255,0.94); box-shadow: 0 0.65rem 2rem rgba(0,0,0,0.16); }
+.training-logo { display: block; width: 100%; height: 100%; object-fit: contain; }
+.training-mark { color: var(--training-a); font-family: var(--sans); font-size: clamp(1.35rem, 2.8vw, 2.35rem); font-weight: 650; letter-spacing: -0.05em; line-height: 1; text-align: center; }
+.training-logo:not([hidden]) + .training-mark { display: none; }
 .training-provider:hover .training-mark { transform: scale(1.04); transition: transform 800ms var(--ease-photo); }
+.training-provider:hover .training-logo-panel { transform: scale(1.04); transition: transform 800ms var(--ease-photo); }
 .featured-band#global-training { scroll-margin-top: 7rem; }
 .provider-note { max-width: 78ch; margin-top: 1.25rem; color: var(--brasa-soft); font-size: 0.82rem; line-height: 1.65; }
 </style>
@@ -1156,6 +1160,34 @@ if (document.readyState === 'loading') {
 } else {
   applyPhotos();
 }
+
+// Provider identity marks. The existing text remains as a resilient fallback.
+const trainingLogoDomains = [
+  'ibm.com', 'google.com', 'aws.amazon.com', 'microsoft.com', 'cisco.com',
+  'salesforce.com', 'homedepot.com', 'alephholding.com', 'open.ac.uk',
+  'unicef.org', 'who.int', 'itcilo.org', 'fundaciontelefonica.com', 'atingi.org',
+  'huawei.com', 'itu.int', 'orange.com', 'outsystems.com',
+  'technovationchallenge.org', 'festo.com', 'siemens-stiftung.org',
+  'generation.global', 'hp.com', 'who.int', 'jaamericas.org'
+];
+document.querySelectorAll('.training-provider .training-art').forEach((art, index) => {
+  const mark = art.querySelector('.training-mark');
+  const domain = trainingLogoDomains[index];
+  if (!mark || !domain) return;
+
+  const panel = document.createElement('span');
+  panel.className = 'training-logo-panel';
+  const logo = document.createElement('img');
+  logo.className = 'training-logo';
+  logo.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=256`;
+  logo.alt = '';
+  logo.loading = 'lazy';
+  logo.decoding = 'async';
+  logo.referrerPolicy = 'no-referrer';
+  logo.addEventListener('error', () => { logo.hidden = true; });
+  panel.append(logo, mark);
+  art.append(panel);
+});
 
 const header = document.getElementById('header');
 const onScroll = () => {

@@ -17,3 +17,12 @@ test('opens external training providers safely and preserves the provider bounda
   for (const link of links) assert.match(link, /target="_blank" rel="noopener noreferrer"/);
   assert.match(html, /A listing is not a BRASA partnership, endorsement, accreditation, or guarantee of employment/);
 });
+
+test('adds a resilient company logo to every training tile', () => {
+  const domains = html.match(/const trainingLogoDomains = \[([\s\S]*?)\];/)?.[1]
+    .match(/'[^']+'/g) || [];
+  assert.equal(domains.length, 25);
+  assert.match(html, /className = 'training-logo-panel'/);
+  assert.match(html, /logo\.addEventListener\('error', \(\) => \{ logo\.hidden = true; \}\)/);
+  assert.match(html, /panel\.append\(logo, mark\)/);
+});
