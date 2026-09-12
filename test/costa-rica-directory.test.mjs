@@ -41,3 +41,10 @@ test('school profiles can enter the BRASA connection flow', () => {
   assert.match(connection, /school-portal\.html/);
   assert.match(portal, /params\.get\('school_id'\)/);
 });
+
+test('every selected Costa Rica school receives a website action', () => {
+  assert.match(connection, /verifiedSchoolWebsites=\{'250286':'https:\/\/criacademy\.com\/'\}/);
+  assert.match(connection, /Open verified school website/);
+  assert.match(connection, /Find the school website/);
+  assert.match(connection, /official website '\+selectedSchoolName\+' Costa Rica/);
+});

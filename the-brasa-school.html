@@ -16,6 +16,8 @@ const $=id=>document.getElementById(id),SIGNUP='https://brasa-signup.richard-bad
 const connectionParams=new URLSearchParams(location.search),selectedSchoolId=connectionParams.get('school_id')||'',selectedSchoolName=connectionParams.get('school_name')||'';
 if(selectedSchoolName){$('identityStatus').textContent='Connect '+selectedSchoolName+' to your private BRASA education history. Sign in or create a BRASA ID to continue.';document.title='Connect '+selectedSchoolName+' · BRASA School'}
 const portalParams=new URLSearchParams();if(selectedSchoolId)portalParams.set('school_id',selectedSchoolId);if(connectionParams.get('country'))portalParams.set('country',connectionParams.get('country'));if(selectedSchoolName)portalParams.set('school_name',selectedSchoolName);document.querySelector('#school .actions a').href='school-portal.html'+(portalParams.size?'?'+portalParams.toString():'');
+const verifiedSchoolWebsites={'250286':'https://criacademy.com/'};
+if(selectedSchoolName){const verifiedWebsite=verifiedSchoolWebsites[selectedSchoolId],website=document.createElement('a');website.className='button alt';website.target='_blank';website.rel='noopener noreferrer';website.href=verifiedWebsite||'https://www.google.com/search?q='+encodeURIComponent('official website '+selectedSchoolName+' Costa Rica');website.textContent=verifiedWebsite?'Open verified school website →':'Find the school website →';document.querySelector('.hero .actions').append(website)}
 let id='',items=[];
 const clean=s=>String(s||'').replace(/[<>]/g,'').trim(),clamp=n=>Math.max(0,Math.min(100,Number(n)||0));
 function key(){return 'brasa:khan-mastery:'+id}
