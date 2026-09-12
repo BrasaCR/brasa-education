@@ -489,17 +489,20 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .training-mark { color: rgba(255,255,255,0.94); font-family: var(--sans); font-size: clamp(1.8rem, 3.6vw, 3.2rem); font-weight: 650; letter-spacing: -0.06em; line-height: 1; text-align: center; }
 .training-logo:not([hidden]) + .training-mark { display: none; }
 .training-provider:hover .training-art::after,
-.capability-provider:hover .training-art::after { background: linear-gradient(180deg, rgba(27,26,23,0.08) 30%, rgba(27,26,23,0.82) 100%); }
+.capability-provider:hover .training-art::after,
+.school-provider:hover .training-art::after { background: linear-gradient(180deg, rgba(27,26,23,0.08) 30%, rgba(27,26,23,0.82) 100%); }
 .training-provider:hover .training-logo-panel,
-.capability-provider:hover .training-logo-panel { transform: scale(1.05); transition: transform 1500ms var(--ease-photo); }
+.capability-provider:hover .training-logo-panel,
+.school-provider:hover .training-logo-panel { transform: scale(1.05); transition: transform 1500ms var(--ease-photo); }
 .featured-band#global-training { scroll-margin-top: 7rem; }
 .featured-band#human-capability { scroll-margin-top: 7rem; }
 .featured-collections { display: flex; flex-direction: column; }
 .featured-collections > .featured-intro { order: 0; }
 .featured-collections > #featured-start { order: 1; }
 .featured-collections > #marquee-schools { order: 2; }
-.featured-collections > #human-capability { order: 3; }
-.featured-collections > #global-training { order: 4; }
+.featured-collections > #global-primary-secondary { order: 3; }
+.featured-collections > #human-capability { order: 4; }
+.featured-collections > #global-training { order: 5; }
 .provider-note { max-width: 78ch; margin-top: 1.25rem; color: var(--brasa-soft); font-size: 0.82rem; line-height: 1.65; }
 </style>
 </head>
@@ -804,6 +807,27 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
       </a>
 
       </div>
+    </div>
+
+    <div class="featured-band reveal" id="global-primary-secondary">
+      <p class="band-eyebrow">Global primary &amp; secondary education · 14 direct providers</p>
+      <div class="featured-grid">
+        <a href="https://www.ck12.org/" class="feature school-provider" data-logo-domain="ck12.org" target="_blank" rel="noopener noreferrer" style="--training-a:#172554;--training-b:#2563eb"><div class="training-art" aria-hidden="true"><span class="training-mark">CK-12</span></div><span class="feature-badge free">Free · K–12</span><div class="feature-content"><span class="feature-eyebrow">Curriculum & practice</span><div class="feature-label">CK-12 · Digital textbooks, exercises, simulations, adaptive practice, and teacher tools.</div></div></a>
+        <a href="https://www.thenational.academy/" class="feature school-provider" data-logo-domain="thenational.academy" target="_blank" rel="noopener noreferrer" style="--training-a:#3b1f66;--training-b:#8b5cf6"><div class="training-art" aria-hidden="true"><span class="training-mark">Oak</span></div><span class="feature-badge free">Free · Primary–secondary</span><div class="feature-content"><span class="feature-eyebrow">England curriculum</span><div class="feature-label">Oak National Academy · Sequenced lessons and teacher resources across school subjects.</div></div></a>
+        <a href="https://www.coreknowledge.org/download-free-curriculum/" class="feature school-provider" data-logo-domain="coreknowledge.org" target="_blank" rel="noopener noreferrer" style="--training-a:#4a1820;--training-b:#c43d4d"><div class="training-art" aria-hidden="true"><span class="training-mark">Core Knowledge</span></div><span class="feature-badge free">Free · Preschool–8</span><div class="feature-content"><span class="feature-eyebrow">Downloadable curriculum</span><div class="feature-label">Core Knowledge · Language arts, mathematics, science, history, geography, and arts.</div></div></a>
+        <a href="https://openstax.org/k12/" class="feature school-provider" data-logo-domain="openstax.org" target="_blank" rel="noopener noreferrer" style="--training-a:#5b1520;--training-b:#c83f49"><div class="training-art" aria-hidden="true"><span class="training-mark">OpenStax</span></div><span class="feature-badge free">Free · Secondary</span><div class="feature-content"><span class="feature-eyebrow">Open textbooks</span><div class="feature-label">OpenStax K–12 · Peer-reviewed high-school textbooks and educator resources.</div></div></a>
+        <a href="https://openscied.org/" class="feature school-provider" data-logo-domain="openscied.org" target="_blank" rel="noopener noreferrer" style="--training-a:#174b2c;--training-b:#4f8f45"><div class="training-art" aria-hidden="true"><span class="training-mark">OpenSciEd</span></div><span class="feature-badge free">Free · K–12 science</span><div class="feature-content"><span class="feature-eyebrow">Science curriculum</span><div class="feature-label">OpenSciEd · Complete science units, student materials, and teacher guidance.</div></div></a>
+        <a href="https://diksha.gov.in/exploreasstudent/index.html" class="feature school-provider" data-logo-domain="diksha.gov.in" target="_blank" rel="noopener noreferrer" style="--training-a:#5c2d0e;--training-b:#e87524"><div class="training-art" aria-hidden="true"><span class="training-mark">DIKSHA</span></div><span class="feature-badge free">Free · Preschool–12</span><div class="feature-content"><span class="feature-eyebrow">India · Multilingual</span><div class="feature-label">DIKSHA · Government curriculum, textbooks, videos, quizzes, courses, and offline access.</div></div></a>
+        <a href="https://www.siyavula.com/" class="feature school-provider" data-logo-domain="siyavula.com" target="_blank" rel="noopener noreferrer" style="--training-a:#14532d;--training-b:#22c55e"><div class="training-art" aria-hidden="true"><span class="training-mark">Siyavula</span></div><span class="feature-badge freemium">Free books · Paid practice</span><div class="feature-content"><span class="feature-eyebrow">Grades 4–12</span><div class="feature-label">Siyavula · Open mathematics, science, computing, and technology textbooks.</div></div></a>
+        <a href="https://profuturo.education/recursos/" class="feature school-provider" data-logo-domain="profuturo.education" target="_blank" rel="noopener noreferrer" style="--training-a:#12315b;--training-b:#2874c6"><div class="training-art" aria-hidden="true"><span class="training-mark">ProFuturo</span></div><span class="feature-badge free">Free · Ages 5–12</span><div class="feature-content"><span class="feature-eyebrow">Four languages</span><div class="feature-label">ProFuturo · Mathematics, language, science, and technology learning resources.</div></div></a>
+        <a href="https://www.colombiaaprende.edu.co/servicios/contenidos" class="feature school-provider" data-logo-domain="colombiaaprende.edu.co" target="_blank" rel="noopener noreferrer" style="--training-a:#4b3d00;--training-b:#d4a900"><div class="training-art" aria-hidden="true"><span class="training-mark">Colombia Aprende</span></div><span class="feature-badge free">Free · All grades</span><div class="feature-content"><span class="feature-eyebrow">Colombia · Spanish</span><div class="feature-label">Colombia Aprende · Government learning resources from preschool through secondary school.</div></div></a>
+        <a href="https://storyweaver.org.in/en/" class="feature school-provider" data-logo-domain="storyweaver.org.in" target="_blank" rel="noopener noreferrer" style="--training-a:#6b2144;--training-b:#d95386"><div class="training-art" aria-hidden="true"><span class="training-mark">StoryWeaver</span></div><span class="feature-badge free">Free · Open books</span><div class="feature-content"><span class="feature-eyebrow">Primary literacy</span><div class="feature-label">StoryWeaver · Multilingual children’s books for reading, downloading, translation, and print.</div></div></a>
+        <a href="https://www.africanstorybook.org/" class="feature school-provider" data-logo-domain="africanstorybook.org" target="_blank" rel="noopener noreferrer" style="--training-a:#5c3d1f;--training-b:#b7791f"><div class="training-art" aria-hidden="true"><span class="training-mark">African Storybook</span></div><span class="feature-badge free">Free · Offline</span><div class="feature-content"><span class="feature-eyebrow">Primary literacy</span><div class="feature-label">African Storybook · Open picture books in hundreds of African languages.</div></div></a>
+        <a href="https://schoolhouse.world/" class="feature school-provider" data-logo-domain="schoolhouse.world" target="_blank" rel="noopener noreferrer" style="--training-a:#172554;--training-b:#4f46e5"><div class="training-art" aria-hidden="true"><span class="training-mark">Schoolhouse</span></div><span class="feature-badge free">Free · Live tutoring</span><div class="feature-content"><span class="feature-eyebrow">Secondary support</span><div class="feature-label">Schoolhouse.world · Peer tutoring in mathematics, science, computing, writing, and more.</div></div></a>
+        <a href="https://discoveryk12.com/" class="feature school-provider" data-logo-domain="discoveryk12.com" target="_blank" rel="noopener noreferrer" style="--training-a:#164e63;--training-b:#0891b2"><div class="training-art" aria-hidden="true"><span class="training-mark">Discovery K12</span></div><span class="feature-badge freemium">Free curriculum · Paid admin</span><div class="feature-content"><span class="feature-eyebrow">Secular homeschool · PreK–12</span><div class="feature-label">Discovery K12 · Complete student curriculum; reporting and transcript tools cost extra.</div></div></a>
+        <a href="https://allinonehomeschool.com/" class="feature school-provider" data-logo-domain="allinonehomeschool.com" target="_blank" rel="noopener noreferrer" style="--training-a:#3f2a1d;--training-b:#9a6a3a"><div class="training-art" aria-hidden="true"><span class="training-mark">Easy Peasy</span></div><span class="feature-badge free">Free · Christian</span><div class="feature-content"><span class="feature-eyebrow">Homeschool · PreK–12</span><div class="feature-label">Easy Peasy All-in-One Homeschool · Complete faith-based lessons and assignments.</div></div></a>
+      </div>
+      <p class="provider-note">BRASA presents complete schools, curricula, tutoring, and learning libraries without excluding options because they are public, private, secular, religious, free, or paid. Labels describe important differences. Provider listings do not establish accreditation, endorsement, or a BRASA partnership.</p>
     </div>
 
     <div class="featured-band reveal" id="global-training">
@@ -1234,7 +1258,7 @@ document.querySelectorAll('.training-provider .training-art').forEach((art, inde
   art.append(panel);
 });
 
-document.querySelectorAll('.capability-provider .training-art').forEach((art) => {
+document.querySelectorAll('.capability-provider .training-art, .school-provider .training-art').forEach((art) => {
   const provider = art.closest('.capability-provider');
   const mark = art.querySelector('.training-mark');
   const domain = provider?.dataset.logoDomain;

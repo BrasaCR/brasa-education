@@ -21,9 +21,10 @@ test('Human Capability links preserve the external-provider boundary', () => {
   assert.match(html, /BRASA connects learners to them and does not claim their content/);
 });
 
-test('Marquee schools appear after Where to begin and before Human Capability', () => {
+test('Marquee schools and Primary and Secondary Education precede Human Capability', () => {
   assert.match(html, /<div class="featured-band reveal" hidden>\s*<p class="band-eyebrow">Languages · 4 tiles<\/p>/);
   assert.match(html, /\.featured-collections > #featured-start \{ order: 1; \}/);
   assert.match(html, /\.featured-collections > #marquee-schools \{ order: 2; \}/);
-  assert.match(html, /\.featured-collections > #human-capability \{ order: 3; \}/);
+  assert.match(html, /\.featured-collections > #global-primary-secondary \{ order: 3; \}/);
+  assert.match(html, /\.featured-collections > #human-capability \{ order: 4; \}/);
 });
