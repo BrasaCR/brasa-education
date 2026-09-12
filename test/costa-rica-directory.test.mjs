@@ -7,6 +7,8 @@ const root = path.resolve(import.meta.dirname, '..');
 const index = await readFile(path.join(root, 'index.html'), 'utf8');
 const schools = await readFile(path.join(root, 'schools.html'), 'utf8');
 const school = await readFile(path.join(root, 'school.html'), 'utf8');
+const connection = await readFile(path.join(root, 'the-brasa-school.html'), 'utf8');
+const portal = await readFile(path.join(root, 'school-portal.html'), 'utf8');
 const registry = 'https://brasa-education-api.richard-bad.workers.dev/costa-rica/';
 
 test('Costa Rica tiles use the canonical school registry', () => {
@@ -31,4 +33,11 @@ test('legacy directory fallback does not display escaped Unicode', () => {
   assert.doesNotMatch(schools, /Loading\\u2026<\/h1>/);
   assert.doesNotMatch(schools, /placeholder="Search by name\\u2026"/);
   assert.doesNotMatch(schools, /registry \\u00B7 Schools/);
+});
+
+test('school profiles can enter the BRASA connection flow', () => {
+  assert.match(connection, /selectedSchoolId=connectionParams\.get\('school_id'\)/);
+  assert.match(connection, /selectedSchoolName=connectionParams\.get\('school_name'\)/);
+  assert.match(connection, /school-portal\.html/);
+  assert.match(portal, /params\.get\('school_id'\)/);
 });
