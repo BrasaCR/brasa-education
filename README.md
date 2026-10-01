@@ -1,3 +1,5 @@
+Production deploys automatically from `main` to the `brasa-education-powered-production` Cloudflare Worker. The public school directory uses `schools.brasa.education`.
+
 🌍 Read in: English · Español · Français · Deutsch · Português · 中文 · हिन्दी · العربية · বাংলা · Русский · 日本語 · 한국어 · Italiano · …
 
 
