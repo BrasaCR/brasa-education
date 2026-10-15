@@ -370,6 +370,16 @@ test('French Guiana pack preserves French, territorial, UAI, diploma and communi
   }
 });
 
+test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
+  const rollout = readJson('africa-education-rollout.json');
+  assert.equal(rollout.countries.length, 54);
+  assert.equal(new Set(rollout.countries.map(country => country.code)).size, 54);
+  assert.equal(new Set(rollout.countries.map(country => country.slug)).size, 54);
+  assert.ok(rollout.requiredGates.length >= 10);
+  assert.match(rollout.policy, /never replace current national and subnational official sources/i);
+  assert.ok(rollout.countries.every(country => country.status !== 'complete'));
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
