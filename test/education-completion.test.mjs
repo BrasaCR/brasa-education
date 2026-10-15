@@ -525,6 +525,25 @@ test('Cameroon pack preserves subsystem, directory, statistics, higher-status, p
   }
 });
 
+test('Central African Republic pack preserves directory, curriculum, statistics, privacy and language boundaries', () => {
+  const pack = readJson('central-african-republic-education-pack.json');
+  assert.equal(pack.country.code, 'CF');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.curriculum.implementationRule, /sector plan.*pilot is not proof.*nationally controlling in 2026/i);
+  assert.match(pack.educationStatistics.scopeNotice, /1\.2 million.*not publication-ready catalog statistics/i);
+  assert.match(pack.higherEducation.authorityNotice, /not proof that every current program.*authorized or accredited/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /24\.001.*20 November 2024/i);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /20\.016.*15 June 2020/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /French and Sango.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Central African reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -557,6 +576,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const cameroon = rollout.countries.find(country => country.code === 'CM');
   assert.equal(cameroon.status, 'reference-pack-in-review');
   assert.equal(cameroon.packUrl, '/cameroon-education-pack.json');
+  const centralAfricanRepublic = rollout.countries.find(country => country.code === 'CF');
+  assert.equal(centralAfricanRepublic.status, 'reference-pack-in-review');
+  assert.equal(centralAfricanRepublic.packUrl, '/central-african-republic-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
