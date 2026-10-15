@@ -1442,3 +1442,24 @@ BRASA mete Edikasyon, Gouvenman ak Komès ansanm nan yon sèl sistèm konplè �
 Konstitisyon an vini anvan tout lòt bagay. Ouvè ak transparan. Se sitwayen lemonn ki posede li. Tout dwa pwoteje pa kad Konstitisyon BRASA a.
 
 «Arenal · Kosta Rika · 2026 — Konstwi ak Lanmou pou Tout Moun.»
+
+<!-- BRASA-PLATFORM-UPDATE:START -->
+## BRASA Education today: learning connected to life
+
+BRASA Education is the learning spine of a wider civic architecture. It connects school discovery, open educational resources, practical skills, professional development, business learning, public-service knowledge, and pathways for citizens to demonstrate what they can do.
+
+### What has expanded
+
+- Education now connects with 198 country destinations across BRASA World, Business, and Government.
+- Country school directories are designed to lead citizens to public and private schools and authoritative national sources wherever reliable links are available.
+- Learning can connect to the twelve BRASA Business operating areas: point of sale, CRM, inventory, people, training, payroll and banking, time, family support, legal work, government forms, reports, and the business workspace.
+- Government country packs organize services and official links into twelve practical categories while keeping source, jurisdiction, effective date, and review status visible.
+
+### Learning can lead to economic participation
+
+BRASA Financials catalogs 385 distinct payment systems representing 161 country or multi-country market descriptions and 216 payment types. This includes mobile money, instant transfers, QR payments, wallets, cash networks, remittance, open banking, domestic card systems, and USSD. These options help BRASA explain how citizens and businesses participate in their local economies.
+
+The directory is governed: catalogued does not mean activated or endorsed. Provider availability, licensing, official sources, integration readiness, and production approval are tracked separately, and licensed providers remain responsible for moving and settling money.
+
+The long-term path is connected: learn, demonstrate capability, earn, work or build, and teach the next citizen.
+<!-- BRASA-PLATFORM-UPDATE:END -->
