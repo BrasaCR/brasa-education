@@ -544,6 +544,25 @@ test('Central African Republic pack preserves directory, curriculum, statistics,
   }
 });
 
+test('Chad pack preserves directory, bilingual curriculum, statistics, privacy and language boundaries', () => {
+  const pack = readJson('chad-education-pack.json');
+  assert.equal(pack.country.code, 'TD');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.curriculum.implementationRule, /French or Arabic stream.*effective school year/i);
+  assert.match(pack.educationStatistics.scopeNotice, /2022–2023.*observation year separately from release date/i);
+  assert.match(pack.higherEducation.authorityNotice, /does not prove every program.*authorized/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /007\/PR\/2015/i);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /policy is not itself a complete statutory code/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /French and Arabic streams.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Chadian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -579,6 +598,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const centralAfricanRepublic = rollout.countries.find(country => country.code === 'CF');
   assert.equal(centralAfricanRepublic.status, 'reference-pack-in-review');
   assert.equal(centralAfricanRepublic.packUrl, '/central-african-republic-education-pack.json');
+  const chad = rollout.countries.find(country => country.code === 'TD');
+  assert.equal(chad.status, 'reference-pack-in-review');
+  assert.equal(chad.packUrl, '/chad-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
