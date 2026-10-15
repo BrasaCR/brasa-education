@@ -579,6 +579,22 @@ test('Comoros pack preserves island, directory, multilingual curriculum, privacy
   if (pack.status === 'complete') assert.ok(pack.review.reviewer);
 });
 
+test('DRC pack preserves provincial, directory, curriculum, statistics, privacy and safeguarding boundaries', () => {
+  const pack = readJson('democratic-republic-of-the-congo-education-pack.json');
+  assert.equal(pack.country.code, 'CD');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.curriculum.implementationRule, /not proof that every listed document controls every class in 2026/i);
+  assert.match(pack.educationStatistics.scopeNotice, /October 2026.*2023–2024/i);
+  assert.match(pack.higherEducation.authorityNotice, /does not authorize every program/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /23\/010.*13 March 2023/i);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /09\/001.*10 January 2009/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /French and Lingala, Kiswahili, Kikongo ya leta and Tshiluba/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') assert.ok(pack.review.reviewer);
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -620,6 +636,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const comoros = rollout.countries.find(country => country.code === 'KM');
   assert.equal(comoros.status, 'reference-pack-in-review');
   assert.equal(comoros.packUrl, '/comoros-education-pack.json');
+  const drc = rollout.countries.find(country => country.code === 'CD');
+  assert.equal(drc.status, 'reference-pack-in-review');
+  assert.equal(drc.packUrl, '/democratic-republic-of-the-congo-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {

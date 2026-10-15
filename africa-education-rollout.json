@@ -16,7 +16,7 @@
     {"code":"CF","slug":"central-african-republic","name":"Central African Republic","status":"reference-pack-in-review","packUrl":"/central-african-republic-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"TD","slug":"chad","name":"Chad","status":"reference-pack-in-review","packUrl":"/chad-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"KM","slug":"comoros","name":"Comoros","status":"reference-pack-in-review","packUrl":"/comoros-education-pack.json","reviewedAt":"2026-10-15"},
-    {"code":"CD","slug":"democratic-republic-of-the-congo","name":"Democratic Republic of the Congo","status":"official-source-research"},
+    {"code":"CD","slug":"democratic-republic-of-the-congo","name":"Democratic Republic of the Congo","status":"reference-pack-in-review","packUrl":"/democratic-republic-of-the-congo-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"CG","slug":"republic-of-the-congo","name":"Republic of the Congo","status":"official-source-research"},
     {"code":"CI","slug":"cote-divoire","name":"Côte d’Ivoire","status":"official-source-research"},
     {"code":"DJ","slug":"djibouti","name":"Djibouti","status":"official-source-research"},
