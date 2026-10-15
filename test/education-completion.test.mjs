@@ -595,6 +595,22 @@ test('DRC pack preserves provincial, directory, curriculum, statistics, privacy 
   if (pack.status === 'complete') assert.ok(pack.review.reviewer);
 });
 
+test('Republic of the Congo pack preserves jurisdiction, directory, curriculum, higher-status, privacy and language boundaries', () => {
+  const pack = readJson('republic-of-the-congo-education-pack.json');
+  assert.equal(pack.country.code, 'CG');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.country.jurisdictionNotice, /separate jurisdiction from the Democratic Republic/i);
+  assert.match(pack.schoolDirectory.coverageStatus, /completeness-and-authorization-not-verified/i);
+  assert.match(pack.curriculum.implementationRule, /not the controlling curriculum/i);
+  assert.match(pack.higherEducation.authorityNotice, /does not equal approval to open.*five-year/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /29-2019.*10 October 2019/i);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /single verified consolidated current child-protection code was not located/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /French, Lingala and Kituba/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') assert.ok(pack.review.reviewer);
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -639,6 +655,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const drc = rollout.countries.find(country => country.code === 'CD');
   assert.equal(drc.status, 'reference-pack-in-review');
   assert.equal(drc.packUrl, '/democratic-republic-of-the-congo-education-pack.json');
+  const congo = rollout.countries.find(country => country.code === 'CG');
+  assert.equal(congo.status, 'reference-pack-in-review');
+  assert.equal(congo.packUrl, '/republic-of-the-congo-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
