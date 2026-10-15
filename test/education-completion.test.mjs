@@ -70,6 +70,24 @@ test('Panama pack preserves MEDUCA, directory-vintage, accreditation and safegua
   }
 });
 
+test('Guatemala pack preserves MINEDUC, school-code, higher-education and legal-gap boundaries', () => {
+  const pack = readJson('guatemala-education-pack.json');
+  assert.equal(pack.country.code, 'GT');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /digecur\.mineduc\.gob\.gt/);
+  assert.match(pack.schoolDirectory.sourceUrl, /mineduc\.gob\.gt\/BUSCAESTABLECIMIENTO_GE/);
+  assert.match(pack.schoolDirectory.scopeNotice, /multiple codes/i);
+  assert.match(pack.higherEducation.privateUniversities.authority, /Consejo de la Enseñanza Privada Superior/);
+  assert.match(pack.privacyAndSafeguarding.comprehensiveLawNotice, /must not claim that a proposal is enacted law/i);
+  assert.match(pack.privacyAndSafeguarding.childrenRightsSource, /congreso\.gob\.gt/);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Guatemalan reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
