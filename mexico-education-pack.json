@@ -1,0 +1,141 @@
+{
+  "schema": "brasa.education.country-pack.v1",
+  "country": {
+    "code": "MX",
+    "name": "México",
+    "defaultLanguage": "es-MX",
+    "timeZones": ["America/Tijuana", "America/Hermosillo", "America/Chihuahua", "America/Mexico_City", "America/Cancun"],
+    "languagePolicy": "Spanish is the default interface language. Indigenous-language access must be planned with the relevant community and authoritative language resources; automatic translation is not treated as reviewed educational localization."
+  },
+  "version": "2026.10.14",
+  "status": "reference-pack-in-review",
+  "review": {
+    "reviewedAt": "2026-10-14",
+    "reviewer": null,
+    "verificationStatus": "qualified-human-review-required",
+    "policy": "No category becomes verified without a named qualified Mexican reviewer, a current authoritative source, and review of the applicable federal and state jurisdiction."
+  },
+  "governanceModel": {
+    "summary": "The national education system combines federal authority, state education authorities, autonomous institutions and institution- or program-specific recognition. A federal record must not be silently treated as complete state coverage.",
+    "federalAuthority": "Secretaría de Educación Pública",
+    "stateAuthorityRule": "Record the responsible state education authority and state-issued recognition when it applies.",
+    "institutionRule": "Autonomous universities and other legally empowered institutions may operate under distinct authority; verify the particular institution and program."
+  },
+  "authorities": [
+    {
+      "name": "Secretaría de Educación Pública",
+      "role": "federal education authority",
+      "url": "https://www.gob.mx/sep",
+      "status": "official-source"
+    },
+    {
+      "name": "Sistema de Información y Gestión Educativa",
+      "role": "national education information and school consultation system",
+      "url": "https://www.siged.sep.gob.mx/SIGED/",
+      "status": "official-source"
+    },
+    {
+      "name": "Dirección General de Acreditación, Incorporación y Revalidación",
+      "role": "federal recognition, incorporation, equivalence and revalidation functions within SEP scope",
+      "url": "https://dgair.sep.gob.mx/",
+      "status": "official-source"
+    },
+    {
+      "name": "Dirección General de Profesiones",
+      "role": "professional title and credential registry functions",
+      "url": "https://www.gob.mx/sep/acciones-y-programas/direccion-general-de-profesiones",
+      "status": "official-source"
+    },
+    {
+      "name": "Secretaría Anticorrupción y Buen Gobierno",
+      "role": "federal personal-data authority within its statutory competence after the 2025 reforms",
+      "url": "https://www.gob.mx/buengobierno",
+      "status": "official-source"
+    }
+  ],
+  "curriculum": {
+    "controllingSource": "https://educacionbasica.sep.gob.mx/wp-content/uploads/2025/Plan_y_programas_de_estudio_2025/Plan%20de%20Estudio%202025%20-WEB-.pdf",
+    "authority": "Secretaría de Educación Pública",
+    "title": "Plan de Estudio 2025 para educación preescolar, primaria y secundaria",
+    "status": "official-source-registered-phase-and-state-implementation-review-required",
+    "stateImplementationRule": "Confirm calendars, implementation guidance, indigenous and community adaptations, and state-issued instructions with the responsible state authority.",
+    "supplementPolicy": "External materials may supplement but never replace, waive or silently reinterpret controlling requirements."
+  },
+  "schoolDirectory": {
+    "authority": "Secretaría de Educación Pública",
+    "primarySourceName": "SIGED Consulta de escuelas",
+    "sourceUrl": "https://siged.sep.gob.mx/SIGED/escuelas.html",
+    "openDataUrl": "https://www.siged.sep.gob.mx/SIGED/datos_abiertos.html",
+    "coverageStatus": "official-national-discovery-source-record-import-and-link-review-required",
+    "scopeNotice": "SIGED reports school information supplied through national education statistics and authorities. BRASA must preserve source-cycle and update dates and must not infer current recognition solely from an older listing.",
+    "requiredRecordFields": [
+      "name",
+      "Clave de Centro de Trabajo",
+      "public or private support type",
+      "education level",
+      "state",
+      "municipality or alcaldía",
+      "locality",
+      "shift",
+      "operating status",
+      "official or institutional URL when available",
+      "source cycle",
+      "source URL",
+      "review date"
+    ]
+  },
+  "upperSecondary": {
+    "authority": "SEP and applicable federal or state authority",
+    "sourceUrl": "https://www.gob.mx/sep/articulos/que-bachillerato-vas-a-elegir-decide-bien-informado",
+    "status": "federal-options-source-registered-state-systems-require-separate-review",
+    "recognitionRule": "Private programs require verification of the applicable official recognition; a provider name alone is insufficient."
+  },
+  "higherEducation": {
+    "federalRvoeSource": "https://sirvoes.sep.gob.mx/sirvoes/mvc/consultas",
+    "authorityNotice": "RVOE attaches to a specific program, campus, modality and issuing authority. It is not a blanket approval of every program offered by an institution.",
+    "stateRecognitionRule": "Search and record state-issued RVOE separately where the responsible state authority issued it.",
+    "autonomousInstitutionRule": "Verify the legal authority and official program information of autonomous institutions directly.",
+    "status": "federal-source-registered-state-and-program-level-review-required"
+  },
+  "qualityAssurance": {
+    "legalRecognition": "RVOE or other applicable statutory authority",
+    "voluntaryAccreditation": [
+      {
+        "name": "COPAES-recognized accrediting organizations",
+        "url": "https://www.copaes.org/",
+        "notice": "Program accreditation is a quality signal and must not be substituted for legal recognition."
+      },
+      {
+        "name": "CIEES",
+        "url": "https://www.ciees.edu.mx/",
+        "notice": "Evaluation or accreditation status must be verified for the specific program and effective period."
+      }
+    ],
+    "status": "program-level-verification-required"
+  },
+  "privacyAndSafeguarding": {
+    "publicSectorLawSource": "https://www.dof.gob.mx/abrirPDF.php?anio=2025&archivo=20032025-VES.pdf&repo=repositorio%2F",
+    "federalAuthoritySource": "https://www.gob.mx/buengobierno/documentos/normatividad-en-materia-de-acceso-a-la-informacion-y-proteccion-de-datos-personales-nuevo",
+    "childrenRightsSource": "https://www.gob.mx/sipinna",
+    "scopeNotice": "Public and private institutions can be governed by different personal-data regimes and authorities. State and institutional safeguarding protocols must be reviewed before real learner participation.",
+    "status": "legal-state-and-institutional-review-required-before-real-learner-pilot"
+  },
+  "officialSourceRegister": [
+    { "id": "mx-sep", "url": "https://www.gob.mx/sep", "reviewedAt": "2026-10-14", "status": "reachable-official-source" },
+    { "id": "mx-siged-schools", "url": "https://siged.sep.gob.mx/SIGED/escuelas.html", "reviewedAt": "2026-10-14", "status": "reachable-official-source" },
+    { "id": "mx-siged-open-data", "url": "https://www.siged.sep.gob.mx/SIGED/datos_abiertos.html", "reviewedAt": "2026-10-14", "status": "reachable-official-source" },
+    { "id": "mx-basic-plan-2025", "url": "https://educacionbasica.sep.gob.mx/wp-content/uploads/2025/Plan_y_programas_de_estudio_2025/Plan%20de%20Estudio%202025%20-WEB-.pdf", "reviewedAt": "2026-10-14", "status": "reachable-official-source" },
+    { "id": "mx-sirvoes", "url": "https://sirvoes.sep.gob.mx/sirvoes/mvc/consultas", "reviewedAt": "2026-10-14", "status": "official-source-manual-query-required" },
+    { "id": "mx-data-law-2025", "url": "https://www.dof.gob.mx/abrirPDF.php?anio=2025&archivo=20032025-VES.pdf&repo=repositorio%2F", "reviewedAt": "2026-10-14", "status": "reachable-official-source" }
+  ],
+  "completionCriteria": [
+    "A qualified Mexican education reviewer is named.",
+    "Federal and state authority boundaries are reviewed and approved.",
+    "Every school record preserves CCT, source cycle, jurisdiction, provenance and review date.",
+    "Every private or non-autonomous program displays program-, campus-, modality- and authority-specific recognition evidence where applicable.",
+    "Curriculum mappings are reviewed by phase, field and relevant state implementation context.",
+    "Indigenous-language and community adaptations are reviewed with competent local participation.",
+    "Privacy, child protection, accessibility, incident and consent procedures are approved by the participating institution and applicable authority.",
+    "No accreditation, recognition, partnership or credential claim exceeds documentary evidence."
+  ]
+}

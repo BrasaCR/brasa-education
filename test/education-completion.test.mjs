@@ -35,6 +35,23 @@ test('Costa Rica pack cannot claim completion without named review authority', (
   }
 });
 
+test('Mexico pack preserves federal, state, program-recognition and privacy boundaries', () => {
+  const pack = readJson('mexico-education-pack.json');
+  assert.equal(pack.country.code, 'MX');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /^https:\/\/educacionbasica\.sep\.gob\.mx\//);
+  assert.match(pack.schoolDirectory.sourceUrl, /siged\.sep\.gob\.mx/);
+  assert.match(pack.higherEducation.authorityNotice, /specific program, campus, modality and issuing authority/i);
+  assert.match(pack.higherEducation.stateRecognitionRule, /state-issued RVOE/i);
+  assert.match(pack.privacyAndSafeguarding.publicSectorLawSource, /dof\.gob\.mx/);
+  assert.ok(pack.officialSourceRegister.length >= 6);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Mexican reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
