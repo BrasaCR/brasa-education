@@ -447,6 +447,26 @@ test('Botswana pack preserves register, curriculum, statistics, BQA, privacy and
   }
 });
 
+test('Burkina Faso pack preserves subsector, directory, statistics, programme, privacy and language boundaries', () => {
+  const pack = readJson('burkina-faso-education-pack.json');
+  assert.equal(pack.country.code, 'BF');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.governanceModel.summary, /divided among.*basic.*secondary.*higher education/i);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.curriculum.implementationRule, /sector plan.*pilot.*not proof.*controlling current curriculum/i);
+  assert.match(pack.educationStatistics.scopeNotice, /released in 2025.*2023–2024.*not 2025 enrollment data/i);
+  assert.match(pack.higherEducationAndTVET.authorityNotice, /monitoring classification is not automatic authorization or accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /001-2021.*30 March 2021/i);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /015-2014.*13 May 2014/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /French, Mooré, Dioula, Fulfuldé.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Burkinabè reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -467,6 +487,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const botswana = rollout.countries.find(country => country.code === 'BW');
   assert.equal(botswana.status, 'reference-pack-in-review');
   assert.equal(botswana.packUrl, '/botswana-education-pack.json');
+  const burkinaFaso = rollout.countries.find(country => country.code === 'BF');
+  assert.equal(burkinaFaso.status, 'reference-pack-in-review');
+  assert.equal(burkinaFaso.packUrl, '/burkina-faso-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
