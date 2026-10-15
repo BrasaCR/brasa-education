@@ -193,6 +193,25 @@ test('Brazil pack preserves federal, census-vintage, course-act, language and sa
   }
 });
 
+test('Peru pack preserves service, census-vintage, licensing, language and safeguarding boundaries', () => {
+  const pack = readJson('peru-education-pack.json');
+  assert.equal(pack.country.code, 'PE');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /minedu\.gob\.pe/);
+  assert.match(pack.schoolDirectory.sourceUrl, /escale\.minedu\.gob\.pe/);
+  assert.match(pack.schoolDirectory.scopeNotice, /educational services and programs, not necessarily one-to-one institutions/i);
+  assert.match(pack.higherEducation.authorityNotice, /institutional licensing, licensed premises, authorized programs/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionAuthoritySource, /gob\.pe\/anpd/);
+  assert.match(pack.privacyAndSafeguarding.childrenLawSource, /gob\.pe\/institucion\/congreso/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /policy proposal under prior consultation as enacted policy/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Peruvian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
