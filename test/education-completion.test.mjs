@@ -563,6 +563,22 @@ test('Chad pack preserves directory, bilingual curriculum, statistics, privacy a
   }
 });
 
+test('Comoros pack preserves island, directory, multilingual curriculum, privacy and safeguarding boundaries', () => {
+  const pack = readJson('comoros-education-pack.json');
+  assert.equal(pack.country.code, 'KM');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.schoolDirectory.scopeNotice, /Operational platform presence is not authorization/i);
+  assert.match(pack.curriculum.implementationRule, /not the controlling curriculum/i);
+  assert.match(pack.higherEducation.authorityNotice, /does not prove institution or program authorization/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /26 June 2014/i);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /31 December 2005/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Comorian, French and Arabic.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') assert.ok(pack.review.reviewer);
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -601,6 +617,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const chad = rollout.countries.find(country => country.code === 'TD');
   assert.equal(chad.status, 'reference-pack-in-review');
   assert.equal(chad.packUrl, '/chad-education-pack.json');
+  const comoros = rollout.countries.find(country => country.code === 'KM');
+  assert.equal(comoros.status, 'reference-pack-in-review');
+  assert.equal(comoros.packUrl, '/comoros-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
