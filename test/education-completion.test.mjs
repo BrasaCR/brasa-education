@@ -505,6 +505,26 @@ test('Cabo Verde pack preserves network, curriculum, qualification, accreditatio
   }
 });
 
+test('Cameroon pack preserves subsystem, directory, statistics, higher-status, privacy and language boundaries', () => {
+  const pack = readJson('cameroon-education-pack.json');
+  assert.equal(pack.country.code, 'CM');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.curriculum.implementationRule, /two distinct subsystems.*not proof of the controlling 2026 version/i);
+  assert.match(pack.educationStatistics.scopeNotice, /2023–2024 school year.*publication date/i);
+  assert.match(pack.higherEducation.authorityNotice, /institution listing does not authorize every program/i);
+  assert.match(pack.higherEducation.authorityNotice, /no private higher-education institution.*authorized to offer a PhD/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /2024\/017.*23 December 2024/i);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /No single verified consolidated current Child Code was located/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /English and French education subsystems are distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Cameroonian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -534,6 +554,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const caboVerde = rollout.countries.find(country => country.code === 'CV');
   assert.equal(caboVerde.status, 'reference-pack-in-review');
   assert.equal(caboVerde.packUrl, '/cabo-verde-education-pack.json');
+  const cameroon = rollout.countries.find(country => country.code === 'CM');
+  assert.equal(cameroon.status, 'reference-pack-in-review');
+  assert.equal(cameroon.packUrl, '/cameroon-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {

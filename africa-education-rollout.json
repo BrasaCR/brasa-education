@@ -12,7 +12,7 @@
     {"code":"BF","slug":"burkina-faso","name":"Burkina Faso","status":"reference-pack-in-review","packUrl":"/burkina-faso-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"BI","slug":"burundi","name":"Burundi","status":"reference-pack-in-review","packUrl":"/burundi-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"CV","slug":"cabo-verde","name":"Cabo Verde","status":"reference-pack-in-review","packUrl":"/cabo-verde-education-pack.json","reviewedAt":"2026-10-15"},
-    {"code":"CM","slug":"cameroon","name":"Cameroon","status":"official-source-research"},
+    {"code":"CM","slug":"cameroon","name":"Cameroon","status":"reference-pack-in-review","packUrl":"/cameroon-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"CF","slug":"central-african-republic","name":"Central African Republic","status":"official-source-research"},
     {"code":"TD","slug":"chad","name":"Chad","status":"official-source-research"},
     {"code":"KM","slug":"comoros","name":"Comoros","status":"official-source-research"},
