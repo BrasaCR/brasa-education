@@ -8,7 +8,7 @@
     {"code":"DZ","slug":"algeria","name":"Algeria","status":"reference-pack-in-review","packUrl":"/algeria-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"AO","slug":"angola","name":"Angola","status":"reference-pack-in-review","packUrl":"/angola-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"BJ","slug":"benin","name":"Benin","status":"reference-pack-in-review","packUrl":"/benin-education-pack.json","reviewedAt":"2026-10-15"},
-    {"code":"BW","slug":"botswana","name":"Botswana","status":"official-source-research"},
+    {"code":"BW","slug":"botswana","name":"Botswana","status":"reference-pack-in-review","packUrl":"/botswana-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"BF","slug":"burkina-faso","name":"Burkina Faso","status":"official-source-research"},
     {"code":"BI","slug":"burundi","name":"Burundi","status":"official-source-research"},
     {"code":"CV","slug":"cabo-verde","name":"Cabo Verde","status":"official-source-research"},

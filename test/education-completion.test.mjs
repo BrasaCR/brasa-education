@@ -427,6 +427,26 @@ test('Benin pack preserves subsector, directory-gap, statistic, program, privacy
   }
 });
 
+test('Botswana pack preserves register, curriculum, statistics, BQA, privacy and language boundaries', () => {
+  const pack = readJson('botswana-education-pack.json');
+  assert.equal(pack.country.code, 'BW');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 6);
+  assert.match(pack.schoolDirectory.coverageStatus, /register-exists.*directory-not-verified/i);
+  assert.match(pack.curriculum.implementationRule, /strategy.*pilot.*does not.*controlling current syllabus/i);
+  assert.match(pack.educationStatistics.scopeNotice, /observation or academic year separately from its release date/i);
+  assert.match(pack.higherEducationAndTVET.authorityNotice, /provider.*does not prove.*every learning programme.*every qualification/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /2024.*18.*14 January 2025/i);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /2009/);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /proposal or review.*not enacted law/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /English, Setswana.*community languages.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Botswana reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -444,6 +464,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const benin = rollout.countries.find(country => country.code === 'BJ');
   assert.equal(benin.status, 'reference-pack-in-review');
   assert.equal(benin.packUrl, '/benin-education-pack.json');
+  const botswana = rollout.countries.find(country => country.code === 'BW');
+  assert.equal(botswana.status, 'reference-pack-in-review');
+  assert.equal(botswana.packUrl, '/botswana-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
