@@ -486,6 +486,25 @@ test('Burundi pack preserves territorial, statistical, curriculum, higher-status
   }
 });
 
+test('Cabo Verde pack preserves network, curriculum, qualification, accreditation, privacy and language boundaries', () => {
+  const pack = readJson('cabo-verde-education-pack.json');
+  assert.equal(pack.country.code, 'CV');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.curriculum.implementationRule, /excludes.*youth and adult.*must not be expanded/i);
+  assert.match(pack.vocationalQualifications.authorityNotice, /qualification in the CNQ does not prove.*provider/i);
+  assert.match(pack.higherEducation.authorityNotice, /Institution accreditation.*exact study cycle.*separate claims/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /133\/V\/2001.*41\/VIII\/2013.*121\/IX\/2021/i);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /72\/X\/2026.*22 April/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Portuguese and the Cape Verdean language.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Cabo Verde reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -512,6 +531,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const burundi = rollout.countries.find(country => country.code === 'BI');
   assert.equal(burundi.status, 'reference-pack-in-review');
   assert.equal(burundi.packUrl, '/burundi-education-pack.json');
+  const caboVerde = rollout.countries.find(country => country.code === 'CV');
+  assert.equal(caboVerde.status, 'reference-pack-in-review');
+  assert.equal(caboVerde.packUrl, '/cabo-verde-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
