@@ -199,6 +199,18 @@
       "accessibility": ["source-controlled"],
       "offline": false,
       "verification": "official-source-manual-query-required"
+    },
+    {
+      "id": "panama-meduca-schools", "title": "Panamá school directories and education statistics", "description": "Find MEDUCA's dated school directories, open data and education statistical bulletins; always check the displayed source year.",
+      "url": "https://www.meduca.gob.pa/transparencia/estadisticas/", "provider": "Ministerio de Educación", "source": "MEDUCA Estadísticas Educativas", "sourceUrl": "https://www.meduca.gob.pa/transparencia/estadisticas/", "reviewedAt": "2026-10-15", "stage": "school", "goals": ["foundations"], "subjects": ["school-discovery", "education-statistics"], "languages": ["es-PA"], "cost": "free-public-source", "credential": "none-reference-source", "credentialAuthority": "MEDUCA", "curriculumRelevance": "Official discovery source; directory year and publication date must be displayed and a listing does not prove current operating status", "countryRelevance": ["PA"], "accessibility": ["source-controlled"], "offline": false, "verification": "official-source-directory-vintage-required"
+    },
+    {
+      "id": "panama-meduca-curriculum", "title": "Panamá plans and programs of study", "description": "Official MEDUCA source for preschool, primary, premedia and media plans and programs.",
+      "url": "https://www.meduca.gob.pa/planes-y-programas-de-estudio/", "provider": "Ministerio de Educación", "source": "Planes y programas de estudio", "sourceUrl": "https://www.meduca.gob.pa/planes-y-programas-de-estudio/", "reviewedAt": "2026-10-15", "stage": "school", "goals": ["foundations", "teach"], "subjects": ["national-curriculum"], "languages": ["es-PA"], "cost": "free-public-source", "credential": "none-reference-source", "credentialAuthority": "MEDUCA", "curriculumRelevance": "Official national source; current implementation, regional guidance and intercultural adaptations require review", "countryRelevance": ["PA"], "accessibility": ["web-and-pdf-source-controlled"], "offline": true, "verification": "official-source"
+    },
+    {
+      "id": "panama-coneaupa-status", "title": "Panamá university accreditation status", "description": "Check the exact published status of Panamanian universities and distinguish accreditation, reaccreditation, in-process, non-operating and closed institutions.",
+      "url": "https://coneaupa.edu.pa/acreditacion/estatus-de-universidades/", "provider": "CONEAUPA", "source": "Estatus de Universidades", "sourceUrl": "https://coneaupa.edu.pa/acreditacion/estatus-de-universidades/", "reviewedAt": "2026-10-15", "stage": "adult", "goals": ["university", "credential"], "subjects": ["institution-status", "higher-education", "accreditation"], "languages": ["es-PA"], "cost": "free-public-source", "credential": "accreditation-reference-not-a-credential", "credentialAuthority": "CONEAUPA", "curriculumRelevance": "Status must be verified for the named institution or program, controlling resolution and effective period", "countryRelevance": ["PA"], "accessibility": ["source-controlled"], "offline": false, "verification": "official-source-status-and-date-review-required"
     }
   ]
 }

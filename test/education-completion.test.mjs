@@ -52,6 +52,24 @@ test('Mexico pack preserves federal, state, program-recognition and privacy boun
   }
 });
 
+test('Panama pack preserves MEDUCA, directory-vintage, accreditation and safeguarding boundaries', () => {
+  const pack = readJson('panama-education-pack.json');
+  assert.equal(pack.country.code, 'PA');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /^https:\/\/www\.meduca\.gob\.pa\//);
+  assert.match(pack.schoolDirectory.sourceUrl, /meduca\.gob\.pa\/transparencia\/estadisticas/);
+  assert.match(pack.schoolDirectory.scopeNotice, /source year and publication date/i);
+  assert.match(pack.higherEducation.authorityNotice, /institutional status, legal operation and program accreditation are distinct/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLawSource, /antai\.gob\.pa/);
+  assert.match(pack.privacyAndSafeguarding.childrenRightsSource, /senniaf\.gob\.pa/);
+  assert.ok(pack.officialSourceRegister.length >= 7);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Panamanian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
