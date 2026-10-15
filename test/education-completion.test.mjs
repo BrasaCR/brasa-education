@@ -467,6 +467,25 @@ test('Burkina Faso pack preserves subsector, directory, statistics, programme, p
   }
 });
 
+test('Burundi pack preserves territorial, statistical, curriculum, higher-status, privacy and language boundaries', () => {
+  const pack = readJson('burundi-education-pack.json');
+  assert.equal(pack.country.code, 'BI');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.educationStatistics.scopeNotice, /uploaded in 2024 or 2025.*2022–2023.*not current 2025 data/i);
+  assert.match(pack.curriculum.implementationRule, /reform history.*experiment.*not the controlling current programme/i);
+  assert.match(pack.higherEducationAndTVET.authorityNotice, /quality-evaluation scores are not programme accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /1\/03.*10 March 2026/i);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /new.*commencement.*supervisory authority.*implementing measures/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Kirundi, French, English and Kiswahili.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Burundian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -490,6 +509,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const burkinaFaso = rollout.countries.find(country => country.code === 'BF');
   assert.equal(burkinaFaso.status, 'reference-pack-in-review');
   assert.equal(burkinaFaso.packUrl, '/burkina-faso-education-pack.json');
+  const burundi = rollout.countries.find(country => country.code === 'BI');
+  assert.equal(burundi.status, 'reference-pack-in-review');
+  assert.equal(burundi.packUrl, '/burundi-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
