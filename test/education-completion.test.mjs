@@ -248,6 +248,25 @@ test('Bolivia pack preserves unit-year, program, regional-curriculum and legal-g
   }
 });
 
+test('Uruguay pack preserves center-vintage, authority, recognition, accreditation and LSU boundaries', () => {
+  const pack = readJson('uruguay-education-pack.json');
+  assert.equal(pack.country.code, 'UY');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /anep\.edu\.uy\/documentos-curriculares/);
+  assert.match(pack.schoolDirectory.sourceUrl, /sig\.anep\.edu\.uy\/SIGANEP/);
+  assert.match(pack.schoolDirectory.scopeNotice, /different update dates by subsystem.*does not by itself prove/i);
+  assert.match(pack.higherEducation.authorityNotice, /Authorization of a private institution.*autonomous status of a public university.*ARCU-SUR/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /18\.331/);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /17\.823/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Lengua de Señas Uruguaya.*not as a Spanish translation feature/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Uruguayan reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
