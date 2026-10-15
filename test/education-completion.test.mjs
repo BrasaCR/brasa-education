@@ -174,6 +174,25 @@ test('Colombia pack preserves territorial, DUE, program-registration, accreditat
   }
 });
 
+test('Brazil pack preserves federal, census-vintage, course-act, language and safeguarding boundaries', () => {
+  const pack = readJson('brazil-education-pack.json');
+  assert.equal(pack.country.code, 'BR');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /basenacionalcomum\.mec\.gov\.br/);
+  assert.match(pack.schoolDirectory.sourceUrl, /gov\.br\/inep/);
+  assert.match(pack.schoolDirectory.scopeNotice, /annually updated Censo Escolar declarations/i);
+  assert.match(pack.higherEducation.authorityNotice, /course authorization, recognition or renewal of recognition/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionAuthoritySource, /gov\.br\/anpd/);
+  assert.match(pack.privacyAndSafeguarding.childrenLawSource, /planalto\.gov\.br/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Indigenous and Quilombola curricula.*Libras/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Brazilian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
