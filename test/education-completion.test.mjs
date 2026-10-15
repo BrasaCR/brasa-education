@@ -156,6 +156,24 @@ test('El Salvador pack preserves directory vintage, curriculum version, program 
   }
 });
 
+test('Colombia pack preserves territorial, DUE, program-registration, accreditation and safeguarding boundaries', () => {
+  const pack = readJson('colombia-education-pack.json');
+  assert.equal(pack.country.code, 'CO');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /mineducacion\.gov\.co/);
+  assert.match(pack.schoolDirectory.sourceUrl, /mineducacion\.gov\.co\/buscandocolegio/);
+  assert.match(pack.schoolDirectory.scopeNotice, /certified territorial secretariats/i);
+  assert.match(pack.higherEducation.authorityNotice, /mandatory registro calificado.*voluntary time-limited high-quality accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionAuthoritySource, /sic\.gov\.co/);
+  assert.match(pack.privacyAndSafeguarding.childrenAuthoritySource, /icbf\.gov\.co/);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Colombian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
