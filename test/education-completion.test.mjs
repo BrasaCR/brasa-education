@@ -230,6 +230,24 @@ test('Chile pack preserves RBD, recognition, accreditation, consultation and leg
   }
 });
 
+test('Bolivia pack preserves unit-year, program, regional-curriculum and legal-gap boundaries', () => {
+  const pack = readJson('bolivia-education-pack.json');
+  assert.equal(pack.country.code, 'BO');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /minedu\.gob\.bo/);
+  assert.match(pack.schoolDirectory.sourceUrl, /seie\.minedu\.gob\.bo/);
+  assert.match(pack.schoolDirectory.scopeNotice, /displays a management year.*does not by itself prove current authorization/i);
+  assert.match(pack.higherEducation.authorityNotice, /Autonomous public-university status.*private-university institutional authorization.*program/i);
+  assert.match(pack.privacyAndSafeguarding.pendingBillNotice, /must not be presented as enacted law/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /regionalized and diversified curricula.*relevant Indigenous Original Peasant Nations and Peoples/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Bolivian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
