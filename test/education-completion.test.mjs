@@ -329,6 +329,27 @@ test('Guyana pack preserves regional, school-list, curriculum, NAC and Indigenou
   }
 });
 
+test('Suriname pack preserves centralized, school-list, curriculum, NOVA and multilingual boundaries', () => {
+  const pack = readJson('suriname-education-pack.json');
+  assert.equal(pack.country.code, 'SR');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /gov\.sr.*directoraat-algemeen-vormend-onderwijs/);
+  assert.match(pack.curriculum.supplementPolicy, /policy intention or pilot must not be presented as an effective nationwide curriculum/i);
+  assert.match(pack.schoolDirectory.sourceUrl, /gov\.sr.*over-ons/);
+  assert.match(pack.schoolDirectory.scopeNotice, /listing does not by itself prove current operation/i);
+  assert.match(pack.higherEducation.authorityNotice, /distinguishes recognition from accreditation/i);
+  assert.match(pack.higherEducation.authorityNotice, /accredited program does not make every program at the institution accredited/i);
+  assert.match(pack.privacyAndSafeguarding.privacyDraft, /Wet Bescherming Privacy en Persoonsgegevens/);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /marked ONTWERP.*not be represented as enacted law/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /relevant community.*interior education/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Surinamese reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
