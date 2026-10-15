@@ -122,6 +122,23 @@ test('Honduras pack preserves SACE, territorial, higher-education and legal-gap 
   }
 });
 
+test('Nicaragua pack preserves territorial, curriculum-version, CNEA-category and legal boundaries', () => {
+  const pack = readJson('nicaragua-education-pack.json');
+  assert.equal(pack.country.code, 'NI');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /mined\.gob\.ni/);
+  assert.match(pack.schoolDirectory.scopeNotice, /indicator period and update date/i);
+  assert.match(pack.higherEducation.authorityNotice, /does not by itself prove current institutional or program accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /Ley No\. 787/);
+  assert.match(pack.privacyAndSafeguarding.childrenCodeSource, /digesto\.asamblea\.gob\.ni/);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Nicaraguan reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
