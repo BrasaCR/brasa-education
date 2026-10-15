@@ -350,6 +350,26 @@ test('Suriname pack preserves centralized, school-list, curriculum, NOVA and mul
   }
 });
 
+test('French Guiana pack preserves French, territorial, UAI, diploma and community boundaries', () => {
+  const pack = readJson('french-guiana-education-pack.json');
+  assert.equal(pack.country.code, 'GF');
+  assert.match(pack.country.jurisdictionNotice, /not a sovereign state/i);
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /eduscol\.education\.gouv\.fr/);
+  assert.match(pack.curriculum.supplementPolicy, /draft program.*must not be presented as already effective/i);
+  assert.match(pack.schoolDirectory.sourceUrl, /data\.education\.gouv\.fr/);
+  assert.match(pack.schoolDirectory.scopeNotice, /UAI or directory entry does not by itself prove current operation/i);
+  assert.match(pack.higherEducation.authorityNotice, /only to the diplomas listed in the controlling arrêté and annex/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionFramework, /General Data Protection Regulation/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /relevant community and competent customary representatives/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Guyanese/French reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
