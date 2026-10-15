@@ -212,6 +212,24 @@ test('Peru pack preserves service, census-vintage, licensing, language and safeg
   }
 });
 
+test('Chile pack preserves RBD, recognition, accreditation, consultation and legal-transition boundaries', () => {
+  const pack = readJson('chile-education-pack.json');
+  assert.equal(pack.country.code, 'CL');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /curriculumnacional\.cl/);
+  assert.match(pack.schoolDirectory.sourceUrl, /mi\.mineduc\.cl\/mime-web/);
+  assert.match(pack.schoolDirectory.scopeNotice, /does not by itself prove current official recognition/i);
+  assert.match(pack.higherEducation.authorityNotice, /Official recognition.*institutional accreditation.*program's accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.futureReform, /1 December 2026.*must not apply.*before that date/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /proposal under Indigenous consultation must not be presented as an approved curriculum/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Chilean reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
