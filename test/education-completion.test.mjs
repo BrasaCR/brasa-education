@@ -370,6 +370,25 @@ test('French Guiana pack preserves French, territorial, UAI, diploma and communi
   }
 });
 
+test('Algeria pack preserves directory-gap, phased-curriculum, habilitation, privacy and language boundaries', () => {
+  const pack = readJson('algeria-education-pack.json');
+  assert.equal(pack.country.code, 'DZ');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.schoolDirectory.scopeNotice, /must not fabricate school records/i);
+  assert.match(pack.curriculum.implementationRule, /beginning in 2026–2027.*must not be retroactively applied/i);
+  assert.match(pack.higherEducation.authorityNotice, /institution status.*habilitation of the exact training offer/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /18-07.*25-11/);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /15-12/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Arabic and Tamazight are official.*French and English.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Algerian reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -378,6 +397,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   assert.ok(rollout.requiredGates.length >= 10);
   assert.match(rollout.policy, /never replace current national and subnational official sources/i);
   assert.ok(rollout.countries.every(country => country.status !== 'complete'));
+  const algeria = rollout.countries.find(country => country.code === 'DZ');
+  assert.equal(algeria.status, 'reference-pack-in-review');
+  assert.equal(algeria.packUrl, '/algeria-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {

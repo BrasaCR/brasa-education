@@ -5,7 +5,7 @@
   "policy":"Each sovereign state requires its own governed education pack. Regional or international material may supplement but never replace current national and subnational official sources. No pack may be marked complete without a named qualified reviewer.",
   "requiredGates":["official education authority","school directory or documented directory gap","curriculum authority and effective version","dated education statistics","higher-education recognition and accreditation boundaries","privacy status","child safeguarding","language and community requirements","catalog resources","automated tests","staging route verification"],
   "countries":[
-    {"code":"DZ","slug":"algeria","name":"Algeria","status":"official-source-research"},
+    {"code":"DZ","slug":"algeria","name":"Algeria","status":"reference-pack-in-review","packUrl":"/algeria-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"AO","slug":"angola","name":"Angola","status":"official-source-research"},
     {"code":"BJ","slug":"benin","name":"Benin","status":"official-source-research"},
     {"code":"BW","slug":"botswana","name":"Botswana","status":"official-source-research"},
