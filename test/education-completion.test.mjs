@@ -307,6 +307,28 @@ test('Argentina pack preserves federal, CUE, curriculum, title-validity, accredi
   }
 });
 
+test('Guyana pack preserves regional, school-list, curriculum, NAC and Indigenous-community boundaries', () => {
+  const pack = readJson('guyana-education-pack.json');
+  assert.equal(pack.country.code, 'GY');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /education\.gov\.gy\/web2\/index\.php\/students-resources/);
+  assert.match(pack.curriculum.supplementPolicy, /CXC.*must not silently replace the Guyana national curriculum/i);
+  assert.match(pack.schoolDirectory.sourceUrl, /list-of-schools/);
+  assert.match(pack.schoolDirectory.scopeNotice, /listing does not by itself prove current operation/i);
+  assert.match(pack.higherEducation.authorityNotice, /registration.*is not institutional accreditation/i);
+  assert.match(pack.higherEducation.authorityNotice, /protected institutional title/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /Act No\. 18 of 2023/);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /Act No\. 17 of 2009/);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /Commencement.*Data Protection Commissioner/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /relevant people, village and community/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Guyanese reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
