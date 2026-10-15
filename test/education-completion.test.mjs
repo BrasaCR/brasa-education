@@ -267,6 +267,26 @@ test('Uruguay pack preserves center-vintage, authority, recognition, accreditati
   }
 });
 
+test('Paraguay pack preserves data-vintage, habilitation, accreditation, privacy-transition and language boundaries', () => {
+  const pack = readJson('paraguay-education-pack.json');
+  assert.equal(pack.country.code, 'PY');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /mec\.gov\.py/);
+  assert.match(pack.schoolDirectory.sourceUrl, /datos\.gov\.py\/dataset\/directorio-de-instituciones/);
+  assert.match(pack.schoolDirectory.scopeNotice, /October 2019 modification date.*does not by itself prove current operation/i);
+  assert.match(pack.higherEducation.authorityNotice, /CONES habilitation.*ANEAES.*accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /7593\/2025/);
+  assert.match(pack.privacyAndSafeguarding.authorityStatus, /operational status.*implementing decree.*must be confirmed/i);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /1680/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Spanish and Guaraní.*not be treated as a substitute for all Indigenous languages/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Paraguayan reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
