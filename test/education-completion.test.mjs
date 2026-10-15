@@ -139,6 +139,23 @@ test('Nicaragua pack preserves territorial, curriculum-version, CNEA-category an
   }
 });
 
+test('El Salvador pack preserves directory vintage, curriculum version, program and accreditation boundaries', () => {
+  const pack = readJson('el-salvador-education-pack.json');
+  assert.equal(pack.country.code, 'SV');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /mined\.gob\.sv/);
+  assert.match(pack.schoolDirectory.scopeNotice, /publication date/i);
+  assert.match(pack.higherEducation.authorityNotice, /legal establishment, authorization of a named program, title registration and voluntary accreditation are distinct/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionNotice, /consolidated law/i);
+  assert.match(pack.privacyAndSafeguarding.childrenLawSource, /conapina\.gob\.sv/);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Salvadoran reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
