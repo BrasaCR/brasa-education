@@ -48,6 +48,21 @@ export default {
       if (request.method === 'POST') return onRequestPost(context);
       return json({ error: 'method_not_allowed' }, 405, { allow: 'GET, HEAD, POST' });
     }
+    // Country pages deliberately keep the country URL visible while sharing one
+    // reviewed application shell.  Relative links from that shell would normally
+    // resolve below /country/<slug>/ and 404.  Resolve those asset requests against
+    // the site root so every country follows the same tested navigation contract.
+    const countryAsset = url.pathname.match(/^\/country\/([a-z0-9-]+)\/(.+)$/i);
+    if (countryAsset) {
+      const rootUrl = new URL(`/${countryAsset[2]}`, url);
+      rootUrl.search = url.search;
+      return env.ASSETS.fetch(new Request(rootUrl, request));
+    }
+    if (/^\/country\/[a-z0-9-]+\/?$/i.test(url.pathname)) {
+      const rootUrl = new URL('/index.html', url);
+      rootUrl.search = url.search;
+      return env.ASSETS.fetch(new Request(rootUrl, request));
+    }
     return env.ASSETS.fetch(request);
   }
 };

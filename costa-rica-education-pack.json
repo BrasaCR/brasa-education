@@ -1,0 +1,47 @@
+{
+  "schema": "brasa.education.country-pack.v1",
+  "country": { "code": "CR", "name": "Costa Rica", "defaultLanguage": "es", "timeZone": "America/Costa_Rica" },
+  "version": "2026.10.14",
+  "status": "reference-pack-in-review",
+  "review": {
+    "reviewedAt": "2026-10-14",
+    "reviewer": null,
+    "verificationStatus": "qualified-human-review-required",
+    "policy": "No category becomes verified without an identified qualified reviewer and a current official source."
+  },
+  "authorities": [
+    { "name": "Ministerio de Educación Pública", "role": "national education authority", "url": "https://www.mep.go.cr/", "status": "official-source" },
+    { "name": "Consejo Superior de Educación", "role": "education policy and curriculum authority", "url": "https://www.cse.go.cr/", "status": "official-source" },
+    { "name": "Consejo Nacional de Enseñanza Superior Universitaria Privada", "role": "private higher-education authority", "url": "https://conesup.mep.go.cr/", "status": "official-source" },
+    { "name": "Sistema Nacional de Acreditación de la Educación Superior", "role": "higher-education accreditation body", "url": "https://www.sinaes.ac.cr/", "status": "official-source" }
+  ],
+  "curriculum": {
+    "controllingSource": "https://www.mep.go.cr/programas-estudio",
+    "status": "source-registered-mapping-review-required",
+    "supplementPolicy": "External materials may supplement but never replace or amend controlling MEP requirements."
+  },
+  "schoolDirectory": {
+    "authority": "Ministerio de Educación Pública",
+    "sourceUrl": "https://www.mep.go.cr/",
+    "coverageStatus": "api-directory-present-record-level-verification-continuing",
+    "requiredRecordFields": ["name", "type", "province", "canton", "official identifier", "official or institutional URL", "source", "review date"]
+  },
+  "higherEducation": {
+    "publicUniversitySource": "https://www.conare.ac.cr/",
+    "privateAuthoritySource": "https://conesup.mep.go.cr/",
+    "accreditationSource": "https://www.sinaes.ac.cr/",
+    "status": "sources-registered-institution-level-review-required"
+  },
+  "privacyAndSafeguarding": {
+    "dataProtectionAuthority": "PRODHAB",
+    "sourceUrl": "https://www.prodhab.go.cr/",
+    "status": "legal-and-institutional-review-required-before-real-learner-pilot"
+  },
+  "completionCriteria": [
+    "A qualified Costa Rican education reviewer is named.",
+    "Every school record has provenance and a current review date.",
+    "Curriculum mappings are approved or rejected by subject and grade.",
+    "Accessibility, privacy, safeguarding and incident procedures are approved by the pilot institution.",
+    "No accreditation, authorization or recognition claim exceeds documentary evidence."
+  ]
+}

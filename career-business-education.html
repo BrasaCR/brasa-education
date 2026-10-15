@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="BRASA CR · Education, World Wide · Owned by the citizens of the world">
+<meta name="theme-color" content="#1B1A17">
+
+<title>Career and Business Education — BRASA Education</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://assets.brasa.world">
+
+<!-- Fraunces (variable serif) + Geist (variable sans) — same as brasa.world -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300..700&display=swap">
+
+<style>
+/* =========================================================================
+   BRASA — Education, World Wide
+   Photo-first · Text-restrained · Constitutionally anchored
+   Foundation stylesheet · verbatim from brasa.world
+   ========================================================================= */
+
+:root {
+  --brasa-black: #1B1A17;
+  --brasa-soft: #6B6862;
+  --brasa-accent: #8C3A1F;
+  --brasa-green: #0D6E5C;
+  --brasa-callout: #F2EDE0;
+  --brasa-page: #FBF9F4;
+  --brasa-cream: #F5F0E5;
+  --brasa-rule: #E5DFD0;
+  --brasa-hover: #6B280F;
+  --serif: 'Fraunces', 'Times New Roman', serif;
+  --sans: 'Geist', 'Helvetica Neue', system-ui, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 9rem;
+  --max-w: 1480px;
+  --gutter: clamp(1.25rem, 4vw, 2.75rem);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-photo: cubic-bezier(0.16, 0.84, 0.34, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--brasa-page);
+  color: var(--brasa-black);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.5;
+  font-feature-settings: "ss01", "ss02";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+img { display: block; max-width: 100%; height: auto; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+.container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.visually-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brasa-accent);
+  margin-bottom: var(--space-sm);
+}
+.section-h {
+  font-family: var(--serif); font-weight: 350;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05; letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0;
+  margin-bottom: var(--space-md);
+  max-width: 28ch;
+}
+
+/* HEADER */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.25rem var(--gutter);
+  display: flex; align-items: center; justify-content: space-between;
+  pointer-events: none;
+  transition: background 380ms var(--ease), padding 380ms var(--ease), backdrop-filter 380ms var(--ease);
+}
+.site-header > * { pointer-events: auto; }
+.site-header.scrolled {
+  background: rgba(251, 249, 244, 0.86);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  padding-top: 0.9rem; padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(229, 223, 208, 0.5);
+}
+.wordmark {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 1.35rem; letter-spacing: 0.04em;
+  color: var(--brasa-cream);
+  transition: color 380ms var(--ease);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  display: flex; align-items: center;
+}
+.site-header.scrolled .wordmark { color: var(--brasa-black); }
+.wordmark-img { height: 140px; width: auto; display: block; transition: height 380ms var(--ease), filter 380ms var(--ease); filter: drop-shadow(0 4px 18px rgba(0,0,0,0.25)); }
+.site-header.scrolled .wordmark-img { height: 56px; filter: none; }
+.nav { display: flex; gap: 2.25rem; align-items: center; }
+.nav a {
+  font-family: var(--sans); font-size: 0.82rem; font-weight: 500;
+  letter-spacing: 0.04em; color: var(--brasa-cream);
+  position: relative; padding: 0.25rem 0;
+  transition: color 380ms var(--ease);
+}
+.site-header.scrolled .nav a { color: var(--brasa-black); }
+.nav a::after { content: ''; position: absolute; bottom: -2px; left: 0; height: 1px; width: 0; background: currentColor; transition: width 360ms var(--ease); }
+.nav a:hover::after { width: 100%; }
+.nav-search {
+  background: transparent; display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%;
+  color: var(--brasa-cream);
+  transition: color 380ms var(--ease), background 280ms var(--ease);
+}
+.site-header.scrolled .nav-search { color: var(--brasa-black); }
+.nav-search:hover { background: rgba(140, 58, 31, 0.12); }
+@media (max-width: 720px) {
+  .nav { gap: 1.25rem; }
+  .nav a:not(.nav-search) { display: none; }
+  .nav a.nav-catalog { display: inline-block; }
+  .wordmark-img { height: 84px; }
+  .site-header.scrolled .wordmark-img { height: 44px; }
+}
+
+/* HERO */
+.hero {
+  position: relative; width: 100%;
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: flex-end;
+  overflow: hidden; background: var(--brasa-black);
+}
+.hero-photo { position: absolute; inset: 0; z-index: 1; overflow: hidden; }
+.hero-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(27,26,23,0.3) 0%, rgba(27,26,23,0) 28%, rgba(27,26,23,0) 50%, rgba(27,26,23,0.55) 100%);
+  z-index: 2;
+}
+.hero-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  animation: heroBreathe 28s var(--ease-photo) infinite alternate;
+  filter: saturate(0.95) contrast(1.02);
+}
+@keyframes heroBreathe {
+  0%   { transform: scale(1.0)  translateX(0); }
+  100% { transform: scale(1.08) translateX(-1.5%); }
+}
+.hero-content { position: relative; z-index: 3; width: 100%; padding: 0 var(--gutter) clamp(3rem, 8vh, 5.5rem); color: var(--brasa-cream); }
+.hero-identity {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(2.75rem, 8vw, 6.75rem);
+  line-height: 0.96; letter-spacing: -0.025em;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+  max-width: 18ch; margin-bottom: 1.5rem;
+  opacity: 0; transform: translateY(28px);
+  animation: heroReveal 1.6s 0.4s var(--ease) forwards;
+}
+.hero-tag {
+  font-family: var(--sans); font-weight: 400;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  letter-spacing: 0.04em;
+  color: rgba(245, 240, 229, 0.82);
+  max-width: 52ch;
+  opacity: 0; transform: translateY(20px);
+  animation: heroReveal 1.6s 0.85s var(--ease) forwards;
+}
+@keyframes heroReveal { to { opacity: 1; transform: translateY(0); } }
+.hero-scroll {
+  position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 3;
+  font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.6);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  opacity: 0; animation: heroReveal 1.6s 1.4s var(--ease) forwards;
+}
+.hero-scroll::after {
+  content: ''; width: 1px; height: 36px;
+  background: linear-gradient(to bottom, rgba(245,240,229,0.7), rgba(245,240,229,0));
+  animation: scrollPulse 2.4s var(--ease) infinite;
+}
+@keyframes scrollPulse {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* SECTION + REVEAL */
+.section { padding-top: clamp(4rem, 10vh, 8rem); padding-bottom: clamp(4rem, 10vh, 8rem); }
+.section--tight { padding-top: clamp(3rem, 6vh, 5rem); padding-bottom: clamp(3rem, 6vh, 5rem); }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .hero-identity, .hero-tag, .hero-scroll { opacity: 1; transform: none; animation: none; }
+  .hero-photo img { animation: none; }
+  * { transition-duration: 0.001ms !important; }
+}
+
+/* FOUR PILLARS */
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(0.75rem, 1.5vw, 1.25rem); }
+@media (max-width: 720px) { .pillars { grid-template-columns: 1fr; } }
+.pillar {
+  position: relative; display: flex; flex-direction: column;
+  aspect-ratio: 4 / 3; overflow: hidden;
+  background: var(--brasa-black); isolation: isolate;
+}
+.pillar-photo { position: absolute; inset: 0; z-index: 1; }
+.pillar-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(27,26,23,0.05) 0%, rgba(27,26,23,0.0) 35%, rgba(27,26,23,0.65) 100%);
+  z-index: 2; transition: background 700ms var(--ease);
+}
+.pillar:hover .pillar-photo::after { background: linear-gradient(180deg, rgba(27,26,23,0.15) 0%, rgba(27,26,23,0.05) 35%, rgba(27,26,23,0.78) 100%); }
+.pillar-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1500ms var(--ease-photo); filter: saturate(0.93) contrast(1.02); }
+.pillar:hover .pillar-photo img { transform: scale(1.06); }
+.pillar-content {
+  position: relative; z-index: 3; align-self: end; width: 100%;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex; align-items: flex-end; margin-top: auto;
+  color: var(--brasa-cream);
+}
+.pillar-eyebrow {
+  font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.7);
+  margin-bottom: 0.5rem; display: block;
+}
+.pillar-label {
+  font-family: var(--serif); font-weight: 350;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.05; letter-spacing: -0.015em;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  margin-bottom: 0.5rem;
+}
+.pillar-arrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.85);
+  transform: translateX(0);
+  transition: transform 480ms var(--ease), color 280ms;
+}
+.pillar:hover .pillar-arrow { transform: translateX(8px); color: var(--brasa-cream); }
+
+/* SUBJECTS GRID (21 tiles · BRASA "rights" pattern) */
+.rights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+@media (max-width: 760px) { .rights-grid { grid-template-columns: repeat(2, 1fr); gap: 0.85rem; } }
+@media (max-width: 480px) { .rights-grid { grid-template-columns: 1fr; } }
+.right-tile {
+  position: relative; display: block; aspect-ratio: 4 / 3;
+  overflow: hidden; background: var(--brasa-callout); isolation: isolate;
+}
+.right-tile-primary { position: absolute; inset: 0; z-index: 1; display: block; }
+.right-photo { position: absolute; inset: 0; z-index: 1; }
+.right-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(27,26,23,0) 50%, rgba(27,26,23,0.7) 100%); z-index: 2; }
+.right-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1500ms var(--ease-photo); filter: saturate(0.92) contrast(1.03); }
+.right-tile:hover .right-photo img { transform: scale(1.07); }
+.right-label {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 3;
+  padding: 1.25rem 1.35rem; color: var(--brasa-cream);
+  font-family: var(--serif); font-weight: 400;
+  font-size: 1.4rem; letter-spacing: -0.005em;
+  line-height: 1.1; font-variation-settings: "opsz" 48, "SOFT" 40;
+}
+
+/* FEATURED COLLECTIONS */
+.featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.75rem, 1.5vw, 1.25rem); }
+@media (max-width: 960px) { .featured-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .featured-grid { grid-template-columns: 1fr; } }
+.feature { position: relative; display: block; aspect-ratio: 3 / 2; overflow: hidden; background: var(--brasa-black); }
+.feature-photo { position: absolute; inset: 0; z-index: 1; }
+.feature-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(27,26,23,0) 35%, rgba(27,26,23,0.7) 100%); z-index: 2; }
+.feature-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1500ms var(--ease-photo); filter: saturate(0.92) contrast(1.02); }
+.feature:hover .feature-photo img { transform: scale(1.05); }
+.feature-content { position: absolute; bottom: 0; left: 0; z-index: 3; padding: clamp(1.25rem, 2.5vw, 1.75rem); color: var(--brasa-cream); }
+.feature-eyebrow {
+  font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.78);
+  margin-bottom: 0.4rem; display: block;
+}
+.feature-label {
+  font-family: var(--serif); font-weight: 350;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  line-height: 1.1; letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 72, "SOFT" 50;
+}
+
+/* Status badge — sits top-right of a feature tile, signals provider tier */
+.feature-badge {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  z-index: 4;
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(245, 240, 229, 0.95);
+  color: var(--brasa-black);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.feature-badge.free     { color: var(--brasa-green); }
+.feature-badge.freemium { color: var(--brasa-accent); }
+.feature-badge.native   { color: var(--brasa-accent); background: var(--brasa-cream); }
+
+
+/* SIGNALS */
+.signals {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(0.5rem, 1vw, 1rem);
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-top: 1px solid var(--brasa-rule);
+  border-bottom: 1px solid var(--brasa-rule);
+}
+@media (max-width: 880px) { .signals { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } }
+@media (max-width: 480px) { .signals { grid-template-columns: 1fr; } }
+.signal { text-align: left; padding: 0.5rem 0.75rem 0.5rem 0; }
+.signal-num {
+  font-family: var(--serif); font-weight: 350;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  line-height: 1; color: var(--brasa-accent);
+  font-variation-settings: "opsz" 144, "SOFT" 60;
+  margin-bottom: 0.4rem; letter-spacing: -0.02em;
+  font-feature-settings: "lnum";
+}
+.signal-label { font-family: var(--sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; line-height: 1.35; color: var(--brasa-soft); }
+
+/* GATEWAY */
+.gateway {
+  position: relative; display: block; width: 100%;
+  aspect-ratio: 21 / 9; min-height: 320px;
+  overflow: hidden; background: var(--brasa-black); isolation: isolate;
+}
+@media (max-width: 720px) { .gateway { aspect-ratio: 4 / 5; } }
+.gateway-photo { position: absolute; inset: 0; z-index: 1; }
+.gateway-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(27,26,23,0.5) 0%, rgba(27,26,23,0.55) 100%);
+  z-index: 2; transition: background 700ms var(--ease);
+}
+.gateway:hover .gateway-photo::after { background: linear-gradient(180deg, rgba(27,26,23,0.4) 0%, rgba(27,26,23,0.45) 100%); }
+.gateway-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1800ms var(--ease-photo); filter: saturate(0.85) contrast(1.05); }
+.gateway:hover .gateway-photo img { transform: scale(1.04); }
+.gateway-content {
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 2rem;
+  color: var(--brasa-cream);
+}
+.gateway-eyebrow {
+  font-family: var(--sans); font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: rgba(245, 240, 229, 0.75);
+  margin-bottom: 1rem;
+}
+.gateway-h {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  line-height: 1; letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 1;
+  margin-bottom: 1.5rem; max-width: 18ch;
+}
+.gateway-arrow {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid rgba(245, 240, 229, 0.4);
+  border-radius: 999px;
+  transition: background 380ms var(--ease), border-color 380ms;
+}
+.gateway:hover .gateway-arrow { background: rgba(245, 240, 229, 0.1); border-color: rgba(245, 240, 229, 0.7); }
+
+/* WELCOME */
+.section--welcome { padding-top: 0; padding-bottom: 0; }
+.welcome { position: relative; min-height: clamp(440px, 72vh, 700px); display: flex; align-items: center; overflow: hidden; }
+.welcome-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(0.95); z-index: 0; }
+.welcome::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(27,26,23,0.10) 0%, rgba(27,26,23,0.42) 48%, rgba(27,26,23,0.80) 100%); }
+.welcome-copy { position: relative; z-index: 2; margin-left: auto; width: min(48ch, 92%); padding: clamp(2.5rem, 7vw, 6rem) clamp(1.5rem, 7vw, 7rem); }
+.welcome-text {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  line-height: 1.18; letter-spacing: -0.012em;
+  color: var(--brasa-cream);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.35);
+}
+.welcome-text em { font-style: italic; color: #E9B892; font-variation-settings: "opsz" 144, "SOFT" 80, "WONK" 1; }
+.welcome-sig {
+  margin-top: 1.75rem;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(245,240,229,0.82);
+}
+@media (max-width: 820px) {
+  .welcome { align-items: flex-end; min-height: clamp(420px, 82vh, 620px); }
+  .welcome::after { background: linear-gradient(180deg, rgba(27,26,23,0.05) 0%, rgba(27,26,23,0.35) 38%, rgba(27,26,23,0.86) 100%); }
+  .welcome-copy { width: 100%; margin-left: 0; }
+}
+
+/* FOOTER */
+.site-footer { background: var(--brasa-black); color: var(--brasa-cream); padding: clamp(3rem, 7vh, 5rem) var(--gutter) 2rem; margin-top: 0; }
+.footer-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: end; }
+@media (max-width: 720px) { .footer-inner { grid-template-columns: 1fr; } }
+.footer-mark { font-family: var(--serif); font-weight: 300; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.05; letter-spacing: -0.015em; font-variation-settings: "opsz" 144, "SOFT" 50; margin-bottom: 0.75rem; }
+.footer-mark-img { height: 220px; width: auto; display: block; margin-bottom: 0.75rem; }
+.footer-tagline { font-family: var(--sans); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.04em; color: rgba(245, 240, 229, 0.65); max-width: 48ch; line-height: 1.6; }
+.footer-links { display: flex; flex-direction: column; gap: 0.65rem; font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; text-align: right; }
+@media (max-width: 720px) { .footer-links { text-align: left; flex-direction: row; flex-wrap: wrap; gap: 1rem 1.5rem; } }
+.footer-links a { color: rgba(245, 240, 229, 0.78); transition: color 280ms var(--ease); position: relative; }
+.footer-links a:hover { color: var(--brasa-cream); }
+.footer-bottom { max-width: var(--max-w); margin: 3rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(245, 240, 229, 0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.06em; color: rgba(245, 240, 229, 0.4); }
+
+/* SEARCH OVERLAY */
+.search-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(27, 26, 23, 0.96);
+  backdrop-filter: blur(20px);
+  opacity: 0; pointer-events: none;
+  transition: opacity 380ms var(--ease);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 6rem var(--gutter) 2rem;
+}
+.search-overlay.is-open { opacity: 1; pointer-events: auto; }
+.search-inner { width: 100%; max-width: 640px; }
+.search-input {
+  width: 100%; background: transparent; border: 0;
+  border-bottom: 1px solid rgba(245, 240, 229, 0.3);
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--brasa-cream);
+  padding: 1rem 0; outline: none;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+.search-input::placeholder { color: rgba(245, 240, 229, 0.4); }
+.search-hint { margin-top: 1.5rem; font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.08em; color: rgba(245, 240, 229, 0.5); }
+.search-close { position: absolute; top: 1.5rem; right: var(--gutter); color: rgba(245, 240, 229, 0.6); font-family: var(--sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; transition: color 280ms; }
+.search-close:hover { color: var(--brasa-cream); }
+
+/* ACCESSIBILITY */
+:focus-visible { outline: 2px solid var(--brasa-accent); outline-offset: 3px; }
+.site-header .nav a:focus-visible,
+.pillar:focus-visible,
+.right-tile-primary:focus-visible,
+.feature:focus-visible,
+.gateway:focus-visible { outline-offset: -3px; }
+
+/* Featured-band wrappers — each grid has its own eyebrow header */
+.featured-band { margin-bottom: clamp(2.5rem, 5vh, 4rem); }
+.featured-band:last-child { margin-bottom: 0; }
+
+.band-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brasa-accent);
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--brasa-rule);
+}
+
+.featured-band .featured-grid { margin-top: 0; }
+
+.training-art { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-start; justify-content: center; background: radial-gradient(circle at 78% 18%, rgba(255,255,255,0.24), transparent 32%), linear-gradient(145deg, var(--training-a), var(--training-b)); }
+.training-art::after { content: ''; position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(27,26,23,0) 35%, rgba(27,26,23,0.72) 100%); transition: background 700ms var(--ease); }
+.training-logo-panel { position: absolute; z-index: 1; top: 7%; left: 10%; width: 80%; height: 58%; display: flex; align-items: center; justify-content: center; }
+.training-logo { display: block; width: 100%; height: 100%; object-fit: contain; filter: saturate(0.95) contrast(1.02); }
+.training-mark { color: rgba(255,255,255,0.94); font-family: var(--sans); font-size: clamp(1.8rem, 3.6vw, 3.2rem); font-weight: 650; letter-spacing: -0.06em; line-height: 1; text-align: center; }
+.training-logo:not([hidden]) + .training-mark { display: none; }
+.school-provider .training-logo-panel { top: 8%; left: 12%; width: 76%; height: 55%; padding: clamp(0.8rem, 2vw, 1.35rem); flex-direction: column; gap: 0.55rem; background: rgba(255,255,255,0.96); border: 1px solid rgba(255,255,255,0.72); border-radius: 0.45rem; box-shadow: 0 12px 32px rgba(0,0,0,0.18); }
+.school-provider .training-logo { width: min(42%, 112px); height: min(62%, 112px); flex: 1 1 auto; }
+.school-provider .training-logo:not([hidden]) + .training-mark { display: block; }
+.school-provider .training-mark { color: #25231f; font-size: clamp(1rem, 1.8vw, 1.45rem); font-weight: 650; letter-spacing: -0.035em; }
+.training-provider:hover .training-art::after,
+.capability-provider:hover .training-art::after,
+.school-provider:hover .training-art::after { background: linear-gradient(180deg, rgba(27,26,23,0.08) 30%, rgba(27,26,23,0.82) 100%); }
+.training-provider:hover .training-logo-panel,
+.capability-provider:hover .training-logo-panel,
+.school-provider:hover .training-logo-panel { transform: scale(1.05); transition: transform 1500ms var(--ease-photo); }
+.featured-band#global-training { scroll-margin-top: 7rem; }
+.featured-band#human-capability { scroll-margin-top: 7rem; }
+.featured-collections { display: flex; flex-direction: column; }
+.featured-collections > .featured-intro { order: 0; }
+.featured-collections > #featured-start { order: 1; }
+.featured-collections > #marquee-schools { order: 2; }
+.featured-collections > #global-primary-secondary { order: 3; }
+.featured-collections > #human-capability { order: 4; }
+.featured-collections > #global-training { order: 5; }
+.provider-note { max-width: 78ch; margin-top: 1.25rem; color: var(--brasa-soft); font-size: 0.82rem; line-height: 1.65; }
+</style>
+</head>
+<body>
+<header class="site-header" id="header">
+  <a href="index.html" class="wordmark" aria-label="BRASA CR — Education, World Wide">
+    <img src="https://assets.brasa.world/Photos/brasa-cr-logo_8.png" class="wordmark-img" alt="BRASA CR">
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html#subjects" class="nav-subjects">Subjects</a>
+    <a href="index.html#featured" class="nav-featured">Featured</a>
+    <a href="index.html#full-catalog" class="nav-catalog">Catalog</a>
+    <button class="nav-search" id="searchToggle" aria-label="Open search">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="8" cy="8" r="5.5"/>
+        <path d="M12.2 12.2L16 16"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+<main><section class="section"><div class="container"><p class="eyebrow">Education for work and life</p><h1 class="section-h">Build human capability.</h1><p class="section-intro">Explore practical learning for food, health, technology, public service, entrepreneurship, skilled work, business, and professional development.</p>
+<div class="featured-band" id="human-capability">
+      <p class="band-eyebrow">Human capability · Education for life · 29 direct resources</p>
+      <div class="featured-grid">
+        <a href="https://elearning.fao.org/" class="feature capability-provider" data-logo-domain="fao.org" target="_blank" rel="noopener noreferrer" style="--training-a:#174b2c;--training-b:#4f8f45"><div class="training-art" aria-hidden="true"><span class="training-mark">FAO</span></div><span class="feature-badge free">Provider hosted</span><div class="feature-content"><span class="feature-eyebrow">Food, land & animals</span><div class="feature-label">FAO eLearning Academy · Agriculture, food, fisheries, climate, markets, and animal production.</div></div></a>
+        <a href="https://www.fao.org/teca/en/" class="feature capability-provider" data-logo-domain="fao.org" target="_blank" rel="noopener noreferrer" style="--training-a:#31572c;--training-b:#90a955"><div class="training-art" aria-hidden="true"><span class="training-mark">TECA</span></div><span class="feature-badge free">Provider hosted</span><div class="feature-content"><span class="feature-eyebrow">Practical farming</span><div class="feature-label">FAO TECA · Field-tested technologies for crops, livestock, aquaculture, and small producers.</div></div></a>
+        <a href="https://www.fao.org/family-farming/home/en/" class="feature capability-provider" data-logo-domain="fao.org" target="_blank" rel="noopener noreferrer" style="--training-a:#5c3d1f;--training-b:#a98467"><div class="training-art" aria-hidden="true"><span class="training-mark">Family Farming</span></div><span class="feature-badge free">Provider hosted</span><div class="feature-content"><span class="feature-eyebrow">Family farming</span><div class="feature-label">FAO Family Farming Knowledge Platform · Resources by country, region, and subject.</div></div></a>
+        <a href="https://www.accessagriculture.org/" class="feature capability-provider" data-logo-domain="accessagriculture.org" target="_blank" rel="noopener noreferrer" style="--training-a:#3f6212;--training-b:#84cc16"><div class="training-art" aria-hidden="true"><span class="training-mark">Access Agriculture</span></div><span class="feature-badge free">Provider hosted</span><div class="feature-content"><span class="feature-eyebrow">Farmer-to-farmer</span><div class="feature-label">Access Agriculture · Practical agroecology videos in local languages.</div></div></a>
+        <a href="https://www.echocommunity.org/" class="feature capability-provider" data-logo-domain="echocommunity.org" target="_blank" rel="noopener noreferrer" style="--training-a:#28451f;--training-b:#658c42"><div class="training-art" aria-hidden="true"><span class="training-mark">ECHOcommunity</span></div><span class="feature-badge free">Provider hosted</span><div class="feature-content"><span class="feature-eyebrow">Smallholder farming</span><div class="feature-label">ECHOcommunity · Seeds, composting, water systems, livestock, and tropical agriculture.</div></div></a>
+        <a href="https://infonet-biovision.org/" class="feature capability-provider" data-logo-domain="infonet-biovision.org" target="_blank" rel="noopener noreferrer" style="--training-a:#184e37;--training-b:#52b788"><div class="training-art" aria-hidden="true"><span class="training-mark">Infonet</span></div><span class="feature-badge free">Provider hosted</span><div class="feature-content"><span class="feature-eyebrow">Ecological agriculture</span><div class="feature-label">Infonet-Biovision · Crops, animals, soil, water, pests, and climate resilience.</div></div></a>
+        <a href="https://academy.cabi.org/" class="feature capability-provider" data-logo-domain="cabi.org" target="_blank" rel="noopener noreferrer" style="--training-a:#243b2f;--training-b:#7b9e52"><div class="training-art" aria-hidden="true"><span class="training-mark">CABI</span></div><span class="feature-badge freemium">Access varies</span><div class="feature-content"><span class="feature-eyebrow">Crop health</span><div class="feature-label">CABI Academy · Pest diagnosis, crop nutrition, soil, water, seeds, and agribusiness.</div></div></a>
+        <a href="https://worldfishcenter.org/" class="feature capability-provider" data-logo-domain="worldfishcenter.org" target="_blank" rel="noopener noreferrer" style="--training-a:#073b4c;--training-b:#118ab2"><div class="training-art" aria-hidden="true"><span class="training-mark">WorldFish</span></div><span class="feature-badge free">Open resources</span><div class="feature-content"><span class="feature-eyebrow">Aquaculture</span><div class="feature-label">WorldFish · Small-scale fish production, nutrition, horticulture, and livelihoods.</div></div></a>
+        <a href="https://www.fao.org/fishery/en" class="feature capability-provider" data-logo-domain="fao.org" target="_blank" rel="noopener noreferrer" style="--training-a:#003049;--training-b:#4ea8de"><div class="training-art" aria-hidden="true"><span class="training-mark">FAO Fisheries</span></div><span class="feature-badge free">Provider hosted</span><div class="feature-content"><span class="feature-eyebrow">Sustainable fisheries</span><div class="feature-label">FAO Fisheries · Small-scale fisheries, ecosystems, climate, and community governance.</div></div></a>
+        <a href="https://blueventures.org/" class="feature capability-provider" data-logo-domain="blueventures.org" target="_blank" rel="noopener noreferrer" style="--training-a:#023e8a;--training-b:#00b4d8"><div class="training-art" aria-hidden="true"><span class="training-mark">Blue Ventures</span></div><span class="feature-badge free">Open resources</span><div class="feature-content"><span class="feature-eyebrow">Blue livelihoods</span><div class="feature-label">Blue Ventures · Community-led fisheries, conservation, and coastal livelihoods.</div></div></a>
+        <a href="https://reefresilience.org/" class="feature capability-provider" data-logo-domain="reefresilience.org" target="_blank" rel="noopener noreferrer" style="--training-a:#005f73;--training-b:#0a9396"><div class="training-art" aria-hidden="true"><span class="training-mark">Reef Resilience</span></div><span class="feature-badge free">Free learning</span><div class="feature-content"><span class="feature-eyebrow">Ocean stewardship</span><div class="feature-label">Reef Resilience Network · Reef, coastal, and marine-management training.</div></div></a>
+        <a href="https://www.conservationtraining.org/" class="feature capability-provider" data-logo-domain="conservationtraining.org" target="_blank" rel="noopener noreferrer" style="--training-a:#164e63;--training-b:#2dd4bf"><div class="training-art" aria-hidden="true"><span class="training-mark">ConservationTraining</span></div><span class="feature-badge free">Free learning</span><div class="feature-content"><span class="feature-eyebrow">Conservation</span><div class="feature-label">ConservationTraining · Practical conservation courses and learning resources.</div></div></a>
+        <a href="https://washresources.cawst.org/" class="feature capability-provider" data-logo-domain="cawst.org" target="_blank" rel="noopener noreferrer" style="--training-a:#0c4a6e;--training-b:#38bdf8"><div class="training-art" aria-hidden="true"><span class="training-mark">CAWST</span></div><span class="feature-badge free">Open resources</span><div class="feature-content"><span class="feature-eyebrow">Water & sanitation</span><div class="feature-label">CAWST · Safe water, sanitation, hygiene, and household water treatment.</div></div></a>
+        <a href="https://ifrc.csod.com/client/ifrc/default.aspx" class="feature capability-provider" data-logo-domain="ifrc.org" target="_blank" rel="noopener noreferrer" style="--training-a:#5f1118;--training-b:#d9232e"><div class="training-art" aria-hidden="true"><span class="training-mark">IFRC</span></div><span class="feature-badge free">Free registration</span><div class="feature-content"><span class="feature-eyebrow">First aid & community</span><div class="feature-label">IFRC Learning Platform · First aid, community health, preparedness, and response.</div></div></a>
+        <a href="https://openwho.org/" class="feature capability-provider" data-logo-domain="who.int" target="_blank" rel="noopener noreferrer" style="--training-a:#113f67;--training-b:#2f80a9"><div class="training-art" aria-hidden="true"><span class="training-mark">OpenWHO</span></div><span class="feature-badge free">Open access</span><div class="feature-content"><span class="feature-eyebrow">Public health</span><div class="feature-label">OpenWHO · Emergency and public-health learning designed for broad access.</div></div></a>
+        <a href="https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/mobile-internet-skills-training-toolkit/" class="feature capability-provider" data-logo-domain="gsma.com" target="_blank" rel="noopener noreferrer" style="--training-a:#172554;--training-b:#2563eb"><div class="training-art" aria-hidden="true"><span class="training-mark">GSMA MISTT</span></div><span class="feature-badge free">Open toolkit</span><div class="feature-content"><span class="feature-eyebrow">Digital foundations</span><div class="feature-label">GSMA MISTT · Internet, smartphones, mobile money, safety, and accessibility.</div></div></a>
+        <a href="https://learningequality.org/kolibri/" class="feature capability-provider" data-logo-domain="learningequality.org" target="_blank" rel="noopener noreferrer" style="--training-a:#3b1f66;--training-b:#8b5cf6"><div class="training-art" aria-hidden="true"><span class="training-mark">Kolibri</span></div><span class="feature-badge free">Open source</span><div class="feature-content"><span class="feature-eyebrow">Offline learning</span><div class="feature-label">Kolibri · Learning content over local networks and devices without continuous internet.</div></div></a>
+        <a href="https://www.atingi.org/" class="feature capability-provider" data-logo-domain="atingi.org" target="_blank" rel="noopener noreferrer" style="--training-a:#173c2b;--training-b:#5ca455"><div class="training-art" aria-hidden="true"><span class="training-mark">atingi</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Vocational learning</span><div class="feature-label">atingi · Multilingual vocational, entrepreneurship, and employability courses.</div></div></a>
+        <a href="https://www.life-global.org/" class="feature capability-provider" data-logo-domain="hp.com" target="_blank" rel="noopener noreferrer" style="--training-a:#12315b;--training-b:#2874c6"><div class="training-art" aria-hidden="true"><span class="training-mark">HP LIFE</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Entrepreneurship</span><div class="feature-label">HP LIFE · Business, finance, marketing, communication, and digital skills.</div></div></a>
+        <a href="https://academy.hubspot.com/" class="feature capability-provider" data-logo-domain="hubspot.com" target="_blank" rel="noopener noreferrer" style="--training-a:#3d2142;--training-b:#ff7a59"><div class="training-art" aria-hidden="true"><span class="training-mark">HubSpot</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Sales & marketing</span><div class="feature-label">HubSpot Academy · Marketing, sales, service, CRM, and business certifications.</div></div></a>
+        <a href="https://skillsforall.com/" class="feature capability-provider" data-logo-domain="cisco.com" target="_blank" rel="noopener noreferrer" style="--training-a:#005073;--training-b:#00bceb"><div class="training-art" aria-hidden="true"><span class="training-mark">Cisco</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Digital & cybersecurity</span><div class="feature-label">Cisco Skills for All · Networking, cybersecurity, Python, and data skills.</div></div></a>
+        <a href="https://www.fortinet.com/training" class="feature capability-provider" data-logo-domain="fortinet.com" target="_blank" rel="noopener noreferrer" style="--training-a:#4a1018;--training-b:#d71920"><div class="training-art" aria-hidden="true"><span class="training-mark">Fortinet</span></div><span class="feature-badge freemium">Free + paid labs</span><div class="feature-content"><span class="feature-eyebrow">Cybersecurity</span><div class="feature-label">Fortinet Training Institute · Self-paced cybersecurity from fundamentals onward.</div></div></a>
+        <a href="https://learn.microsoft.com/training/" class="feature capability-provider" data-logo-domain="microsoft.com" target="_blank" rel="noopener noreferrer" style="--training-a:#243a5e;--training-b:#0078d4"><div class="training-art" aria-hidden="true"><span class="training-mark">Microsoft</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Technology & AI</span><div class="feature-label">Microsoft Learn · Self-paced technology, cloud, AI, and business learning.</div></div></a>
+        <a href="https://learning.sap.com/" class="feature capability-provider" data-logo-domain="sap.com" target="_blank" rel="noopener noreferrer" style="--training-a:#083344;--training-b:#0891b2"><div class="training-art" aria-hidden="true"><span class="training-mark">SAP</span></div><span class="feature-badge freemium">Free + premium</span><div class="feature-content"><span class="feature-eyebrow">Enterprise systems</span><div class="feature-label">SAP Learning · Courses, learning journeys, and practical enterprise skills.</div></div></a>
+        <a href="https://www.osha.gov/training/library" class="feature capability-provider" data-logo-domain="osha.gov" target="_blank" rel="noopener noreferrer" style="--training-a:#172554;--training-b:#1d4ed8"><div class="training-art" aria-hidden="true"><span class="training-mark">OSHA</span></div><span class="feature-badge free">Official resources</span><div class="feature-content"><span class="feature-eyebrow">Workplace safety</span><div class="feature-label">OSHA Training Library · Safety publications, videos, tools, and training materials.</div></div></a>
+        <a href="https://unitar.org/free-and-open-courses" class="feature capability-provider" data-logo-domain="unitar.org" target="_blank" rel="noopener noreferrer" style="--training-a:#312e81;--training-b:#6366f1"><div class="training-art" aria-hidden="true"><span class="training-mark">UNITAR</span></div><span class="feature-badge free">Free courses</span><div class="feature-content"><span class="feature-eyebrow">Sustainable development</span><div class="feature-label">UNITAR · Free and open learning for sustainable development and public service.</div></div></a>
+        <a href="https://agora.unicef.org/" class="feature capability-provider" data-logo-domain="unicef.org" target="_blank" rel="noopener noreferrer" style="--training-a:#005a8b;--training-b:#1cabe2"><div class="training-art" aria-hidden="true"><span class="training-mark">Agora</span></div><span class="feature-badge free">Free registration</span><div class="feature-content"><span class="feature-eyebrow">Humanitarian learning</span><div class="feature-label">UNICEF Agora · Mobile and offline-capable development and humanitarian learning.</div></div></a>
+        <a href="https://www.opensourceecology.org/" class="feature capability-provider" data-logo-domain="opensourceecology.org" target="_blank" rel="noopener noreferrer" style="--training-a:#3f2a1d;--training-b:#b7791f"><div class="training-art" aria-hidden="true"><span class="training-mark">Open Source Ecology</span></div><span class="feature-badge free">Open knowledge</span><div class="feature-content"><span class="feature-eyebrow">Build & repair</span><div class="feature-label">Open Source Ecology · Open machines, construction, fabrication, energy, and tools.</div></div></a>
+        <a href="https://www.appropedia.org/" class="feature capability-provider" data-logo-domain="appropedia.org" target="_blank" rel="noopener noreferrer" style="--training-a:#365314;--training-b:#65a30d"><div class="training-art" aria-hidden="true"><span class="training-mark">Appropedia</span></div><span class="feature-badge free">Open knowledge</span><div class="feature-content"><span class="feature-eyebrow">Appropriate technology</span><div class="feature-label">Appropedia · Practical sustainable solutions for agriculture, energy, and communities.</div></div></a>
+      </div>
+      <p class="provider-note">These resources remain on their providers' websites. BRASA connects learners to them and does not claim their content, credentials, or trademarks.</p>
+    </div>
+
+    <div class="featured-band" hidden>
+      <p class="band-eyebrow">Languages · 4 tiles</p>
+      <div class="featured-grid">
+      <a href="https://www.classcentral.com/collection/free-certificates?lang=spanish" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-lang-spanish" src="https://assets.brasa.world/Thumbnails/flag-spain.jpg"
+               alt="Cursos en Español" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Idioma</span>
+          <div class="feature-label">839+ Spanish-language courses with free certificates.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/collection/free-certificates?lang=portuguese" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-lang-portuguese" src="https://assets.brasa.world/Thumbnails/flag-portugal.jpg"
+               alt="Cursos em Português" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Idioma</span>
+          <div class="feature-label">787+ Portuguese-language courses, all free.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/collection/free-certificates?lang=english" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-lang-english" src="https://assets.brasa.world/Thumbnails/flag-uk.jpg"
+               alt="English-language courses" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · Language</span>
+          <div class="feature-label">7,300+ English-language courses with free certificates.</div>
+        </div>
+      </a>
+      <a href="https://www.classcentral.com/collection/free-certificates?lang=chinese" class="feature" target="_blank" rel="noopener">
+        <div class="feature-photo">
+          <img data-photo-slug="feature-lang-chinese" src="https://assets.brasa.world/Thumbnails/flag-china.jpg"
+               alt="Chinese-language courses" loading="lazy" width="900" height="600">
+        </div>
+        <div class="feature-content">
+          <span class="feature-eyebrow">Class Central · 语言</span>
+          <div class="feature-label">800+ Chinese-language courses with free certificates.</div>
+        </div>
+      </a>
+
+      </div>
+    </div>
+
+    
+
+<div class="featured-band" id="global-training">
+      <p class="band-eyebrow">Global career training · 25 direct providers</p>
+      <div class="featured-grid">
+        <a href="https://skillsbuild.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#071d49;--training-b:#4589ff"><div class="training-art" aria-hidden="true"><span class="training-mark">IBM</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">IBM SkillsBuild</span><div class="feature-label">Technology, workplace skills, credentials, and career preparation.</div></div></a>
+        <a href="https://skillshop.withgoogle.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#174ea6;--training-b:#34a853"><div class="training-art" aria-hidden="true"><span class="training-mark">Google</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Google Skillshop</span><div class="feature-label">Self-paced training for Google workplace and business tools.</div></div></a>
+        <a href="https://skillbuilder.aws/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#131a22;--training-b:#ff9900"><div class="training-art" aria-hidden="true"><span class="training-mark">AWS</span></div><span class="feature-badge freemium">Free + paid</span><div class="feature-content"><span class="feature-eyebrow">AWS Skill Builder</span><div class="feature-label">Cloud and AI learning paths, digital courses, and badges.</div></div></a>
+        <a href="https://learn.microsoft.com/training/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#243a5e;--training-b:#0078d4"><div class="training-art" aria-hidden="true"><span class="training-mark">Microsoft</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Microsoft Learn</span><div class="feature-label">Career-oriented modules and guided technical learning paths.</div></div></a>
+        <a href="https://skillsforall.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#005073;--training-b:#00bceb"><div class="training-art" aria-hidden="true"><span class="training-mark">Cisco</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Cisco Skills for All</span><div class="feature-label">Practice-oriented cybersecurity, networking, Python, and data skills.</div></div></a>
+        <a href="https://trailhead.salesforce.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#032d60;--training-b:#0d9dda"><div class="training-art" aria-hidden="true"><span class="training-mark">Trailhead</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Salesforce Trailhead</span><div class="feature-label">Guided CRM, data, AI, and business learning with hands-on practice.</div></div></a>
+        <a href="https://www.pathtopro.com/free-training/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#7a2e00;--training-b:#f96302"><div class="training-art" aria-hidden="true"><span class="training-mark">Path to Pro</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">The Home Depot · Path to Pro</span><div class="feature-label">English and Spanish introductory training for skilled trades.</div></div></a>
+        <a href="https://learn.digitaladexpert.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#132743;--training-b:#4267b2"><div class="training-art" aria-hidden="true"><span class="training-mark">Aleph</span></div><span class="feature-badge free">Free scholarship</span><div class="feature-content"><span class="feature-eyebrow">Digital Ad Expert</span><div class="feature-label">Digital advertising, marketing, data analysis, and professional development.</div></div></a>
+        <a href="https://www.open.edu/openlearn/employability-hub" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#3b164d;--training-b:#9b4f96"><div class="training-art" aria-hidden="true"><span class="training-mark">OpenLearn</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">The Open University</span><div class="feature-label">Communication, teamwork, leadership, CV, and workplace learning.</div></div></a>
+        <a href="https://agora.unicef.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#005a8b;--training-b:#1cabe2"><div class="training-art" aria-hidden="true"><span class="training-mark">Agora</span></div><span class="feature-badge free">Free registration</span><div class="feature-content"><span class="feature-eyebrow">UNICEF Agora</span><div class="feature-label">Mobile and offline-capable learning for development and humanitarian work.</div></div></a>
+        <a href="https://openwho.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#113f67;--training-b:#2f80a9"><div class="training-art" aria-hidden="true"><span class="training-mark">OpenWHO</span></div><span class="feature-badge free">Open access</span><div class="feature-content"><span class="feature-eyebrow">World Health Organization</span><div class="feature-label">Low-bandwidth-ready public-health learning and downloadable resources.</div></div></a>
+        <a href="https://www.itcilo.org/courses" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#4a1820;--training-b:#c43d4d"><div class="training-art" aria-hidden="true"><span class="training-mark">ITCILO</span></div><span class="feature-badge freemium">Free + paid</span><div class="feature-content"><span class="feature-eyebrow">International Training Centre of the ILO</span><div class="feature-label">Work, safety, labour, enterprise, and future-of-work education.</div></div></a>
+        <a href="https://conectaempleo-formacion.fundaciontelefonica.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#173c68;--training-b:#00a9e0"><div class="training-art" aria-hidden="true"><span class="training-mark">Conecta Empleo</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Fundación Telefónica</span><div class="feature-label">Spanish-language digital skills and employability courses.</div></div></a>
+        <a href="https://www.atingi.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#173c2b;--training-b:#5ca455"><div class="training-art" aria-hidden="true"><span class="training-mark">atingi</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">GIZ · atingi</span><div class="feature-label">Global digital learning with free courses and certificates.</div></div></a>
+        <a href="https://e.huawei.com/en/talent/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#5c1118;--training-b:#cf0a2c"><div class="training-art" aria-hidden="true"><span class="training-mark">Huawei</span></div><span class="feature-badge freemium">Free + paid</span><div class="feature-content"><span class="feature-eyebrow">Huawei Talent</span><div class="feature-label">ICT, cloud, networking, artificial intelligence, and certification pathways.</div></div></a>
+        <a href="https://academy.itu.int/training-courses/full-catalogue" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#172b4d;--training-b:#2c7fb8"><div class="training-art" aria-hidden="true"><span class="training-mark">ITU Academy</span></div><span class="feature-badge freemium">Free + paid</span><div class="feature-content"><span class="feature-eyebrow">International Telecommunication Union</span><div class="feature-label">Cybersecurity, digital inclusion, infrastructure, policy, and regulation.</div></div></a>
+        <a href="https://odc.gos.orange.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#21160a;--training-b:#ff7900"><div class="training-art" aria-hidden="true"><span class="training-mark">Orange</span></div><span class="feature-badge free">Free programs</span><div class="feature-content"><span class="feature-eyebrow">Orange Digital Center</span><div class="feature-label">Digital training, mentoring, employability, and entrepreneurship.</div></div></a>
+        <a href="https://www.outsystems.com/education-program" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#4e1111;--training-b:#c82828"><div class="training-art" aria-hidden="true"><span class="training-mark">OutSystems</span></div><span class="feature-badge free">Free training</span><div class="feature-content"><span class="feature-eyebrow">OutSystems Education</span><div class="feature-label">Low-code development courses, exercises, and developer challenges.</div></div></a>
+        <a href="https://technovationchallenge.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#342052;--training-b:#8d5bb7"><div class="training-art" aria-hidden="true"><span class="training-mark">Technovation</span></div><span class="feature-badge free">Free program</span><div class="feature-content"><span class="feature-eyebrow">Technovation Girls</span><div class="feature-label">Technology and entrepreneurship programs for girls and young women.</div></div></a>
+        <a href="https://lx.festo.com/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#12334a;--training-b:#1684b8"><div class="training-art" aria-hidden="true"><span class="training-mark">Festo LX</span></div><span class="feature-badge freemium">Access varies</span><div class="feature-content"><span class="feature-eyebrow">Festo Learning Experience</span><div class="feature-label">Technical education for automation, manufacturing, and green industry.</div></div></a>
+        <a href="https://www.siemens-stiftung.org/en/projects/education-for-innovation/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#0d3b3f;--training-b:#009999"><div class="training-art" aria-hidden="true"><span class="training-mark">Siemens Stiftung</span></div><span class="feature-badge free">Open resources</span><div class="feature-content"><span class="feature-eyebrow">Education for Innovation</span><div class="feature-label">STEM, sustainability, climate, and teacher learning resources.</div></div></a>
+        <a href="https://generation.global/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#2d2352;--training-b:#7357bb"><div class="training-art" aria-hidden="true"><span class="training-mark">Generation Global</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">Generation Global</span><div class="feature-label">Dialogue, communication, global citizenship, and transversal skills.</div></div></a>
+        <a href="https://www.life-global.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#12315b;--training-b:#2874c6"><div class="training-art" aria-hidden="true"><span class="training-mark">HP LIFE</span></div><span class="feature-badge free">Free</span><div class="feature-content"><span class="feature-eyebrow">HP Foundation</span><div class="feature-label">Business, entrepreneurship, communication, finance, and digital skills.</div></div></a>
+        <a href="https://whoacademy.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#123f67;--training-b:#2f80a9"><div class="training-art" aria-hidden="true"><span class="training-mark">WHO Academy</span></div><span class="feature-badge freemium">Access varies</span><div class="feature-content"><span class="feature-eyebrow">World Health Organization</span><div class="feature-label">Health workforce, public health, and lifelong learning programs.</div></div></a>
+        <a href="https://www.jaamericas.org/" class="feature training-provider" target="_blank" rel="noopener noreferrer" style="--training-a:#1f3154;--training-b:#4f73bd"><div class="training-art" aria-hidden="true"><span class="training-mark">JA Americas</span></div><span class="feature-badge free">Programs vary</span><div class="feature-content"><span class="feature-eyebrow">Junior Achievement Americas</span><div class="feature-label">Entrepreneurship, financial capability, employability, and mentorship.</div></div></a>
+      </div>
+      <p class="provider-note">BRASA links learners directly to independent providers, including programs identified through UNESCO's Global Skills Academy. Each provider owns its courses, access rules, credentials, availability, and learner accounts. A listing is not a BRASA partnership, endorsement, accreditation, or guarantee of employment.</p>
+    </div>
+
+  
+</div></section></main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <img src="https://assets.brasa.world/Photos/brasa-cr-logo_8.png" class="footer-mark-img" alt="BRASA CR">
+      <p class="footer-tagline">Education, World Wide. BRASA CR · Free education for the citizens of the world. Every school, every level, every learner — funded by commerce, protected by Swiss sovereignty.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#subjects">Subjects</a>
+      <a href="#featured">Featured</a>
+      <a href="#full-catalog">Catalog</a>
+      <a href="https://brasa.world" target="_blank" rel="noopener">brasa.world</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© BRASA CR · 2026 · Education, World Wide</span>
+    <span>Made with care in Costa Rica</span>
+  </div>
+</footer>
+</body></html>

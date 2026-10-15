@@ -9,4 +9,7 @@ for (const entry of await readdir(root, { withFileTypes: true })) {
   if (!entry.isFile() || excluded.has(entry.name) || !publicExtensions.has(path.extname(entry.name).toLowerCase())) continue;
   await cp(path.join(root, entry.name), path.join(output, entry.name)); count += 1;
 }
+// Public, versioned interoperability contracts are intentionally published.
+// No runtime secrets or private records belong in this directory.
+await cp(path.join(root, 'contracts'), path.join(output, 'contracts'), { recursive: true });
 console.log(`Built ${count} reviewed Education static assets.`);

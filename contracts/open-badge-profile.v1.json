@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://brasa.education/contracts/open-badge-profile.v1.json",
+  "title": "BRASA portable achievement evidence profile",
+  "description": "An internal profile shaped for future Open Badges interoperability. It is not a claim of 1EdTech certification or conformance.",
+  "type": "object",
+  "required": ["schema", "id", "type", "recipient", "achievement", "evidence", "issuedOn", "issuer", "verification", "status"],
+  "properties": {
+    "schema": { "const": "brasa.portable-achievement.v1" },
+    "id": { "type": "string", "format": "uri" },
+    "type": { "const": "AchievementCredential" },
+    "recipient": { "type": "object", "required": ["id", "type"], "properties": { "id": { "type": "string" }, "type": { "const": "BrasaDisplayId" } } },
+    "achievement": { "type": "object", "required": ["id", "name", "criteria"], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "criteria": { "type": "string" }, "alignment": { "type": "array", "items": { "type": "object" } } } },
+    "evidence": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["type", "source", "reviewStatus"], "properties": { "type": { "type": "string" }, "source": { "type": "string" }, "reviewStatus": { "enum": ["submitted", "teacher-verified", "rejected"] } } } },
+    "issuedOn": { "type": "string", "format": "date-time" },
+    "issuer": { "type": "object", "required": ["id", "name", "authorityScope"], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "authorityScope": { "type": "string" } } },
+    "verification": { "type": "object", "required": ["method"], "properties": { "method": { "enum": ["hosted", "signed"] } } },
+    "status": { "enum": ["draft", "issued", "revoked"] },
+    "revocation": { "type": ["object", "null"] }
+  },
+  "additionalProperties": false
+}

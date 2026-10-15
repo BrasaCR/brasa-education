@@ -18,6 +18,7 @@ test('writes fail closed while the staging identity binding is absent', async ()
 
 test('restricted Education assets exclude dependency and deployment metadata', async () => {
   await assert.doesNotReject(access(new URL('../.education-assets/index.html', import.meta.url)));
+  await assert.doesNotReject(access(new URL('../.education-assets/contracts/open-badge-profile.v1.json', import.meta.url)));
   await assert.rejects(access(new URL('../.education-assets/package-lock.json', import.meta.url)));
   await assert.rejects(access(new URL('../.education-assets/wrangler.jsonc', import.meta.url)));
 });
@@ -27,4 +28,18 @@ test('session lifecycle is proxied only through the identity binding', async () 
   const request = new Request('https://brasa.education/api/v1/session/exchange', { method: 'POST', body: '{"invitation_code":"code"}' });
   const response = await worker.fetch(request, env);
   assert.equal(response.status, 201); assert.equal(new URL(upstream.url).pathname, '/api/session/exchange'); assert.equal(upstream.method, 'POST'); assert.equal(response.headers.get('cache-control'), 'no-store');
+});
+
+test('country routes resolve the shared homepage and every relative asset at the site root', async () => {
+  const requests = [];
+  const env = { ASSETS: { fetch: async request => { requests.push(new URL(request.url).pathname); return new Response('asset'); } } };
+  await worker.fetch(new Request('https://brasa.education/country/mexico/'), env);
+  await worker.fetch(new Request('https://brasa.education/country/mexico/global-education-catalog.html?goal=work'), env);
+  assert.deepEqual(requests, ['/index.html', '/global-education-catalog.html']);
+});
+
+test('country route normalization does not rewrite API requests', async () => {
+  const env = { ASSETS: { fetch: async request => new Response(new URL(request.url).pathname) } };
+  const response = await worker.fetch(new Request('https://brasa.education/api/not-a-country-asset'), env);
+  assert.equal(await response.text(), '/api/not-a-country-asset');
 });

@@ -1,0 +1,52 @@
+{
+  "schema": "brasa.education.catalog-statistics.v1",
+  "reviewedAt": "2026-10-14",
+  "policy": "Every public statistic must identify its source, definition, review date and whether BRASA independently verified it.",
+  "statistics": [
+    {
+      "id": "class-central-courses",
+      "label": "discoverable courses",
+      "value": 250000,
+      "display": "250,000+",
+      "definition": "Courses reported in the Class Central discovery catalog; BRASA does not host or operate all of them.",
+      "sourceName": "Class Central",
+      "sourceUrl": "https://www.classcentral.com/about",
+      "sourceReviewedAt": "2026-10-14",
+      "verification": "provider-published"
+    },
+    {
+      "id": "class-central-institutions",
+      "label": "universities and institutions",
+      "value": 3000,
+      "display": "3,000+",
+      "definition": "The sum of Class Central's separately reported 1,300+ universities and 1,700+ institutions; categories may overlap, so BRASA displays them together only with this qualification.",
+      "sourceName": "Class Central",
+      "sourceUrl": "https://www.classcentral.com/",
+      "sourceReviewedAt": "2026-10-14",
+      "verification": "derived-from-provider-published",
+      "qualification": "May contain overlap between provider categories."
+    },
+    {
+      "id": "class-central-subjects",
+      "label": "subjects",
+      "value": 6900,
+      "display": "6,900+",
+      "definition": "Subjects in the Class Central subject directory.",
+      "sourceName": "Class Central",
+      "sourceUrl": "https://www.classcentral.com/subjects",
+      "sourceReviewedAt": "2026-10-14",
+      "verification": "provider-published"
+    },
+    {
+      "id": "brasa-interface-languages",
+      "label": "README documentation languages",
+      "value": 89,
+      "display": "89",
+      "definition": "English plus 88 localized repository README files. This does not mean every course or interface is available in every language.",
+      "sourceName": "BRASA Education repository",
+      "sourceUrl": "https://github.com/BrasaCR/brasa-education",
+      "sourceReviewedAt": "2026-10-14",
+      "verification": "repository-counted"
+    }
+  ]
+}
