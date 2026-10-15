@@ -389,6 +389,25 @@ test('Algeria pack preserves directory-gap, phased-curriculum, habilitation, pri
   }
 });
 
+test('Angola pack preserves directory-gap, curriculum, accreditation, privacy and language boundaries', () => {
+  const pack = readJson('angola-education-pack.json');
+  assert.equal(pack.country.code, 'AO');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 6);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.schoolDirectory.scopeNotice, /must not fabricate schools/i);
+  assert.match(pack.curriculum.implementationRule, /do not by themselves prove the complete current curriculum/i);
+  assert.match(pack.higherEducation.authorityNotice, /institution.*not proof that every current campus, course or program.*accredited/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /22\/11/);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /25\/12/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Portuguese.*national languages.*Angolan Sign Language.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Angolan reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -400,6 +419,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const algeria = rollout.countries.find(country => country.code === 'DZ');
   assert.equal(algeria.status, 'reference-pack-in-review');
   assert.equal(algeria.packUrl, '/algeria-education-pack.json');
+  const angola = rollout.countries.find(country => country.code === 'AO');
+  assert.equal(angola.status, 'reference-pack-in-review');
+  assert.equal(angola.packUrl, '/angola-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
