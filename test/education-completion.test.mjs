@@ -408,6 +408,25 @@ test('Angola pack preserves directory-gap, curriculum, accreditation, privacy an
   }
 });
 
+test('Benin pack preserves subsector, directory-gap, statistic, program, privacy and language boundaries', () => {
+  const pack = readJson('benin-education-pack.json');
+  assert.equal(pack.country.code, 'BJ');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 6);
+  assert.match(pack.governanceModel.summary, /separate ministries/i);
+  assert.match(pack.schoolDirectory.coverageStatus, /directory-not-verified/i);
+  assert.match(pack.educationStatistics.scopeNotice, /different current school total.*must be reconciled/i);
+  assert.match(pack.higherEducation.authorityNotice, /does not authorize every program or prove accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /2017-20.*2020-35/);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /2015-08/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /French.*national languages.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Beninese reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -422,6 +441,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const angola = rollout.countries.find(country => country.code === 'AO');
   assert.equal(angola.status, 'reference-pack-in-review');
   assert.equal(angola.packUrl, '/angola-education-pack.json');
+  const benin = rollout.countries.find(country => country.code === 'BJ');
+  assert.equal(benin.status, 'reference-pack-in-review');
+  assert.equal(benin.packUrl, '/benin-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
