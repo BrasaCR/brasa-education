@@ -287,6 +287,26 @@ test('Paraguay pack preserves data-vintage, habilitation, accreditation, privacy
   }
 });
 
+test('Argentina pack preserves federal, CUE, curriculum, title-validity, accreditation and EIB boundaries', () => {
+  const pack = readJson('argentina-education-pack.json');
+  assert.equal(pack.country.code, 'AR');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /argentina\.gob\.ar\/nucleos-de-aprendizaje-prioritarios/);
+  assert.match(pack.curriculum.supplementPolicy, /NAP.*do not replace provincial or City of Buenos Aires curricular designs/i);
+  assert.match(pack.schoolDirectory.sourceUrl, /argentina\.gob\.ar\/node\/246613/);
+  assert.match(pack.schoolDirectory.scopeNotice, /CUE or map record does not by itself prove current authorization/i);
+  assert.match(pack.higherEducation.authorityNotice, /official recognition and national validity.*CONEAU accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /25\.326/);
+  assert.match(pack.privacyAndSafeguarding.childrenLaw, /26\.061/);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /permanent participation.*Indigenous peoples/i);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Argentine reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
