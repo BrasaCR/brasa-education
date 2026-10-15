@@ -105,6 +105,23 @@ test('Belize pack preserves directory vintage, licensing, accreditation and lega
   }
 });
 
+test('Honduras pack preserves SACE, territorial, higher-education and legal-gap boundaries', () => {
+  const pack = readJson('honduras-education-pack.json');
+  assert.equal(pack.country.code, 'HN');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 5);
+  assert.match(pack.curriculum.controllingSource, /se\.gob\.hn/);
+  assert.match(pack.schoolDirectory.scopeNotice, /multiple center records or services/i);
+  assert.match(pack.higherEducation.institutionSource, /des\.unah\.edu\.hn/);
+  assert.match(pack.privacyAndSafeguarding.comprehensiveLawNotice, /must not present a bill as law/i);
+  assert.match(pack.privacyAndSafeguarding.childrenAuthoritySource, /senaf\.gob\.hn/);
+  assert.ok(pack.officialSourceRegister.length >= 8);
+  if (pack.status === 'complete') {
+    assert.ok(pack.review.reviewer, 'complete pack requires a named Honduran reviewer');
+    assert.equal(pack.review.verificationStatus, 'verified');
+  }
+});
+
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
   const contract = readJson('contracts/open-badge-profile.v1.json');
   assert.match(contract.description, /not a claim of 1EdTech certification/i);
