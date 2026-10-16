@@ -21,7 +21,7 @@
     {"code":"CI","slug":"cote-divoire","name":"Côte d’Ivoire","status":"reference-pack-in-review","packUrl":"/cote-divoire-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"DJ","slug":"djibouti","name":"Djibouti","status":"reference-pack-in-review","packUrl":"/djibouti-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"EG","slug":"egypt","name":"Egypt","status":"reference-pack-in-review","packUrl":"/egypt-education-pack.json","reviewedAt":"2026-10-15"},
-    {"code":"GQ","slug":"equatorial-guinea","name":"Equatorial Guinea","status":"official-source-research"},
+    {"code":"GQ","slug":"equatorial-guinea","name":"Equatorial Guinea","status":"reference-pack-in-review","packUrl":"/equatorial-guinea-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"ER","slug":"eritrea","name":"Eritrea","status":"official-source-research"},
     {"code":"SZ","slug":"eswatini","name":"Eswatini","status":"official-source-research"},
     {"code":"ET","slug":"ethiopia","name":"Ethiopia","status":"official-source-research"},
