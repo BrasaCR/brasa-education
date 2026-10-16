@@ -678,6 +678,23 @@ test('Equatorial Guinea pack preserves directory, curriculum, higher-status, pri
   if (pack.status === 'complete') assert.ok(pack.review.reviewer);
 });
 
+test('Eritrea pack preserves census, curriculum, higher-status, privacy and language boundaries', () => {
+  const pack = readJson('eritrea-education-pack.json');
+  assert.equal(pack.country.code, 'ER');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /annual-school-census-available-unified-current-public-authorization-directory-not-verified/i);
+  assert.match(pack.schoolDirectory.scopeNotice, /not exhaustive.*not proof of current authorization/i);
+  assert.match(pack.curriculum.implementationRule, /not the controlling grade-and-subject curriculum/i);
+  assert.match(pack.vocationalQualifications.authorityNotice, /digital resource library does not establish current provider authorization/i);
+  assert.match(pack.higherEducation.authorityNotice, /not a current public register/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /No verified comprehensive personal-data protection law/i);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /constitutional privacy right is not a comprehensive processing framework/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Tigrinya, Tigre, Arabic, Afar, Saho, Bilen, Kunama, Nara/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') assert.ok(pack.review.reviewer);
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -737,6 +754,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const equatorialGuinea = rollout.countries.find(country => country.code === 'GQ');
   assert.equal(equatorialGuinea.status, 'reference-pack-in-review');
   assert.equal(equatorialGuinea.packUrl, '/equatorial-guinea-education-pack.json');
+  const eritrea = rollout.countries.find(country => country.code === 'ER');
+  assert.equal(eritrea.status, 'reference-pack-in-review');
+  assert.equal(eritrea.packUrl, '/eritrea-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
