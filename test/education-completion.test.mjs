@@ -644,6 +644,23 @@ test('Djibouti pack preserves service, curriculum, higher-status, privacy and sa
   if (pack.status === 'complete') assert.ok(pack.review.reviewer);
 });
 
+test('Egypt pack preserves Ministry, Al-Azhar, curriculum, accreditation, privacy and safeguarding boundaries', () => {
+  const pack = readJson('egypt-education-pack.json');
+  assert.equal(pack.country.code, 'EG');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 8);
+  assert.match(pack.country.jurisdictionNotice, /Al-Azhar.*separate system/i);
+  assert.match(pack.schoolDirectory.coverageStatus, /unified-current-all-system-authorization-directory-not-verified/i);
+  assert.match(pack.educationStatistics.scopeNotice, /not a live authorization directory/i);
+  assert.match(pack.curriculum.implementationRule, /not by itself the controlling curriculum/i);
+  assert.match(pack.higherEducation.authorityNotice, /institution list does not authorize every campus, program/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /151 of 2020/i);
+  assert.match(pack.privacyAndSafeguarding.childrenFramework, /12 of 1996.*126 of 2008.*186 of 2023/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Arabic national curricula, Al-Azhar curricula.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 10);
+  if (pack.status === 'complete') assert.ok(pack.review.reviewer);
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -697,6 +714,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const djibouti = rollout.countries.find(country => country.code === 'DJ');
   assert.equal(djibouti.status, 'reference-pack-in-review');
   assert.equal(djibouti.packUrl, '/djibouti-education-pack.json');
+  const egypt = rollout.countries.find(country => country.code === 'EG');
+  assert.equal(egypt.status, 'reference-pack-in-review');
+  assert.equal(egypt.packUrl, '/egypt-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
