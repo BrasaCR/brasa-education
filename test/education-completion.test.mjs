@@ -627,6 +627,23 @@ test('Côte d’Ivoire pack preserves directory, curriculum, higher-status, priv
   if (pack.status === 'complete') assert.ok(pack.review.reviewer);
 });
 
+test('Djibouti pack preserves service, curriculum, higher-status, privacy and safeguarding boundaries', () => {
+  const pack = readJson('djibouti-education-pack.json');
+  assert.equal(pack.country.code, 'DJ');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 7);
+  assert.match(pack.schoolDirectory.coverageStatus, /unified-current-public-school-level-directory-not-verified/i);
+  assert.match(pack.schoolDirectory.scopeNotice, /not itself a complete public directory/i);
+  assert.match(pack.curriculum.implementationRule, /not the controlling curriculum/i);
+  assert.match(pack.educationStatistics.scopeNotice, /2018–2019.*not current directories/i);
+  assert.match(pack.higherEducation.authorityNotice, /does not accredit every program/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /No verified comprehensive current Djibouti/i);
+  assert.match(pack.privacyAndSafeguarding.scopeNotice, /Do not infer Djibouti law from another jurisdiction/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /French, Arabic, Somali and Afar.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') assert.ok(pack.review.reviewer);
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -677,6 +694,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const coteDIvoire = rollout.countries.find(country => country.code === 'CI');
   assert.equal(coteDIvoire.status, 'reference-pack-in-review');
   assert.equal(coteDIvoire.packUrl, '/cote-divoire-education-pack.json');
+  const djibouti = rollout.countries.find(country => country.code === 'DJ');
+  assert.equal(djibouti.status, 'reference-pack-in-review');
+  assert.equal(djibouti.packUrl, '/djibouti-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
