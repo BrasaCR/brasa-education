@@ -695,6 +695,22 @@ test('Eritrea pack preserves census, curriculum, higher-status, privacy and lang
   if (pack.status === 'complete') assert.ok(pack.review.reviewer);
 });
 
+test('Eswatini pack preserves census, curriculum, accreditation, privacy and safeguarding boundaries', () => {
+  const pack = readJson('eswatini-education-pack.json');
+  assert.equal(pack.country.code, 'SZ');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 8);
+  assert.match(pack.schoolDirectory.coverageStatus, /annual-education-census-available-unified-current-public-authorization-directory-not-verified/i);
+  assert.match(pack.educationStatistics.scopeNotice, /not be read as a live authorization directory/i);
+  assert.match(pack.curriculum.implementationRule, /not interchangeable with the controlling curriculum/i);
+  assert.match(pack.higherEducation.authorityNotice, /provisional authority, full registration and accreditation/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /No\. 5 of 2022/i);
+  assert.match(pack.privacyAndSafeguarding.childrenFramework, /No\. 6 of 2012.*2023–2027/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /siSwati, English, sign-language.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 9);
+  if (pack.status === 'complete') assert.ok(pack.review.reviewer);
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -757,6 +773,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const eritrea = rollout.countries.find(country => country.code === 'ER');
   assert.equal(eritrea.status, 'reference-pack-in-review');
   assert.equal(eritrea.packUrl, '/eritrea-education-pack.json');
+  const eswatini = rollout.countries.find(country => country.code === 'SZ');
+  assert.equal(eswatini.status, 'reference-pack-in-review');
+  assert.equal(eswatini.packUrl, '/eswatini-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
