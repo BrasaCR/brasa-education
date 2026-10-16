@@ -24,7 +24,7 @@
     {"code":"GQ","slug":"equatorial-guinea","name":"Equatorial Guinea","status":"reference-pack-in-review","packUrl":"/equatorial-guinea-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"ER","slug":"eritrea","name":"Eritrea","status":"reference-pack-in-review","packUrl":"/eritrea-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"SZ","slug":"eswatini","name":"Eswatini","status":"reference-pack-in-review","packUrl":"/eswatini-education-pack.json","reviewedAt":"2026-10-15"},
-    {"code":"ET","slug":"ethiopia","name":"Ethiopia","status":"official-source-research"},
+    {"code":"ET","slug":"ethiopia","name":"Ethiopia","status":"reference-pack-in-review","packUrl":"/ethiopia-education-pack.json","reviewedAt":"2026-10-15"},
     {"code":"GA","slug":"gabon","name":"Gabon","status":"official-source-research"},
     {"code":"GM","slug":"gambia","name":"The Gambia","status":"official-source-research"},
     {"code":"GH","slug":"ghana","name":"Ghana","status":"official-source-research"},

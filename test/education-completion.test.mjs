@@ -711,6 +711,24 @@ test('Eswatini pack preserves census, curriculum, accreditation, privacy and saf
   if (pack.status === 'complete') assert.ok(pack.review.reviewer);
 });
 
+test('Ethiopia pack preserves federal-regional, curriculum, accreditation, privacy and safeguarding boundaries', () => {
+  const pack = readJson('ethiopia-education-pack.json');
+  assert.equal(pack.country.code, 'ET');
+  assert.equal(pack.status, 'reference-pack-in-review');
+  assert.ok(pack.authorities.length >= 9);
+  assert.match(pack.country.jurisdictionNotice, /federal.*regional/i);
+  assert.match(pack.schoolDirectory.coverageStatus, /dated-national-census-available-unified-current-public-school-authorization-directory-not-verified/i);
+  assert.match(pack.schoolDirectory.scopeNotice, /not current school authorization/i);
+  assert.match(pack.curriculum.implementationRule, /national framework, regional curriculum.*not interchangeable/i);
+  assert.match(pack.vocationalQualifications.authorityNotice, /Provider licence, program approval, occupational standard, assessment-centre authorization, assessment result and qualification certificate are separate/i);
+  assert.match(pack.higherEducation.authorityNotice, /provider licence does not prove institutional accreditation.*does not authorize every campus or program/i);
+  assert.match(pack.privacyAndSafeguarding.dataProtectionLaw, /1321\/2024.*in force/i);
+  assert.match(pack.privacyAndSafeguarding.childrenFramework, /1368\/2025/i);
+  assert.match(pack.culturalAndLanguageRequirements.rule, /Amharic, Oromo, Somali, Tigrinya, Afar, Sidama, Wolaytta.*distinct/i);
+  assert.ok(pack.officialSourceRegister.length >= 10);
+  if (pack.status === 'complete') assert.ok(pack.review.reviewer);
+});
+
 test('Africa rollout accounts for all 54 sovereign states without generic completion claims', () => {
   const rollout = readJson('africa-education-rollout.json');
   assert.equal(rollout.countries.length, 54);
@@ -776,6 +794,9 @@ test('Africa rollout accounts for all 54 sovereign states without generic comple
   const eswatini = rollout.countries.find(country => country.code === 'SZ');
   assert.equal(eswatini.status, 'reference-pack-in-review');
   assert.equal(eswatini.packUrl, '/eswatini-education-pack.json');
+  const ethiopia = rollout.countries.find(country => country.code === 'ET');
+  assert.equal(ethiopia.status, 'reference-pack-in-review');
+  assert.equal(ethiopia.packUrl, '/ethiopia-education-pack.json');
 });
 
 test('portable evidence contract does not make a false 1EdTech conformance claim', () => {
